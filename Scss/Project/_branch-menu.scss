@@ -206,7 +206,7 @@
   left: 0;
   min-width:92.21%;
   min-height: 15%;/*字が飛び出ないように*/
-  padding-top: 19px;
+  padding-top: 14.5%;
   padding-bottom: 4.1%;
   margin-bottom: 10px;
   font-size: 2.87vw;
@@ -220,7 +220,7 @@
   position: relative;
   min-width:92.21%;
   min-height: 15%;
-  padding-top: 19px;
+  padding-top: 14.5%;
   padding-bottom: 4.1%;
   margin-bottom: 0 !important;
   object-fit: contain !important;/*ないと縦横比崩れが起きる*/
@@ -246,14 +246,13 @@
   margin-left: 3%;
   margin-right: 3%;
   font-size: 16px;/*1.91vw*/
-  line-height: 23/16;
+  line-height: 1.43;
   overflow-wrap: break-word;
   object-fit: contain;
 }
 
   &__box__text::before{/*字が増えても崩れないように*/
   position: absolute;
-  z-index: 200;
   top:0;
   left:0;
   width:100%;
@@ -261,6 +260,7 @@
   content: "";
   padding-bottom: 15.68%;
   object-fit: contain;
+  border: solid red 1px;
 }
 }
 }
