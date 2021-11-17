@@ -147,7 +147,7 @@
   display:flex !important;
   flex-direction:unset;
   justify-content: center;
-  width:85.64%;
+  width:100%;
   height:auto !important;
   margin: 40px 4.79% 40px 4.79%px;
   /*overflow: hiddenをつけると2カラムの比率崩れる*/
@@ -276,7 +276,7 @@
 &__inner{  /*contentsの内側*/
   display: flex !important;
   flex-direction: unset;
-  width: 85.64%;
+  width: 100%;
   padding: 0;
   margin:7.72% 7.14% 8.43% 7.14% !important;
   box-sizing: border-box;
