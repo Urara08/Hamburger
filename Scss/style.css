@@ -720,12 +720,14 @@ ul, li {
   .take-out {
     /*マルチクラス */
     margin-right: 5%;
+    overflow-x: hidden;
   }
 
   /*eat-in*/
   .eat-in {
     /*マルチクラス */
     margin-top: 0;
+    overflow-x: hidden;
   }
 
   .p-contents__branch-menu__label {
