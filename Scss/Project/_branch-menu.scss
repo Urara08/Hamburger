@@ -152,7 +152,7 @@
   justify-content: center;
   width:100%;
   height:auto !important;
-  margin: 40px 4.79% 40px 4.79%px;
+  margin: 40px 4.79% 40px 4.79%;
   /*overflow: hiddenをつけると2カラムの比率崩れる*/
 }
 }
@@ -258,7 +258,6 @@
   content: "";
   padding-bottom: 15.68%;
   object-fit: contain;
-  border: solid red 1px;
 }
 }
 }

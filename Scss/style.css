@@ -720,7 +720,7 @@ a {
     justify-content: center;
     width: 100%;
     height: auto !important;
-    margin: 40px 4.79% 40px 4.79% px;
+    margin: 40px 4.79% 40px 4.79%;
     /*overflow: hiddenをつけると2カラムの比率崩れる*/
   }
 
@@ -836,7 +836,6 @@ a {
     padding-bottom: 15.68%;
     -o-object-fit: contain;
        object-fit: contain;
-    border: solid red 1px;
   }
 }
 @media screen and (min-width: 1250px) {
@@ -1610,7 +1609,6 @@ a {
     font-size: 20px;
     line-height: 1.5;
     color: #707070;
-    border: solid red 1px;
   }
 
   .p-sidebar__nav__list__item {
