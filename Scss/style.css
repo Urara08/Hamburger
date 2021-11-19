@@ -114,6 +114,11 @@ ul, li {
   /*文字の装飾をしない*/
 }
 
+a {
+  text-decoration: none;
+  color: #707070 !important;
+}
+
 /**
 * Layout
 * ========================== */
@@ -576,6 +581,12 @@ ul, li {
   padding: 89% 3% 20% 3%;
   overflow: hidden;
 }
+.p-contents__branch-menu__inner {
+  /*白い2つのBOXを囲う*/
+  display: flex;
+  flex-direction: column;
+  /*2つのBOXを縦に並べる*/
+}
 .p-contents__branch-menu__label {
   /*Take-out･Eat-in共通大ラベル */
   position: absolute;
@@ -608,7 +619,8 @@ ul, li {
   margin-right: 0;
   background-image: url(../img/p-contents__branch-menu__take-out.png);
   background-size: cover;
-  background-position: center;
+  background-position: top right;
+  /*centerよりカンプに近い */
   background-repeat: no-repeat;
 }
 
@@ -617,13 +629,13 @@ ul, li {
   margin-top: 20px;
   background-image: url(../img/p-contents__branch-menu__eat-in.png);
   background-size: cover;
-  background-position: center;
+  background-position: top right;
+  /*centerよりカンプに近い */
   background-repeat: no-repeat;
 }
 
 .p-contents__branch-menu__box--top {
   /*白いBOX:上*/
-  position: relative;
   display: inline-block;
   width: 100%;
   min-width: 89.8%;
@@ -640,7 +652,6 @@ ul, li {
 }
 .p-contents__branch-menu__box--bottom {
   /*白いBOX:下*/
-  position: relative;
   display: inline-block;
   width: 100%;
   min-width: 89.8%;
@@ -707,7 +718,7 @@ ul, li {
     display: flex !important;
     flex-direction: unset;
     justify-content: center;
-    width: 85.64%;
+    width: 100%;
     height: auto !important;
     margin: 40px 4.79% 40px 4.79% px;
     /*overflow: hiddenをつけると2カラムの比率崩れる*/
@@ -763,13 +774,10 @@ ul, li {
 
   .p-contents__branch-menu__box--top {
     /*白いBOX:上*/
-    position: relative;
-    top: 0;
-    left: 0;
     min-width: 92.21%;
     min-height: 15%;
     /*字が飛び出ないように*/
-    padding-top: 19px;
+    padding-top: 14.5%;
     padding-bottom: 4.1%;
     margin-bottom: 10px;
     font-size: 2.87vw;
@@ -779,12 +787,10 @@ ul, li {
   }
   .p-contents__branch-menu__box--bottom {
     /*白いBOX:下*/
-    position: relative;
     max-width: 100%;
-    position: relative;
     min-width: 92.21%;
     min-height: 15%;
-    padding-top: 19px;
+    padding-top: 14.5%;
     padding-bottom: 4.1%;
     margin-bottom: 0 !important;
     -o-object-fit: contain !important;
@@ -814,7 +820,7 @@ ul, li {
     margin-right: 3%;
     font-size: 16px;
     /*1.91vw*/
-    line-height: 23/16;
+    line-height: 1.43;
     overflow-wrap: break-word;
     -o-object-fit: contain;
        object-fit: contain;
@@ -822,7 +828,6 @@ ul, li {
   .p-contents__branch-menu__box__text::before {
     /*字が増えても崩れないように*/
     position: absolute;
-    z-index: 200;
     top: 0;
     left: 0;
     width: 100%;
@@ -831,6 +836,7 @@ ul, li {
     padding-bottom: 15.68%;
     -o-object-fit: contain;
        object-fit: contain;
+    border: solid red 1px;
   }
 }
 @media screen and (min-width: 1250px) {
@@ -847,7 +853,7 @@ ul, li {
     /*contentsの内側*/
     display: flex !important;
     flex-direction: unset;
-    width: 85.64%;
+    width: 100%;
     padding: 0;
     margin: 7.72% 7.14% 8.43% 7.14% !important;
     box-sizing: border-box;
@@ -899,7 +905,6 @@ ul, li {
 
   .p-contents__branch-menu__box--top {
     /*白いBOX:上 */
-    position: relative;
     max-width: 100% !important;
     min-width: 92.47%;
     min-height: 14.54%;
@@ -913,7 +918,6 @@ ul, li {
   }
   .p-contents__branch-menu__box--bottom {
     /*白いBOX:下 */
-    position: relative;
     max-width: 100% !important;
     min-width: 92.47%;
     min-height: 14.54%;
@@ -1517,7 +1521,7 @@ ul, li {
   transition: all 0.3s;
 }
 .p-sidebar__nav {
-  /*サイドバーのMenuの下：字の部分*/
+  /*サイドバーのMenuから下の部分*/
   position: relative;
   min-width: 80.18%;
   height: auto;
@@ -1531,6 +1535,7 @@ ul, li {
   display: none;
   /*スマホ時は隠す*/
 }
+
 .p-sidebar__nav__title {
   /*バーガー・サイド・ドリンク*/
   display: block;
@@ -1541,7 +1546,7 @@ ul, li {
 }
 .p-sidebar__nav__list {
   /*__titleを除いた各（バーガー・サイド・ドリンク）メーニュー群の箱*/
-  margin-bottom: 40px;
+  margin-bottom: 40px !important;
   padding-left: 8%;
   width: 65.39%;
   font-weight: 400;
@@ -1554,7 +1559,12 @@ ul, li {
   /*各リストアイテムの詳細*/
   margin-bottom: 22px;
 }
-.p-sidebar__nav__list__item > .c-item__title {
+.p-sidebar__nav__list__item:last-child {
+  /*各リストアイテムの詳細*/
+  margin-bottom: 0;
+}
+
+.p-sidebar__nav > .c-item__title {
   /*各リストアイテムの詳細のリンクの部分*/
   list-style: none;
   text-decoration: none;
@@ -1592,13 +1602,24 @@ ul, li {
   }
   .p-sidebar__nav__list {
     /*__titleを除いた各（バーガー・サイド・ドリンク）メーニュー群の箱*/
-    margin-bottom: 22px;
-    padding-left: 7.69%;
+    margin-bottom: 40px !important;
+    padding-left: 9px;
+    /*title（バーガー・サイド・ドリンク）とのインデント*/
     width: 92.3%;
     font-weight: 400;
     font-size: 20px;
     line-height: 1.5;
     color: #707070;
+    border: solid red 1px;
+  }
+
+  .p-sidebar__nav__list__item {
+    /*各リストアイテムの詳細*/
+    margin-bottom: 22px;
+  }
+  .p-sidebar__nav__list__item:last-child {
+    /*各リストアイテムの詳細*/
+    margin-bottom: 0;
   }
 }
 @media screen and (min-width: 1250px) {
@@ -1611,7 +1632,7 @@ ul, li {
     overflow-y: hidden;
   }
   .p-sidebar__nav {
-    /*サイドバーのMenuの下：字の部分*/
+    /*サイドバーのMenuから下の部分*/
     display: inline-block;
     position: relative;
     min-width: 69.75%;
@@ -1623,7 +1644,7 @@ ul, li {
     margin-left: 13.62%;
   }
 
-  .p-sidebar__nav__label {
+  .p-sideba__nav__label {
     /*サイドバーのMenu*/
     display: block !important;
     margin-bottom: 85px;
@@ -1632,24 +1653,29 @@ ul, li {
     color: #707070;
     line-height: 1.32;
   }
+
   .p-sidebar__nav__title {
     /*バーガー・サイド・ドリンク*/
     font-size: 1.25vw;
     font-weight: 700;
   }
   .p-sidebar__nav__list {
-    margin-bottom: 40px;
+    margin-bottom: 40px !important;
     padding-left: 4.26%;
     width: 80%;
     font-weight: 500;
     font-size: 1.04vw;
     color: #707070;
     word-break: break-all;
-    line-height: 30/20;
+    line-height: 1.5;
   }
   .p-sidebar__nav__list__item {
     /*各リストアイテムの詳細*/
-    margin-bottom: 8%;
+    margin-bottom: 22px;
+  }
+  .p-sidebar__nav:last-child {
+    /*各リストアイテムの詳細*/
+    margin-bottom: 0;
   }
 
   .p-sidebar__menu__close-btn {

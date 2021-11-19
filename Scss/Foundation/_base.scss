@@ -21,3 +21,8 @@ ul, li{
   list-style: none;/*リストの装飾をしない*/
   text-decoration: none;/*文字の装飾をしない*/
 }
+
+a{
+  text-decoration: none;
+  color: $color--char-GY !important;
+}
