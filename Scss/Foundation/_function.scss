@@ -1,28 +1,52 @@
-/*スタイルはつけない*/
+.js-sidebar.is-show{
+  display: block !important;
+  top:0;
+  right:0;
+}
 .toggle_btn{/*header側：MENUボタン*/
-  display: block;/*表示する*/
+  display: block;/*普段は表示する*/
   transition: transform .3s, opacity .3s;
 }
 .toggle_btn__label{
-  display: inline-block;
+  display: inline-block;/*普段は表示する*/
 
   &__label:after{
   display:none;/*サイドバーが出たら隠す*/
 }
 }
+.js-overlay{/*全体を覆い暗くするフィルター*/
+  @include overlay;
+  display: none;
+}
 
-.c-overlay{/*全体を覆い暗くするフィルター*/
-  @include position;
-  background-color:$color--mask-op-100;
-  opacity:0;  /*何もしていない時は透明*/
-  display:none;
-  transition: transform .100s,
+.js-overlay{/*普段はみえない*/
+  @include overlay;
+  display: none !important;
+  opacity: 0 !important;
 }
-  .c-overlay.show{/*MENUを押すと全体を覆う*/
-  display:block;
-  opacity:0.5;
+
+.js-overlay.is-show{/*buttonが押されたらみえる*/
+  @include overlay;
+  display: block !important;
+  opacity: 0.5;
 }
+.js-sidebar__menu__close-btn{ /*✕ボタン*/
+  display: block;
+  position: absolute;
+  top:1.75%;
+  right:6.81%;
+  width:32px;
+  height: auto;
+  color:$color--char-GY;
+  font-weight: normal;
+}
+
 @media screen and (min-width: 600px){
+  .js-sidebar.is-show{
+    display: block !important;
+    top:0;
+    right:0;
+}
   .toggle_btn{/*headerのMENUボタン*/
     display: block  !important;
     max-width: 10%;
@@ -37,9 +61,14 @@
 }
 }
 }
-
 @media screen and (min-width: 1250px){
-    .toggle_btn{/*headerのMENUボタン*/
-      display: none　!important;/*MENUボタンは表示しない*/
+  .js-sidebar{
+    display: block;
+}
+  .toggle_btn{/*headerのMENUボタン*/
+    display: none　!important;/*MENUボタンは表示しない*/
+}
+  .js-sidebar__menu__close-btn{  /*サイドバーの✕ボタン*/
+    display: none;/*PCの時は隠す*/
 }
 }

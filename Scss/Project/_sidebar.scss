@@ -53,16 +53,7 @@
     color: $color--char-GY;
 }
 }
-  .p-sidebar__menu__close-btn{ /*✕ボタン*/
-    display: block;
-    position: absolute;
-    top:1.75%;
-    right:6.81%;
-    width:32px;
-    height: auto;
-    color:$color--char-GY;
-    font-weight: normal;
-}
+
 
 @media screen and (min-width: 600px){
   .p-sidebar__nav{/*サイドバーのMenuの下：字の部分*/
@@ -129,7 +120,6 @@
     line-height:  1.32;
 }
 }
-
   .p-sidebar__nav{
   &__title{/*バーガー・サイド・ドリンク*/
     font-size: 1.25vw;
@@ -154,8 +144,5 @@
   &:last-child{/*各リストアイテムの詳細*/
     margin-bottom: 0;
 }
-}
-.p-sidebar__menu__close-btn{  /*サイドバーの✕ボタン*/
-  display: none;/*PCの時は隠す*/
 }
 }

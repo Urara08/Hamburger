@@ -1,11 +1,11 @@
 $(function(){
 window.onload = function(){
     $('.toggle_btn').on('click', function () {//MENUボタンをクリックすると
-    $('.toggle_btn, .l-sidebar, .p-sidebar__menu__close-btn , .c-overlay').toggleClass('show',)//サイドバーが出る
+    $('.toggle_btn, .js-sidebar, .js-sidebar__menu__close-btn , .js-overlay').toggleClass('is-show',)//サイドバーが出る
   });
 
-$('.p-sidebar__menu__close-btn').on('click', function () {//✕ボタンをクリックすると
-    $('.l-sidebar, .c-overlay').removeClass('show')//サイドバーが閉じる
+$('.js-sidebar__menu__close-btn').on('click', function () {//✕ボタンをクリックすると
+    $('.js-sidebar, .js-overlay').removeClass('is-show')//サイドバーが閉じる
   });
 
 $('input').focusin(function(e)  {//検索ボックスがフォーカスされると
@@ -17,6 +17,6 @@ $('input').focusout(function(e)  {//検索ボックスのフォーカスが外�
   });
 
 $(window).on('resize', function () {//画面をリサイズすると
-    $('.l-sidebar, .c-overlay').removeClass('show')//サイドバーが閉じる
+    $('.js-sidebar, .js-overlay').removeClass('is-show')//サイドバーが閉じる
   });
 }});

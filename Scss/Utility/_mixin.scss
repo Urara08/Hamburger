@@ -7,8 +7,9 @@
   align-items: $align;
 }
 
-//装飾の設定
+//特定の装飾の設定
 /*ロゴ*/
+/*Hamburgerの文字・MENUボタン*/
 @mixin logo($display: block, $height: auto, $font-weight: bold, $font-family:$font-family--Roboto, $color:$color--char-GY ) {
   display: block;
   height: auto;
@@ -16,12 +17,15 @@
   font-family:$font-family--Roboto;
   color:$color--char-GY;
 }
-//位置の設定
-@mixin position($position:absolute, $z-index: 100, $top:0, $left:0, $bottom: 0, $right: 0) {
-  position:absolute;
-  z-index: 100;
-  top:0px;
-  left:0px;
-  bottom: 0;
-  right: 0;
+
+
+/*全体を覆うマスク*/
+@mixin overlay($position:fixed, $z-index:150, $top:0px, $left:0px, $width: 100%, $height: 100%, $background-color:$color--mask-op-100) {
+position:fixed;
+z-index: 150;
+top:0px;
+left:0px;
+width: 100%;
+height: 100%;
+background-color:$color--mask-op-100;
 }

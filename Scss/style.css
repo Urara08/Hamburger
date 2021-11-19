@@ -82,6 +82,8 @@ table {
 /* フォントオーサム */
 /*関数の定義*/
 /*ロゴ*/
+/*Hamburgerの文字・MENUボタン*/
+/*全体を覆うマスク*/
 /* Base */
 html {
   text-decoration: none;
@@ -122,44 +124,85 @@ a {
 }
 
 /* jsから参照されるファイル */
-/*スタイルはつけない*/
+.js-sidebar.is-show {
+  display: block !important;
+  top: 0;
+  right: 0;
+}
+
 .toggle_btn {
   /*header側：MENUボタン*/
   display: block;
-  /*表示する*/
+  /*普段は表示する*/
   transition: transform 0.3s, opacity 0.3s;
 }
 
 .toggle_btn__label {
   display: inline-block;
+  /*普段は表示する*/
 }
 .toggle_btn__label__label:after {
   display: none;
   /*サイドバーが出たら隠す*/
 }
 
-.c-overlay {
+.js-overlay {
   /*全体を覆い暗くするフィルター*/
-  position: absolute;
-  z-index: 100;
+  position: fixed;
+  z-index: 150;
   top: 0px;
   left: 0px;
-  bottom: 0;
-  right: 0;
+  width: 100%;
+  height: 100%;
   background-color: #000000;
-  opacity: 0;
-  /*何もしていない時は透明*/
   display: none;
-  transition: transform 0.1s;
 }
 
-.c-overlay.show {
-  /*MENUを押すと全体を覆う*/
-  display: block;
+.js-overlay {
+  /*普段はみえない*/
+  position: fixed;
+  z-index: 150;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  display: none !important;
+  opacity: 0 !important;
+}
+
+.js-overlay.is-show {
+  /*buttonが押されたらみえる*/
+  position: fixed;
+  z-index: 150;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  display: block !important;
   opacity: 0.5;
 }
 
+.js-sidebar__menu__close-btn {
+  /*✕ボタン*/
+  display: block;
+  position: absolute;
+  top: 1.75%;
+  right: 6.81%;
+  width: 32px;
+  height: auto;
+  color: #707070;
+  font-weight: normal;
+}
+
 @media screen and (min-width: 600px) {
+  .js-sidebar.is-show {
+    display: block !important;
+    top: 0;
+    right: 0;
+  }
+
   .toggle_btn {
     /*headerのMENUボタン*/
     display: block !important;
@@ -177,10 +220,20 @@ a {
   }
 }
 @media screen and (min-width: 1250px) {
+  .js-sidebar {
+    display: block;
+  }
+
   .toggle_btn {
     /*headerのMENUボタン*/
     display: none　 !important;
     /*MENUボタンは表示しない*/
+  }
+
+  .js-sidebar__menu__close-btn {
+    /*サイドバーの✕ボタン*/
+    display: none;
+    /*PCの時は隠す*/
   }
 }
 /**
@@ -1634,18 +1687,6 @@ a {
   color: #707070;
 }
 
-.p-sidebar__menu__close-btn {
-  /*✕ボタン*/
-  display: block;
-  position: absolute;
-  top: 1.75%;
-  right: 6.81%;
-  width: 32px;
-  height: auto;
-  color: #707070;
-  font-weight: normal;
-}
-
 @media screen and (min-width: 600px) {
   .p-sidebar__nav {
     /*サイドバーのMenuの下：字の部分*/
@@ -1738,12 +1779,6 @@ a {
   .p-sidebar__nav:last-child {
     /*各リストアイテムの詳細*/
     margin-bottom: 0;
-  }
-
-  .p-sidebar__menu__close-btn {
-    /*サイドバーの✕ボタン*/
-    display: none;
-    /*PCの時は隠す*/
   }
 }
 /* Component ------------ */
