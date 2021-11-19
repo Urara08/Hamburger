@@ -1,0 +1,45 @@
+/*スタイルはつけない*/
+.toggle_btn{/*header側：MENUボタン*/
+  display: block;/*表示する*/
+  transition: transform .3s, opacity .3s;
+}
+.toggle_btn__label{
+  display: inline-block;
+
+  &__label:after{
+  display:none;/*サイドバーが出たら隠す*/
+}
+}
+
+.c-overlay{/*全体を覆い暗くするフィルター*/
+  @include position;
+  background-color:$color--mask-op-100;
+  opacity:0;  /*何もしていない時は透明*/
+  display:none;
+  transition: transform .100s,
+}
+  .c-overlay.show{/*MENUを押すと全体を覆う*/
+  display:block;
+  opacity:0.5;
+}
+@media screen and (min-width: 600px){
+  .toggle_btn{/*headerのMENUボタン*/
+    display: block  !important;
+    max-width: 10%;
+}
+  .toggle_btn__label{
+  display: inline-block;
+  font-size: 34px;
+  line-height:1.32;
+
+  &__labe:after{
+    display:none;/*サイドバーが出たら隠す*/
+}
+}
+}
+
+@media screen and (min-width: 1250px){
+    .toggle_btn{/*headerのMENUボタン*/
+      display: none　!important;/*MENUボタンは表示しない*/
+}
+}

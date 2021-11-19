@@ -5,10 +5,15 @@
 @import "./Foundation/reset";
 
 /* Utility ------------ */
-@import "./Utility/variables" ;
+@import "./Utility/variables";
+@import "./Utility/mixin.scss";
 
 /* Base */
-@import "./Foundation/_base";
+@import "./Foundation/base";
+
+/* jsから参照されるファイル */
+@import "./Foundation/function";
+
 /**
 * Layout
 * ========================== */

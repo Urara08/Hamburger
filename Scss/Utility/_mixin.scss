@@ -1,0 +1,27 @@
+/*関数の定義*/
+
+//flexの設定
+@mixin flex($justify: center, $align:center) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+//装飾の設定
+/*ロゴ*/
+@mixin logo($display: block, $height: auto, $font-weight: bold, $font-family:$font-family--Roboto, $color:$color--char-GY ) {
+  display: block;
+  height: auto;
+  font-weight: bold;
+  font-family:$font-family--Roboto;
+  color:$color--char-GY;
+}
+//位置の設定
+@mixin position($position:absolute, $z-index: 100, $top:0, $left:0, $bottom: 0, $right: 0) {
+  position:absolute;
+  z-index: 100;
+  top:0px;
+  left:0px;
+  bottom: 0;
+  right: 0;
+}
