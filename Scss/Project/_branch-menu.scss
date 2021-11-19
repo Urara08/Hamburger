@@ -87,7 +87,6 @@
 }
 
   &__box--bottom {/*白いBOX:下*/
-    position: relative;
     display: inline-block;
     width: 100%;
     min-width:89.8%;
@@ -205,9 +204,6 @@
 
 .p-contents__branch-menu{
   &__box--top {/*白いBOX:上*/
-  position: relative;
-  top:0;
-  left: 0;
   min-width:92.21%;
   min-height: 15%;/*字が飛び出ないように*/
   padding-top: 14.5%;
@@ -219,9 +215,7 @@
 
 
   &__box--bottom {/*白いBOX:下*/
-  position: relative;
   max-width:100%;
-  position: relative;
   min-width:92.21%;
   min-height: 15%;
   padding-top: 14.5%;
@@ -330,7 +324,6 @@
 
 .p-contents__branch-menu{
   &__box--top {/*白いBOX:上 */
-  position: relative;
   max-width:100% !important;
   min-width:92.47%;
   min-height:14.54%;/*字が飛び出ないように*/
@@ -341,7 +334,6 @@
 }
 
   &__box--bottom {/*白いBOX:下 */
-  position: relative;
   max-width:100% !important;
   min-width:92.47%;
   min-height: 14.54%;/*字が飛び出ないように*/
