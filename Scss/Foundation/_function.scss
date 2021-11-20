@@ -3,43 +3,6 @@
   top:0;
   right:0;
 }
-.toggle_btn{/*header側：MENUボタン*/
-  display: block;/*普段は表示する*/
-  transition: transform .3s, opacity .3s;
-}
-.toggle_btn__label{
-  display: inline-block;/*普段は表示する*/
-
-  &__label:after{
-  display:none;/*サイドバーが出たら隠す*/
-}
-}
-.js-overlay{/*全体を覆い暗くするフィルター*/
-  @include overlay;
-  display: none;
-}
-
-.js-overlay{/*普段はみえない*/
-  @include overlay;
-  display: none !important;
-  opacity: 0;
-}
-
-.js-overlay.is-show{/*buttonが押されたらみえる*/
-  @include overlay;
-  display: block;
-  opacity: 0.5;
-}
-.js-sidebar__menu__close-btn{ /*✕ボタン*/
-  display: block;
-  position: absolute;
-  top:1.75%;
-  right:6.81%;
-  width:32px;
-  height: auto;
-  color:$color--char-GY;
-  font-weight: normal;
-}
 
 @media screen and (min-width: 600px){
   .js-sidebar.is-show{
@@ -47,30 +10,9 @@
     top:0;
     right:0;
 }
-  .toggle_btn{/*headerのMENUボタン*/
-    display: block  !important;
-    max-width: 10%;
-}
-  .toggle_btn__label{
-  display: inline-block;
-  font-size: 34px;
-  line-height:1.32;
-
-  &__labe:after{
-    display:none;/*サイドバーが出たら隠す*/
-}
-}
 }
 @media screen and (min-width: 1250px){
 .js-sidebar{
   display: block;
 }
-    .toggle_btn{/*headerのMENUボタン*/
-      display: none　!important;/*MENUボタンは表示しない*/
-}
-.js-sidebar__menu__close-btn{  /*サイドバーの✕ボタン*/
-  display: none;/*PCの時は隠す*/
-}
-
-
 }
