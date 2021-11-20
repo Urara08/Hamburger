@@ -1,5 +1,5 @@
 .js-sidebar.is-show{
-  display: block !important;
+  display: block;
   top:0;
   right:0;
 }
@@ -22,12 +22,12 @@
 .js-overlay{/*普段はみえない*/
   @include overlay;
   display: none !important;
-  opacity: 0 !important;
+  opacity: 0;
 }
 
 .js-overlay.is-show{/*buttonが押されたらみえる*/
   @include overlay;
-  display: block !important;
+  display: block;
   opacity: 0.5;
 }
 .js-sidebar__menu__close-btn{ /*✕ボタン*/
@@ -62,13 +62,15 @@
 }
 }
 @media screen and (min-width: 1250px){
-  .js-sidebar{
-    display: block;
+.js-sidebar{
+  display: block;
 }
-  .toggle_btn{/*headerのMENUボタン*/
-    display: none　!important;/*MENUボタンは表示しない*/
+    .toggle_btn{/*headerのMENUボタン*/
+      display: none　!important;/*MENUボタンは表示しない*/
 }
-  .js-sidebar__menu__close-btn{  /*サイドバーの✕ボタン*/
-    display: none;/*PCの時は隠す*/
+.js-sidebar__menu__close-btn{  /*サイドバーの✕ボタン*/
+  display: none;/*PCの時は隠す*/
 }
+
+
 }

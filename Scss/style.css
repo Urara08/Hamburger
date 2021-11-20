@@ -124,118 +124,7 @@ a {
 }
 
 /* jsから参照されるファイル */
-.js-sidebar.is-show {
-  display: block !important;
-  top: 0;
-  right: 0;
-}
-
-.toggle_btn {
-  /*header側：MENUボタン*/
-  display: block;
-  /*普段は表示する*/
-  transition: transform 0.3s, opacity 0.3s;
-}
-
-.toggle_btn__label {
-  display: inline-block;
-  /*普段は表示する*/
-}
-.toggle_btn__label__label:after {
-  display: none;
-  /*サイドバーが出たら隠す*/
-}
-
-.js-overlay {
-  /*全体を覆い暗くするフィルター*/
-  position: fixed;
-  z-index: 150;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-  background-color: #000000;
-  display: none;
-}
-
-.js-overlay {
-  /*普段はみえない*/
-  position: fixed;
-  z-index: 150;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-  background-color: #000000;
-  display: none !important;
-  opacity: 0 !important;
-}
-
-.js-overlay.is-show {
-  /*buttonが押されたらみえる*/
-  position: fixed;
-  z-index: 150;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-  background-color: #000000;
-  display: block !important;
-  opacity: 0.5;
-}
-
-.js-sidebar__menu__close-btn {
-  /*✕ボタン*/
-  display: block;
-  position: absolute;
-  top: 1.75%;
-  right: 6.81%;
-  width: 32px;
-  height: auto;
-  color: #707070;
-  font-weight: normal;
-}
-
-@media screen and (min-width: 600px) {
-  .js-sidebar.is-show {
-    display: block !important;
-    top: 0;
-    right: 0;
-  }
-
-  .toggle_btn {
-    /*headerのMENUボタン*/
-    display: block !important;
-    max-width: 10%;
-  }
-
-  .toggle_btn__label {
-    display: inline-block;
-    font-size: 34px;
-    line-height: 1.32;
-  }
-  .toggle_btn__label__labe:after {
-    display: none;
-    /*サイドバーが出たら隠す*/
-  }
-}
-@media screen and (min-width: 1250px) {
-  .js-sidebar {
-    display: block;
-  }
-
-  .toggle_btn {
-    /*headerのMENUボタン*/
-    display: none　 !important;
-    /*MENUボタンは表示しない*/
-  }
-
-  .js-sidebar__menu__close-btn {
-    /*サイドバーの✕ボタン*/
-    display: none;
-    /*PCの時は隠す*/
-  }
-}
+/* @import "./Foundation/function";*/
 /**
 * Layout
 * ========================== */
@@ -1687,6 +1576,18 @@ a {
   color: #707070;
 }
 
+.p-sidebar__menu__close-btn {
+  /*✕ボタン*/
+  display: block;
+  position: absolute;
+  top: 1.75%;
+  right: 6.81%;
+  width: 32px;
+  height: auto;
+  color: #707070;
+  font-weight: normal;
+}
+
 @media screen and (min-width: 600px) {
   .p-sidebar__nav {
     /*サイドバーのMenuの下：字の部分*/
@@ -1747,7 +1648,7 @@ a {
     margin-left: 13.62%;
   }
 
-  .p-sidebar__nav__label {
+  .p-sideba__nav__label {
     /*サイドバーのMenu*/
     display: block !important;
     margin-bottom: 85px;
@@ -1780,66 +1681,107 @@ a {
     /*各リストアイテムの詳細*/
     margin-bottom: 0;
   }
+
+  .p-sidebar__menu__close-btn {
+    /*サイドバーの✕ボタン*/
+    display: none;
+    /*PCの時は隠す*/
+  }
 }
 /* Component ------------ */
 /*スマホ----*/
-.c-header__logo {
+.c-logo {
   /*Hamburgerのロゴ*/
   display: block;
-  height: auto;
-  font-weight: bold;
-  font-family: "Roboto", sans-serif;
-  color: #707070;
   max-width: 54.13%;
   margin: 5px auto 38px auto;
   /*38px：検索BOXまでの距離*/
+  height: auto;
+  font-family: "Roboto", sans-serif;
   font-size: 10.66vw;
+  color: #707070;
   line-height: 1.32;
+  font-weight: bold;
 }
 
-.c-header__menu-btn {
-  /*headerのMENUボタン*/
+.toggle_btn {
+  /*header側：MENUボタン*/
   display: block;
-  height: auto;
-  font-weight: bold;
-  font-family: "Roboto", sans-serif;
-  color: #707070;
+  /*表示する*/
   position: absolute;
-  z-index: 50;
   top: 14px;
   right: 16px;
   /*headerの右上に配置*/
+  z-index: 50;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.toggle_btn__label {
+  font-family: "Roboto", sans-serif;
   font-size: 5.33vw;
   /*20px（カンプ）*/
+  font-weight: bold;
+  color: #707070;
   line-height: 1.3;
 }
-.c-header__menu-btn__label:after {
-  font-size: 5.33vw;
-  /*20px（カンプ）*/
-  line-height: 1.3;
+.toggle_btn__label__labe:after {
+  display: none;
+  /*サイドバーが出たら隠す*/
+}
+
+.c-overlay {
+  /*全体を暗くするfilter―*/
+  position: fixed;
+  z-index: 150;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  opacity: 0;
+  /*何もしていない時は透明*/
+  display: none;
+  transition: transform 0.1s;
+}
+
+.c-overlay.show {
+  /*MENUを押すと全体を覆う*/
+  display: block;
+  opacity: 0.5;
 }
 
 /*タブレット*/
 @media screen and (min-width: 600px) {
-  /*js-Hamburgerのロゴ*/
-  .c-header__logo {
+  .c-logo {
     font-size: 4.8vw;
     max-width: 24.34%;
+  }
+
+  .toggle_btn {
+    /*headerのMENUボタン*/
+    display: block;
+    max-width: 10%;
+  }
+  .toggle_btn__label {
+    font-size: 34px;
+    line-height: 1.32;
   }
 }
 /* PC */
 @media screen and (min-width: 1250px) {
-  /*Hamburgerのロゴ*/
-  .c-header__logo {
+  .c-logo {
+    display: block;
     max-width: 20.92%;
+    height: auto;
     margin-left: 4% !important;
     font-size: 4.12vw;
+    color: #707070;
     line-height: 1.31;
   }
 
-  .c-header__menu-btn {
-    /*headerのMENUボタン*/
-    display: none !important;
-    /*PCの時は隠す*/
+  /*headerのMENUボタン*/
+  .toggle_btn {
+    display: none;
+    /*MENUボタンは表示しない*/
   }
 }/*# sourceMappingURL=style.css.map */
