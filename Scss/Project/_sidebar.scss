@@ -18,7 +18,12 @@
 }
 .p-sidebar__nav{
 &__label{ /*サイドバーのMenu*/
-  display: none;/*スマホ時は隠す*/
+  display: block !important;
+  margin-bottom: 85px;
+  font-size: 1.77vw;
+  font-weight: bold;
+  color: $color--char-GY;
+  line-height:  1.32;
 }
 }
 .p-sidebar__nav{

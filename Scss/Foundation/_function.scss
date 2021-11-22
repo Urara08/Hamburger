@@ -2,3 +2,6 @@
 .js-search-form__icon.is-active{/*アクティブになったら消える */
 display: none !important;
 }
+.js-overlay.show{
+display: block !important;
+}
