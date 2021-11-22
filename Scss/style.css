@@ -123,7 +123,12 @@ a {
 }
 
 /*** jsから参照されるファイル ***/
-/* @import "./Foundation/function";*/
+/*検索BOXの虫眼鏡 */
+.js-search-form__icon.is-active {
+  /*アクティブになったら消える */
+  display: none !important;
+}
+
 /**
 * Layout
 * ========================== */
@@ -366,10 +371,6 @@ a {
   height: auto;
   font-size: 6.4vw;
 }
-.p-search-form__icon.active {
-  display: none;
-  /*アクティブになったら消える */
-}
 
 @media screen and (min-width: 600px) {
   .p-search-form {
@@ -409,9 +410,8 @@ a {
     -ms-transform: translate(-50%, -50%);
   }
 
-  .p-search-form__icon.active {
-    display: none;
-    /*アクティブになったら消える */
+  .js-search-form__icon.is-active {
+    display: none !important;
   }
 }
 @media screen and (min-width: 1250px) {

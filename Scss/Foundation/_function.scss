@@ -1,18 +1,4 @@
-.js-sidebar.is-show{
-  display: block;
-  top:0;
-  right:0;
-}
-
-@media screen and (min-width: 600px){
-  .js-sidebar.is-show{
-    display: block !important;
-    top:0;
-    right:0;
-}
-}
-@media screen and (min-width: 1250px){
-.js-sidebar{
-  display: block;
-}
+/*検索BOXの虫眼鏡 */
+.js-search-form__icon.is-active{/*アクティブになったら消える */
+display: none !important;
 }

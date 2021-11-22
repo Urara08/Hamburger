@@ -62,10 +62,6 @@
   max-width: 6% !important;
   height: auto;
   font-size: 6.4vw;
-
-&.active{
-  display: none;/*アクティブになったら消える */
-}
 }
 @media screen and (min-width: 600px){
 .p-search-form{
@@ -98,9 +94,10 @@
   -webkit-transform: translate(-3.03%, -50%);
   -ms-transform: translate(-50%, -50%);
 }
-.p-search-form__icon.active{
-  display: none;/*アクティブになったら消える */
-}
+
+.js-search-form__icon.is-active{
+  display: none !important;
+  }
 }
 
 @media screen and (min-width: 1250px){
