@@ -5,3 +5,9 @@ display: none !important;
 .js-overlay.show{
 display: block !important;
 }
+.js-sidebar.show{
+  right: 0;
+}
+.js-sidebar__menu__close-btn.show{
+  display: block;
+}

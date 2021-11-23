@@ -1,11 +1,17 @@
 .p-sidebar{
-  position: relative;
+  position:fixed;/*scrollさせる*/
+  z-index: 200;
+  top:0;
+  right:-250vw;/*何もしていない時は右側に隠す*/
   padding-top: 7.62%;
   padding-bottom: 51.69%;/*背景色の足りない部分を埋める*/
+  width:87.46%;
+  height: 100vh;
   margin: 0;
   background-color: $color--base-li-dark-OR;
   font-family: $font-family--M-plus;
   transition: all 0.3s;
+  overflow-y: scroll;
 
 &__nav{/*サイドバーのMenuから下の部分*/
   position: relative;
@@ -58,18 +64,28 @@
   color: $color--char-GY;
 }
 }
-.p-sidebar__menu__close-btn{ /*✕ボタン*/
+.p-sidebar__menu__close-btn.show,
+.fal.show{ /*✕ボタン*/
   display: block;
   position: absolute;
-  top:1.75%;
-  right:6.81%;
-  width:32px;
-  height: auto;
-  color:$color--char-GY;
-  font-weight: normal;
+  top:25px !important;
+  right:17px !important;
+  width:32px !important;
+  height: auto !important;
+  color:$color--char-GY !important;
+  font-weight: normal !important;
+}
+.p-sidebar.show{/*クラスshowがついたら*/
+  top:0;/*位置を0に*/
+  right:0;
 }
 
 @media screen and (min-width: 600px){
+.p-sidebar.show{/*sidebarが現れた時*/
+  max-width:44%;
+  top:0;/*位置を0に*/
+  right:0;
+}
 .p-sidebar__nav{/*サイドバーのMenuの下：字の部分*/
   position: relative;
   min-width:70.29% ;
@@ -105,9 +121,12 @@
 }
 @media screen and (min-width: 1250px){
 .p-sidebar{
-  position: relative;
   display: block !important;
-  max-width:100% !important;
+  position: relative;
+  top:0 !important;
+  right: 0 !important;
+  width:100% !important;
+  height: 100%;/*ないと高さが切れる*/
   min-height: 100%;
   padding-top: 0;
   overflow-y: hidden;
@@ -161,6 +180,6 @@
 }
 }
 .p-sidebar__menu__close-btn{  /*サイドバーの✕ボタン*/
-display: none;/*PCの時は隠す*/
+display: none !important;/*PCの時は隠す*/
 }
 }
