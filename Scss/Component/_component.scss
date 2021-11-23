@@ -1,6 +1,6 @@
 /*スマホ----*/
 /*ロゴ*/
-.c-logo{
+.c-logo{/*mixin*/
   display: inline-block;
   height: auto;
   font-family:$font-family--Roboto;
@@ -23,7 +23,7 @@
 
 /*ボタン*/
 /*-----------------------------------*/
-.c-btn{
+.c-btn{/*mixin*/
   display: block;
   position: absolute;
   height: auto;
@@ -35,21 +35,24 @@
   @include c-button;
   width: 13.6%;
 }
-/*header側：MENUボタンの位置調整*/
-.c-btn--menu__wrapper{
+
+.c-btn--menu__wrapper{/*header側：MENUボタンの位置調整*/
   position: absolute;
   top:14px !important;
   right: 16px;/*headerの右上に配置*/
   z-index: 50;
 }
-/*MENUボタンの字のスタイル*/
-.c-btn--menu__label{
+
+.c-btn--menu__label{/*MENUボタンの字のスタイル*/
   @include c-logo;
   font-size: 5.33vw;/*20px*/
   line-height:1.3;
 }
 
-.c-overlay.is-show{/*全体を暗くするフィルター*/
+/*フィルター/
+/*-----------------------------------*/
+/*全体を暗くするフィルター*/
+.c-overlay{/*mixin*/
   display: none;
   position:fixed;
   z-index: 150;
@@ -62,25 +65,33 @@
   opacity:0.5;
 }
 
+.c-overlay.is-show{/*jsのスタイル*/
+  @include c-overlay
+}
+
 /*タブレット*/
 @media screen and (min-width: 600px){
+/*ロゴ/
+/*-----------------------------------*/
 /*Hamburgerのロゴ*/
   .c-logo--title--hamburger{
   @include c-logo;
   max-width: 24.34% !important;
   font-size: 4.79vw;
   }
+/*ボタン/
+/*-----------------------------------*/
 /*headerのMENUボタン*/
   .c-btn--menu{
   display: block;
   max-width: 10%;
-/*headerのMENUボタンの字のスタイル*/
-  &__label{
+
+  &__label{/*headerのMENUボタンの字のスタイル*/
   font-size: 34px;
   line-height:1.32;
 }
-/*header側：MENUボタンの位置調整*/
-　&__wrapper{
+
+  &__wrapper{/*header側：MENUボタンの位置調整*/
   position: absolute;
   top:18px !important;
   right: 26px;/*headerの右上に配置*/
@@ -89,6 +100,8 @@
 }
 /* PC */
 @media screen and (min-width: 1250px){
+/*ロゴ*/
+/*-----------------------------------*/
 /*Hamburgerのロゴ*/
  .c-logo--title--hamburger{
   @include c-logo;
@@ -97,10 +110,11 @@
   line-height:1.31;
 }
 
-/*Hamburgerのロゴの位置を調整*/
-  .c-wrapper__logo{
+  .c-wrapper__logo{/*Hamburgerのロゴの位置を調整*/
   margin-left: 4% !important;
 }
+/*ボタン/
+/*-----------------------------------*/
 /*headerのMENUボタン*/
   .c-btn--menu{
   display: none;/*PCではheaderにMENUボタンは表示しない*/
