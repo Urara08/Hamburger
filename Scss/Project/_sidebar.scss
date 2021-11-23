@@ -24,8 +24,8 @@
 }
 
 .p-sidebar__nav{
-  &__label{ /*サイドバーのMenu*/
-    display: none;
+&__label{ /*サイドバーのMenu*/
+  display: none;
   }
 }
 .p-sidebar__nav{
@@ -50,7 +50,7 @@
   margin-bottom: 22px;
 
 &:last-child{/*各リストアイテムの詳細*/
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 }
 .p-sidebar__nav{

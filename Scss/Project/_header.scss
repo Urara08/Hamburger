@@ -1,10 +1,10 @@
 .p-header{
+  position: relative;
   height:217px;
-  padding-top: 40px;/*paddingで画面縮小しても高さが潰れないように*/
-  padding-bottom: 40px;/*paddingで画面縮小しても高さが潰れないように*/
+  padding-top: 40px;/*可変で縦が潰れないように設定*/
+  padding-bottom: 40px;/*可変で縦が潰れないように設定*/
   background-color: $color--base-li-OR;
   box-sizing: border-box;
-  overflow: hidden;
 
 &__wrapper{
   display: flex;
@@ -17,12 +17,12 @@
 @media screen and (min-width: 1250px){
 .p-header{
   height:217px;
-  padding-top: 68px ;/*paddingで画面縮小しても高さが潰れないように*/
-  padding-bottom:68px;/*paddingで画面縮小しても高さが潰れないように*/
+  padding-top: 68px ;/*可変で縦が潰れないように設定*/
+  padding-bottom:68px;/*可変で縦が潰れないように設定*/
 
 &__wrapper{
   display:flex;
-  flex-direction: row;
+  flex-direction: row;/*Hamburgerと検索BOXを横並びに*/
   justify-content: center;
   height:100%;
 }
