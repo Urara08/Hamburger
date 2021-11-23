@@ -83,6 +83,7 @@ table {
 /*関数の定義*/
 /*ロゴ*/
 /*Hamburgerの文字・MENUボタン*/
+/*ボタン*/
 /* Base */
 html {
   text-decoration: none;
@@ -1498,12 +1499,14 @@ a {
   position: fixed;
   /*scrollさせる*/
   z-index: 200;
+  /*一番上に表示*/
   top: 0;
   right: -250vw;
-  /*何もしていない時は右側に隠す*/
+  /*ボタンが押されていない時は右側に隠す*/
   padding-top: 7.62%;
+  /*背景色が切れて足りない部分を埋める*/
   padding-bottom: 51.69%;
-  /*背景色の足りない部分を埋める*/
+  /*背景色が切れて足りない部分を埋める*/
   width: 87.46%;
   height: 100vh;
   margin: 0;
@@ -1523,12 +1526,13 @@ a {
 }
 
 .p-sidebar__nav__label {
-  /*サイドバーのMenu*/
+  /*サイドバーの Menu*/
   display: none;
+  /*スマホ・タブレットの時は非表示*/
 }
 
 .p-sidebar__nav__title {
-  /*バーガー・サイド・ドリンク*/
+  /*バーガー・サイド・ドリンクの標題*/
   display: block;
   margin-bottom: 40px;
   font-size: 24px;
@@ -1537,11 +1541,11 @@ a {
 }
 .p-sidebar__nav__list {
   /*__titleを除いた各（バーガー・サイド・ドリンク）メーニュー群の箱*/
+  width: 65.39%;
   margin-bottom: 40px !important;
   padding-left: 8%;
-  width: 65.39%;
-  font-weight: 400;
   font-size: 20px;
+  font-weight: 400;
   line-height: 1.5;
   color: #707070;
 }
@@ -1551,7 +1555,7 @@ a {
   margin-bottom: 22px;
 }
 .p-sidebar__nav__list__item:last-child {
-  /*各リストアイテムの詳細*/
+  /*各リストアイテムの一番最後*/
   margin-bottom: 0;
 }
 
@@ -1575,14 +1579,20 @@ a {
   font-weight: normal !important;
 }
 
+/*js-クラスのスタイル詳細*/
 .p-sidebar.is-show {
   /*クラスis-showがついたら*/
   top: 0;
   /*位置を0に*/
   right: 0;
+  /*画面の右側を起点に表示*/
 }
 
 @media screen and (min-width: 600px) {
+  .p-sidebar {
+    width: 44%;
+  }
+
   .p-sidebar.is-show {
     /*sidebarが現れた時*/
     max-width: 44%;
@@ -1592,7 +1602,7 @@ a {
   }
 
   .p-sidebar__nav {
-    /*サイドバーのMenuの下：字の部分*/
+    /*サイドバーのMenuの下の字の部分*/
     position: relative;
     min-width: 70.29%;
     height: auto;
@@ -1636,7 +1646,7 @@ a {
     right: 0 !important;
     width: 100% !important;
     height: 100%;
-    /*ないと高さが切れる*/
+    /*100%で指定してないと高さが切れる*/
     min-height: 100%;
     padding-top: 0;
     overflow-y: hidden;
@@ -1696,47 +1706,75 @@ a {
 }
 /* Component ------------ */
 /*スマホ----*/
+/*ロゴ*/
 .c-logo {
-  /*Hamburgerのロゴ*/
-  display: block;
-  max-width: 54.13%;
-  margin: 5px auto 38px auto;
-  /*38px：検索BOXまでの距離*/
+  display: inline-block;
   height: auto;
   font-family: "Roboto", sans-serif;
-  font-size: 10.66vw;
   color: #707070;
-  line-height: 1.32;
   font-weight: bold;
 }
 
-.toggle_btn {
-  /*header側：MENUボタン*/
+/*Hamburgerのロゴ*/
+.c-logo--title--hamburger {
   display: block;
-  /*表示する*/
+  height: auto;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  color: #707070;
+  max-width: 54.13%;
+  font-size: 10.66vw;
+  line-height: 1.32;
+}
+
+/*Hamburgerのロゴの位置調整*/
+.c-wrapper__logo {
+  margin: 5px auto 38px auto;
+  /*38px：c-logo--title--hamburgerと検索BOXまでの距離*/
+}
+
+/*ボタン*/
+/*-----------------------------------*/
+.c-btn {
+  display: block;
   position: absolute;
-  top: 14px;
-  right: 16px;
-  /*headerの右上に配置*/
-  z-index: 50;
+  width: 13.6%;
+  height: auto;
+  cursor: pointer;
   transition: transform 0.3s, opacity 0.3s;
 }
 
-.toggle_btn__label {
+/*header側：MENUボタン*/
+.c-btn--menu {
+  display: block;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s opacity 0.3s;
+}
+
+/*header側：MENUボタンの位置調整*/
+.c-btn--menu__wrapper {
+  position: absolute;
+  top: 14px !important;
+  right: 16px;
+  /*headerの右上に配置*/
+  z-index: 50;
+}
+
+/*MENUボタンの字のスタイル*/
+.c-btn--menu__label {
+  display: block;
+  height: auto;
   font-family: "Roboto", sans-serif;
-  font-size: 5.33vw;
-  /*20px（カンプ）*/
   font-weight: bold;
   color: #707070;
+  font-size: 5.33vw;
+  /*20px*/
   line-height: 1.3;
-}
-.toggle_btn__label__labe:after {
-  display: none;
-  /*サイドバーが出たら隠す*/
 }
 
 .c-overlay.is-show {
-  /*全体を暗くするfilter―*/
+  /*全体を暗くするフィルター*/
   display: none;
   position: fixed;
   z-index: 150;
@@ -1751,36 +1789,58 @@ a {
 
 /*タブレット*/
 @media screen and (min-width: 600px) {
-  .c-logo {
-    font-size: 4.8vw;
-    max-width: 24.34%;
+  /*Hamburgerのロゴ*/
+  .c-logo--title--hamburger {
+    display: block;
+    height: auto;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    color: #707070;
+    max-width: 24.34% !important;
+    font-size: 4.79vw;
   }
 
-  .toggle_btn {
-    /*headerのMENUボタン*/
+  /*headerのMENUボタン*/
+  .c-btn--menu {
     display: block;
     max-width: 10%;
+    /*headerのMENUボタンの字のスタイル*/
   }
-  .toggle_btn__label {
+  .c-btn--menu__label {
     font-size: 34px;
     line-height: 1.32;
+  }
+
+  /*header側：MENUボタンの位置調整*/
+  .c-btn--menu__wrapper {
+    position: absolute;
+    top: 18px !important;
+    right: 26px;
+    /*headerの右上に配置*/
   }
 }
 /* PC */
 @media screen and (min-width: 1250px) {
-  .c-logo {
+  /*Hamburgerのロゴ*/
+  .c-logo--title--hamburger {
     display: block;
-    max-width: 20.92%;
     height: auto;
-    margin-left: 4% !important;
-    font-size: 4.12vw;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
     color: #707070;
+    max-width: 10% !important;
+    font-size: 4.12vw;
     line-height: 1.31;
   }
 
+  /*Hamburgerのロゴの位置を調整*/
+  .c-wrapper__logo {
+    margin-left: 4% !important;
+  }
+
   /*headerのMENUボタン*/
-  .toggle_btn {
+  .c-btn--menu {
     display: none;
-    /*MENUボタンは表示しない*/
+    /*PCではheaderにMENUボタンは表示しない*/
   }
 }/*# sourceMappingURL=style.css.map */

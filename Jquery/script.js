@@ -1,7 +1,7 @@
 $(function(){
   window.onload = function(){
-      $('.toggle_btn').on('click', function () {//MENUボタンをクリックすると
-      $('.toggle_btn, .js-sidebar, .js-sidebar__menu__close-btn , .js-overlay').toggleClass('is-show',)//サイドバーが出る
+      $('.c-btn--menu').on('click', function () {//MENUボタンをクリックすると
+      $('.c-btn--menu, .js-sidebar, .js-sidebar__menu__close-btn , .js-overlay').toggleClass('is-show',)//サイドバーが出る
     });
 
   $('.js-sidebar__menu__close-btn').on('click', function () {//✕ボタンをクリックすると

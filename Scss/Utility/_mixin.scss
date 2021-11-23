@@ -1,18 +1,18 @@
 /*関数の定義*/
-//flexの設定
-@mixin flex($justify: center, $align:center) {
-  display: flex;
-  justify-content: $justify;
-  align-items: $align;
-}
-
-//特定の装飾の設定
 /*ロゴ*/
 /*Hamburgerの文字・MENUボタン*/
-@mixin logo($display: block, $height: auto, $font-weight: bold, $font-family:$font-family--Roboto, $color:$color--char-GY ) {
+@mixin c-logo($display:block, $height:auto, $font-family:$font-family--Roboto, $font-weight: bold, $color:$color--char-GY) {
   display: block;
   height: auto;
-  font-weight: bold;
   font-family:$font-family--Roboto;
+  font-weight: bold;
   color:$color--char-GY;
+}
+
+/*ボタン*/
+@mixin c-button($display: block, $height: auto, $cursor: pointer, $transition: transform .3s opacity .3s) {
+  display: block;
+  height: auto;
+  cursor: pointer;
+  transition: transform .3s opacity .3s;
 }
