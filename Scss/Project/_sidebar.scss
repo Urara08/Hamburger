@@ -22,15 +22,11 @@
   padding-left: 0;
 }
 }
+
 .p-sidebar__nav{
-&__label{ /*サイドバーのMenu*/
-  display: block !important;
-  margin-bottom: 85px;
-  font-size: 1.77vw;
-  font-weight: bold;
-  color: $color--char-GY;
-  line-height:  1.32;
-}
+  &__label{ /*サイドバーのMenu*/
+    display: none;
+  }
 }
 .p-sidebar__nav{
 &__title{/*バーガー・サイド・ドリンク*/
@@ -64,8 +60,8 @@
   color: $color--char-GY;
 }
 }
-.p-sidebar__menu__close-btn.show,
-.fal.show{ /*✕ボタン*/
+.p-sidebar__menu__close-btn.is-show,
+.fal.is-show{ /*✕ボタン*/
   display: block;
   position: absolute;
   top:25px !important;
@@ -75,13 +71,13 @@
   color:$color--char-GY !important;
   font-weight: normal !important;
 }
-.p-sidebar.show{/*クラスshowがついたら*/
+.p-sidebar.is-show{/*クラスis-showがついたら*/
   top:0;/*位置を0に*/
   right:0;
 }
 
 @media screen and (min-width: 600px){
-.p-sidebar.show{/*sidebarが現れた時*/
+.p-sidebar.is-show{/*sidebarが現れた時*/
   max-width:44%;
   top:0;/*位置を0に*/
   right:0;
@@ -143,15 +139,13 @@
   margin-left:13.62%;
 }
 }
-.p-sideba__nav{
-&__label{/*サイドバーのMenu*/
+.p-sidebar__nav__label{/*サイドバーのMenu*/
   display: block !important;
   margin-bottom: 85px;
-  font-size: 1.77vw;
+  font-size: 1.77vw !important;
   font-weight: bold;
   color: $color--char-GY;
   line-height:  1.32;
-}
 }
 
 .p-sidebar__nav{

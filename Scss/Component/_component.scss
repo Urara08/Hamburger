@@ -30,7 +30,7 @@
 }
 }
 
-.c-overlay.show{/*全体を暗くするfilter―*/
+.c-overlay.is-show{/*全体を暗くするfilter―*/
   display: none;
   position:fixed;
   z-index: 150;

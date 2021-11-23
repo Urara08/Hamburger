@@ -129,15 +129,15 @@ a {
   display: none !important;
 }
 
-.js-overlay.show {
+.js-overlay.is-show {
   display: block !important;
 }
 
-.js-sidebar.show {
+.js-sidebar.is-show {
   right: 0;
 }
 
-.js-sidebar__menu__close-btn.show {
+.js-sidebar__menu__close-btn.is-show {
   display: block;
 }
 
@@ -1524,12 +1524,7 @@ a {
 
 .p-sidebar__nav__label {
   /*サイドバーのMenu*/
-  display: block !important;
-  margin-bottom: 85px;
-  font-size: 1.77vw;
-  font-weight: bold;
-  color: #707070;
-  line-height: 1.32;
+  display: none;
 }
 
 .p-sidebar__nav__title {
@@ -1567,8 +1562,8 @@ a {
   color: #707070;
 }
 
-.p-sidebar__menu__close-btn.show,
-.fal.show {
+.p-sidebar__menu__close-btn.is-show,
+.fal.is-show {
   /*✕ボタン*/
   display: block;
   position: absolute;
@@ -1580,15 +1575,15 @@ a {
   font-weight: normal !important;
 }
 
-.p-sidebar.show {
-  /*クラスshowがついたら*/
+.p-sidebar.is-show {
+  /*クラスis-showがついたら*/
   top: 0;
   /*位置を0に*/
   right: 0;
 }
 
 @media screen and (min-width: 600px) {
-  .p-sidebar.show {
+  .p-sidebar.is-show {
     /*sidebarが現れた時*/
     max-width: 44%;
     top: 0;
@@ -1659,11 +1654,11 @@ a {
     margin-left: 13.62%;
   }
 
-  .p-sideba__nav__label {
+  .p-sidebar__nav__label {
     /*サイドバーのMenu*/
     display: block !important;
     margin-bottom: 85px;
-    font-size: 1.77vw;
+    font-size: 1.77vw !important;
     font-weight: bold;
     color: #707070;
     line-height: 1.32;
@@ -1740,7 +1735,7 @@ a {
   /*サイドバーが出たら隠す*/
 }
 
-.c-overlay.show {
+.c-overlay.is-show {
   /*全体を暗くするfilter―*/
   display: none;
   position: fixed;
