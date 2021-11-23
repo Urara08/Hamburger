@@ -241,6 +241,7 @@ a {
     grid-column: 2/-1;
     /*隠さず一番右端に表示*/
     grid-row: 1/-2;
+    overflow-y: hidden;
   }
 }
 /* Object
