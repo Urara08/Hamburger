@@ -40,6 +40,7 @@ color:  $color--char-WH;
 }
 }
 
+/* タブレット */
 @media screen and (min-width: 600px){
 .p-hero{
 position: relative;
@@ -80,6 +81,7 @@ line-height:54 / 36;
 }
 }
 
+/* PC */
 @media screen and (min-width: 1250px){
 .p-hero{
 max-width: 100%;

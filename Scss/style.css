@@ -240,6 +240,7 @@ a {
 }
 /* Object
 * ========================== */
+/* スマートフォン・タブレット */
 .p-header {
   position: relative;
   height: 217px;
@@ -275,6 +276,7 @@ a {
     height: 100%;
   }
 }
+/* スマホ */
 .p-search-form {
   position: relative;
   width: 85.33%;
@@ -348,6 +350,7 @@ a {
   font-size: 6.4vw;
 }
 
+/* タブレット */
 @media screen and (min-width: 600px) {
   .p-search-form {
     max-width: 65.46% !important;
@@ -390,6 +393,7 @@ a {
     display: none !important;
   }
 }
+/* PC */
 @media screen and (min-width: 1250px) {
   .p-search-form {
     position: relative;
@@ -467,6 +471,7 @@ a {
   color: #FFFFFF;
 }
 
+/* タブレット */
 @media screen and (min-width: 600px) {
   .p-hero {
     position: relative;
@@ -507,6 +512,7 @@ a {
     line-height: 54/36;
   }
 }
+/* PC */
 @media screen and (min-width: 1250px) {
   .p-hero {
     max-width: 100%;
@@ -528,6 +534,7 @@ a {
     line-height: 60/40;
   }
 }
+/* スマホ */
 .p-contents {
   /*外枠*/
   width: 100%;
@@ -601,7 +608,7 @@ a {
   background-image: url(../img/p-contents__branch-menu__take-out.png);
   background-size: cover;
   background-position: top right;
-  /*centerよりカンプに近い */
+  /*centerよりカンプに近い*/
   background-repeat: no-repeat;
 }
 
@@ -684,6 +691,7 @@ a {
      object-fit: contain;
 }
 
+/* タブレット */
 @media screen and (min-width: 600px) {
   .p-contents {
     /*contentsの外枠*/
@@ -702,7 +710,7 @@ a {
     width: 100%;
     height: auto !important;
     margin: 40px 4.79% 40px 4.79%;
-    /*overflow: hiddenをつけると2カラムの比率崩れる*/
+    /*overflow: hiddenをつけると2カラムの比率崩れるのでつけない*/
   }
 
   .p-contents__branch-menu {
@@ -819,6 +827,7 @@ a {
        object-fit: contain;
   }
 }
+/* PC */
 @media screen and (min-width: 1250px) {
   .p-contents {
     /*contentsの外枠*/
@@ -839,7 +848,7 @@ a {
     box-sizing: border-box;
     -o-object-fit: contain;
        object-fit: contain;
-    /*overflow: hiddenをつけると2カラムの比率崩れる*/
+    /*overflow: hiddenをつけると2カラムの比率崩れるのでつけない*/
   }
 
   /*branch-menu ------------ */
@@ -946,6 +955,7 @@ a {
        object-fit: contain;
   }
 }
+/* スマホ */
 /*PCとタブレットの画像を隠す*/
 .p-access-map__png-pc,
 .p-access-map__png-tab {
@@ -1099,6 +1109,7 @@ a {
   background-repeat: no-repeat;
 }
 
+/* タブレット */
 @media screen and (min-width: 600px) {
   .p-access-map__png-pc,
 .p-access-map__png-sp {
@@ -1234,6 +1245,7 @@ a {
     background-repeat: no-repeat;
   }
 }
+/* PC */
 @media screen and (min-width: 1250px) {
   .p-access-map__png-tab,
 .p-access-map__png-sp {
@@ -1497,6 +1509,7 @@ a {
     line-height: 1.42;
   }
 }
+/* スマホ */
 .p-sidebar {
   position: fixed;
   /*scrollさせる*/
@@ -1590,6 +1603,7 @@ a {
   /*画面の右側を起点に表示*/
 }
 
+/* タブレット */
 @media screen and (min-width: 600px) {
   .p-sidebar {
     width: 44%;
@@ -1640,6 +1654,7 @@ a {
     margin-bottom: 0;
   }
 }
+/* PC */
 @media screen and (min-width: 1250px) {
   .p-sidebar {
     display: block !important;
@@ -1773,7 +1788,6 @@ a {
   font-weight: bold;
   color: #707070;
   font-size: 5.33vw;
-  /*20px*/
   line-height: 1.3;
 }
 

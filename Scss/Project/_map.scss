@@ -1,3 +1,4 @@
+/* スマホ */
 /*PCとタブレットの画像を隠す*/
   .p-access-map__png-pc,
   .p-access-map__png-tab{
@@ -125,6 +126,8 @@
   background-position: center;
   background-repeat:no-repeat;
 }
+
+/* タブレット */
 @media screen and  (min-width: 600px){
   .p-access-map__png-pc,
   .p-access-map__png-sp {/*PCとSPの写真は隠す*/
@@ -237,6 +240,7 @@
 }
 }
 
+/* PC */
 @media screen and (min-width: 1250px){
   .p-access-map__png-tab,
   .p-access-map__png-sp{/*タブレット・携帯用の写真は隠す*/

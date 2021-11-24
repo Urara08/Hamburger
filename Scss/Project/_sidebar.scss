@@ -1,3 +1,4 @@
+/* スマホ */
 .p-sidebar{
   position:fixed;/*scrollさせる*/
   z-index: 200;/*一番上に表示*/
@@ -77,6 +78,7 @@
   right:0;/*画面の右側を起点に表示*/
 }
 
+/* タブレット */
 @media screen and (min-width: 600px){
 .p-sidebar{
   width:44%;
@@ -119,6 +121,8 @@
 }
 }
 }
+
+/* PC */
 @media screen and (min-width: 1250px){
 .p-sidebar{
   display: block !important;
