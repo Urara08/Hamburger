@@ -1724,19 +1724,15 @@ a {
     /*PCの時は隠す*/
   }
 }
-/* 作成中 クラス名等再考します*/
 /* スマホ */
+/* hero */
 .c-hero__png__archive--pc {
-  /* spの時は隠す */
+  /* spの時はpc用写真は隠す */
   display: none !important;
 }
 
-.p-contents__archive {
-  background-color: #FFFDFA;
-  font-family: "M PLUS 1p", sans-serif;
-}
-
 .p-hero__archive {
+  /*hero外枠*/
   position: relative;
   max-width: 100%;
   height: 0;
@@ -1746,6 +1742,7 @@ a {
 }
 
 .c-hero__png__archive--sp {
+  /*heroスマホ用写真を表示する*/
   display: block !important;
   position: absolute !important;
   top: 0;
@@ -1761,52 +1758,62 @@ a {
   vertical-align: bottom;
 }
 
-.p-contents__archive__inner--bottom {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+/* contents */
+.p-contents__archive {
+  /*archiveページのcontents外枠*/
+  display: block;
+  max-width: 100%;
+  height: auto;
+  overflow: visible;
+  background-color: #FFFDFA;
   font-family: "M PLUS 1p", sans-serif;
-  border: solid red 1px;
 }
 
 .p-contents__archive__inner--top {
+  /*上contents：スタイル*/
   margin-bottom: 70px;
   font-family: "M PLUS 1p", sans-serif;
-  border: solid blue 1px;
 }
 
-.c-index__wrapper {
+.p-contents__archive__inner--middle {
+  /*真ん中contents：スタイル*/
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.contents__archive__introduction__innder {
+  /*introductionのInner*/
   margin: 30px 18px 19px 18px;
   border: solid red 1px;
 }
 
-.p-contents__archive__mains {
+.p-contents__archive__cards {
+  /*cardのグループ*/
   margin-top: 0;
-  margin-right: 100px;
-  margin-bottom: 150px !important;
-  margin-left: 100px;
-  font-family: "M PLUS 1p", sans-serif;
+  margin-right: 18px;
+  margin-bottom: 113px !important;
+  margin-left: 18px;
   border: solid green 1px;
 }
 
-.example2 {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+/* pagenation */
+.c-pages {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: center !important;
   margin-bottom: 64px;
-  border: solid red 1px;
+  background-color: blueb !important;
+  font-family: "Roboto", sans-serif;
 }
 
-.c-picture__pc {
+.c-photo__pc {
+  /*card内の写真--PC用は隠す*/
   display: none !important;
 }
 
-.c-card__picture {
-  display: block;
-  width: 100%;
-}
-
-.c-picture__sp {
+.c-photo__sp {
+  /*card内の写真--スマホを表示*/
   max-width: 100%;
   height: 0;
   padding-bottom: 68.72%;
@@ -1817,28 +1824,20 @@ a {
   vertical-align: bottom;
 }
 
-.p-contents__archive {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  overflow: visible;
-}
-
 .c-card {
+  /*（card）各商品の外枠*/
   margin-bottom: 30px;
+  /*下の余白*/
 }
 
-.c-card:last-child {
-  margin-bottom: 150px;
-  margin-bottom: 0;
-  border: solid red 1px;
-}
-
-.c-card__picture {
+.c-photo-group {
+  /*card内写真の枠*/
+  display: block;
   width: 100%;
 }
 
-.c-card__sentence {
+.c-card__caption-group {
+  /*card内の文章の外枠*/
   width: 100%;
   padding-top: 30.5px;
   padding-bottom: 43.7px;
@@ -1850,6 +1849,7 @@ a {
 }
 
 .c-button__wrapper {
+  /*card内のbuttonのwrapper*/
   position: relative;
   display: flex;
   justify-content: center;
@@ -1859,7 +1859,8 @@ a {
   border: solid white 1px;
 }
 
-.c-button--archive {
+.c-button--card {
+  /*card内のbutton*/
   display: block;
   height: auto;
   cursor: pointer;
@@ -1874,7 +1875,8 @@ a {
   box-sizing: border-box;
 }
 
-.c-button--archive__label {
+.c-button--card__label {
+  /*card内のbuttonのlabel*/
   display: inline-block;
   position: absolute;
   z-index: 140;
@@ -1889,27 +1891,7 @@ a {
   color: red !important;
 }
 
-.p-contents__archive__mains {
-  margin-top: 0;
-  margin-right: 18px;
-  margin-bottom: 113px !important;
-  margin-left: 18px;
-  border: solid green 1px;
-}
-
-.example2 {
-  font-family: "Roboto", sans-serif;
-}
-
-.c-index {
-  display: inline-block;
-  font-size: 28px !important;
-  font-family: "M PLUS 1p", sans-serif;
-  line-height: 1.5;
-  margin-bottom: 30px;
-}
-
-.c-index {
+.p-contents__archive__introduction__title {
   font-size: 16px;
   font-family: "M PLUS 1p", sans-serif;
   color: #3C2A10;
@@ -1917,7 +1899,8 @@ a {
   line-height: 1.43;
 }
 
-.c-title {
+.c-category {
+  /*card内の大きい見出し*/
   display: inline-block;
   margin-bottom: 30px;
   font-size: 20px;
@@ -1926,22 +1909,29 @@ a {
   line-height: 1.5;
 }
 
-.c-sub-title {
+.c-sub-heading {
   margin-bottom: 10px;
 }
 
-.c-text {
+.p-contents__archive__introduction__text {
   display: inline-block;
   font-size: 16px;
   color: #3C2A10;
   font-family: "M PLUS 1p", sans-serif;
   line-height: 1.43;
+  word-wrap: break-word;
   border: solid red 1px;
+}
+
+.c-card__detail {
+  /* card内説明の詳細 */
+  word-wrap: break-word;
 }
 
 /* タブレット */
 /* PC */
 @media screen and (min-width: 1250px) {
+  /* hero */
   .c-hero__png__archive--sp {
     /* pcの時は隠す */
     display: none !important;
@@ -1971,7 +1961,8 @@ a {
     vertical-align: bottom;
   }
 
-  .c-index__wrapper {
+  /* contents */
+  .contents__archive__introduction__innder {
     margin: 60px 100px 70px 100px;
   }
 
@@ -1979,7 +1970,17 @@ a {
     margin-bottom: 0px;
   }
 
-  .p-contents__archive__mains {
+  /* introduction */
+  .p-contents__archive__introduction__title {
+    display: inline-block;
+    font-size: 28px !important;
+    font-family: "M PLUS 1p", sans-serif;
+    line-height: 1.5;
+    margin-bottom: 30px !important;
+  }
+
+  .p-contents__archive__cards {
+    /*cardのグループ*/
     margin-top: 0;
     margin-right: 100px;
     margin-bottom: 150px !important;
@@ -1987,15 +1988,24 @@ a {
     border: solid green 1px;
   }
 
+  /* card */
   .c-card {
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
+    /*画像を左・文章を右に*/
     width: 100%;
     margin-bottom: 30px;
     background: cornsilk;
   }
 
-  .c-card__sentence {
+  .c-card:last-child {
+    /*一番最後の商品の下の余白だけ長さが違う*/
+    margin-bottom: 150px;
+    margin-bottom: 0;
+  }
+
+  .c-card__caption-group {
+    /*card内の文章の外枠*/
     width: 50%;
     padding: 0;
     background-color: #3C2B1C;
@@ -2004,16 +2014,16 @@ a {
     border: solid red 1px;
   }
 
-  .c-card__picture {
+  .c-photo-group {
     /*50でないとおかしい*/
     width: 50%;
   }
 
-  .c-picture__sp {
+  .c-photo__sp {
     display: none !important;
   }
 
-  .c-picture__pc {
+  .c-photo__pc {
     display: block !important;
     max-width: 100%;
     height: 0;
@@ -2031,7 +2041,8 @@ a {
     overflow: visible;
   }
 
-  .c-title {
+  .c-category {
+    /*card内の大きい見出し*/
     display: inline-block;
     margin-top: 53px;
     margin-left: 63px;
@@ -2041,24 +2052,25 @@ a {
     line-height: 1.5;
   }
 
-  .c-sub-title {
+  .c-sub-heading {
     margin-left: 63px;
     margin-bottom: 17px;
     font-size: 24px;
     line-height: 1.5;
   }
 
-  .c-card__caption-area {
+  .c-card__detail__wrapper {
     display: block;
     width: 75.29%;
     margin-left: 63px;
+    margin-bottom: 40px;
     font-size: 16px;
     font-family: "M PLUS 1p", sans-serif;
     line-height: 1.43;
-    background-color: #FFFFFF;
+    border: solid red 1px;
   }
 
-  .c-button--archive {
+  .c-button--card {
     display: block;
     height: auto;
     cursor: pointer;
@@ -2074,11 +2086,11 @@ a {
   }
 
   .c-button__wrapper {
+    /*card内のbuttonのwrapper*/
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 40px;
     margin-bottom: 20px;
     border: solid white 1px;
   }
