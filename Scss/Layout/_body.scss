@@ -5,7 +5,6 @@ grid-template-columns: 1fr;/*１カラムのレイアウト*/
 grid-template-rows: auto 1fr 150px;
 max-width: 100%;
 min-height: 100vh;
-overflow-x: hidden;
 }
 /*パソコン画面1250px以上--*/
 @media screen and (min-width: 1250px){
