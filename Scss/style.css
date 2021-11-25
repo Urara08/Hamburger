@@ -1724,7 +1724,365 @@ a {
     /*PCの時は隠す*/
   }
 }
-/*@import "./project/_archive" ;*/
+/* 作成中 クラス名等再考します*/
+/* スマホ */
+.c-hero__png__archive--pc {
+  /* spの時は隠す */
+  display: none !important;
+}
+
+.p-contents__archive {
+  background-color: #FFFDFA;
+  font-family: "M PLUS 1p", sans-serif;
+}
+
+.p-hero__archive {
+  position: relative;
+  max-width: 100%;
+  height: 0;
+  padding-bottom: 75.46% !important;
+  background-color: #000000;
+  font-family: "M PLUS 1p", sans-serif;
+}
+
+.c-hero__png__archive--sp {
+  display: block !important;
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100% !important;
+  padding-bottom: 75.46% !important;
+  height: 0;
+  background-image: url(../img/hero_sp__archive.png);
+  background-position: top right;
+  background-size: cover;
+  background-repeat: no-repeat;
+  vertical-align: bottom;
+}
+
+.p-contents__archive__inner--bottom {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "M PLUS 1p", sans-serif;
+  border: solid red 1px;
+}
+
+.p-contents__archive__inner--top {
+  margin-bottom: 70px;
+  font-family: "M PLUS 1p", sans-serif;
+  border: solid blue 1px;
+}
+
+.c-index__wrapper {
+  margin: 30px 18px 19px 18px;
+  border: solid red 1px;
+}
+
+.p-contents__archive__mains {
+  margin-top: 0;
+  margin-right: 100px;
+  margin-bottom: 150px !important;
+  margin-left: 100px;
+  font-family: "M PLUS 1p", sans-serif;
+  border: solid green 1px;
+}
+
+.example2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 64px;
+  border: solid red 1px;
+}
+
+.c-picture__pc {
+  display: none !important;
+}
+
+.c-card__picture {
+  display: block;
+  width: 100%;
+}
+
+.c-picture__sp {
+  max-width: 100%;
+  height: 0;
+  padding-bottom: 68.72%;
+  background-image: url(../img/item_sp_archive.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  vertical-align: bottom;
+}
+
+.p-contents__archive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.c-card {
+  margin-bottom: 30px;
+}
+
+.c-card:last-child {
+  margin-bottom: 150px;
+  margin-bottom: 0;
+  border: solid red 1px;
+}
+
+.c-card__picture {
+  width: 100%;
+}
+
+.c-card__sentence {
+  width: 100%;
+  padding-top: 30.5px;
+  padding-bottom: 43.7px;
+  background-color: #3C2B1C;
+  color: #FFFFFF;
+  font-size: 16px;
+  border: solid white 1px;
+  box-sizing: border-box;
+}
+
+.c-button__wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  border: solid white 1px;
+}
+
+.c-button--archive {
+  display: block;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s opacity 0.3s;
+  position: relative;
+  width: 167px;
+  height: 42.47px;
+  padding: 10px;
+  background-color: #FFFFFF;
+  color: #707070 !important;
+  border-radius: 30px;
+  box-sizing: border-box;
+}
+
+.c-button--archive__label {
+  display: inline-block;
+  position: absolute;
+  z-index: 140;
+  top: 50%;
+  /*真ん中に配置*/
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /*真ん中に配置*/
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  font-size: 16px;
+  color: red !important;
+}
+
+.p-contents__archive__mains {
+  margin-top: 0;
+  margin-right: 18px;
+  margin-bottom: 113px !important;
+  margin-left: 18px;
+  border: solid green 1px;
+}
+
+.example2 {
+  font-family: "Roboto", sans-serif;
+}
+
+.c-index {
+  display: inline-block;
+  font-size: 28px !important;
+  font-family: "M PLUS 1p", sans-serif;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+.c-index {
+  font-size: 16px;
+  font-family: "M PLUS 1p", sans-serif;
+  color: #3C2A10;
+  font-weight: bold;
+  line-height: 1.43;
+}
+
+.c-title {
+  display: inline-block;
+  margin-bottom: 30px;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "M PLUS 1p", sans-serif;
+  line-height: 1.5;
+}
+
+.c-sub-title {
+  margin-bottom: 10px;
+}
+
+.c-text {
+  display: inline-block;
+  font-size: 16px;
+  color: #3C2A10;
+  font-family: "M PLUS 1p", sans-serif;
+  line-height: 1.43;
+  border: solid red 1px;
+}
+
+/* タブレット */
+/* PC */
+@media screen and (min-width: 1250px) {
+  .c-hero__png__archive--sp {
+    /* pcの時は隠す */
+    display: none !important;
+  }
+
+  .p-hero__archive {
+    position: relative;
+    max-width: 100%;
+    height: 0;
+    padding-bottom: 15.38% !important;
+    background-color: #000000;
+  }
+
+  .c-hero__png__archive--pc {
+    display: block !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100% !important;
+    padding-bottom: 15.38%;
+    height: 0;
+    background-image: url(../img/hero_pc__archive.png);
+    background-position: top right;
+    background-size: cover !important;
+    background-repeat: no-repeat;
+    vertical-align: bottom;
+  }
+
+  .c-index__wrapper {
+    margin: 60px 100px 70px 100px;
+  }
+
+  .p-contents__archive__inner--top {
+    margin-bottom: 0px;
+  }
+
+  .p-contents__archive__mains {
+    margin-top: 0;
+    margin-right: 100px;
+    margin-bottom: 150px !important;
+    margin-left: 100px;
+    border: solid green 1px;
+  }
+
+  .c-card {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 30px;
+    background: cornsilk;
+  }
+
+  .c-card__sentence {
+    width: 50%;
+    padding: 0;
+    background-color: #3C2B1C;
+    color: #FFFFFF;
+    font-size: 16px;
+    border: solid red 1px;
+  }
+
+  .c-card__picture {
+    /*50でないとおかしい*/
+    width: 50%;
+  }
+
+  .c-picture__sp {
+    display: none !important;
+  }
+
+  .c-picture__pc {
+    display: block !important;
+    max-width: 100%;
+    height: 0;
+    padding-bottom: 69.57%;
+    background-image: url(../img/item_pc_archive.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    vertical-align: bottom;
+  }
+
+  .p-contents__archive {
+    max-width: 100%;
+    height: auto;
+    overflow: visible;
+  }
+
+  .c-title {
+    display: inline-block;
+    margin-top: 53px;
+    margin-left: 63px;
+    font-size: 36px;
+    font-weight: bold;
+    font-family: "M PLUS 1p", sans-serif;
+    line-height: 1.5;
+  }
+
+  .c-sub-title {
+    margin-left: 63px;
+    margin-bottom: 17px;
+    font-size: 24px;
+    line-height: 1.5;
+  }
+
+  .c-card__caption-area {
+    display: block;
+    width: 75.29%;
+    margin-left: 63px;
+    font-size: 16px;
+    font-family: "M PLUS 1p", sans-serif;
+    line-height: 1.43;
+    background-color: #FFFFFF;
+  }
+
+  .c-button--archive {
+    display: block;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s opacity 0.3s;
+    position: relative;
+    width: 292px;
+    height: 76px;
+    padding: 10px;
+    background-color: #FFFFFF;
+    color: #707070 !important;
+    border-radius: 30px;
+    box-sizing: border-box;
+  }
+
+  .c-button__wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    border: solid white 1px;
+  }
+}
 /* Component ------------ */
 /*スマホ----*/
 /*ロゴ*/

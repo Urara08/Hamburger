@@ -5,14 +5,15 @@
 @import "./Foundation/reset";
 
 /* Utility ------------ */
-@import "./Utility/variables";
-@import "./Utility/mixin.scss";
+@import "./Object/Utility/variables";
+@import "./Object/Utility/mixin.scss";
 
 /* Base */
 @import "./Foundation/base";
 
 /*** jsから参照されるファイル ***/
 @import "./Foundation/function";
+
 
 /**
 * Layout
@@ -25,12 +26,14 @@
 
 /* Project
 * ========================== */
-@import "./project/header";
-@import "./project/_search-form" ;
-@import "./Project/_hero" ;
-@import "./Project/_branch-menu";
-@import "./project/_map" ;
-@import "./Project/_footer";
-@import "./project/sidebar" ;
+@import "./Object/project/header";
+@import "./Object/project/_search-form" ;
+@import "./Object/Project/_hero" ;
+@import "./Object/Project/_branch-menu";
+@import "./Object/project/_map" ;
+@import "./Object/Project/_footer";
+@import "./Object/project/sidebar" ;
+
+@import "./Object/project/_archive" ;
 /* Component ------------ */
-@import "./Component/component" ;
+@import "./Object/Component/component" ;
