@@ -104,8 +104,6 @@ body {
   /*最大幅*/
   font-family: "M PLUS 1p", sans-serif;
   box-sizing: border-box;
-  overflow-x: hidden;
-  /*横にはみ出したら隠す*/
 }
 
 img, background {
@@ -153,9 +151,14 @@ a {
   grid-template-columns: 1fr;
   /*１カラムのレイアウト*/
   grid-template-rows: auto 1fr 150px;
+  position: relative;
   max-width: 100%;
   min-height: 100vh;
-  overflow-x: hidden;
+}
+
+.l-body.is-show {
+  /*サイドバーが開いたらbodyは固定する*/
+  position: fixed;
 }
 
 /*パソコン画面1250px以上--*/
@@ -1721,6 +1724,7 @@ a {
     /*PCの時は隠す*/
   }
 }
+/*@import "./project/_archive" ;*/
 /* Component ------------ */
 /*スマホ----*/
 /*ロゴ*/
@@ -1857,6 +1861,8 @@ a {
     /*headerの右上に配置*/
   }
 }
+/*-----------------------------------*/
+/*-----------------------------------*/
 /* PC */
 @media screen and (min-width: 1250px) {
   /*ロゴ*/
@@ -1885,4 +1891,7 @@ a {
     display: none;
     /*PCではheaderにMENUボタンは表示しない*/
   }
+
+  /*-----------------------------------*/
+  /*-----------------------------------*/
 }/*# sourceMappingURL=style.css.map */
