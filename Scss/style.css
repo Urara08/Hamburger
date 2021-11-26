@@ -1760,7 +1760,7 @@ a {
   /*left centerがカンプに近い*/
   background-size: cover;
   background-repeat: no-repeat;
-  vertical-align: bottom;
+  vertical-align: bottom !important;
   box-sizing: border-box;
 }
 
@@ -1819,7 +1819,6 @@ a {
   justify-content: center !important;
   flex-direction: column;
   margin-bottom: 0;
-  background-color: antiquewhite;
 }
 
 .p-contents__archive__cards {
@@ -1838,19 +1837,14 @@ a {
   margin-right: 5.33%;
 }
 
-.c-photo__pc {
-  /*card内の写真--PC用は隠す*/
-  display: none !important;
-}
-
-.c-photo__sp {
+.c-photo {
   /*card内の写真--スマホを表示*/
   max-width: 100%;
   height: 0;
   /*高さは設定しない*/
   padding-bottom: 68.58%;
   /*アスペクト比を維持*/
-  background-image: url(../img/item_sp_archive.png);
+  background-image: url(../img/item__archive.png);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -2062,17 +2056,12 @@ a {
   .c-card {
     display: flex;
     width: 87.12%;
-    flex-direction: row-reverse;
+    flex-direction: row;
     /*画像を左・文章を右に*/
     width: 100%;
     margin-left: 0;
     margin-bottom: 30px;
     box-sizing: border-box;
-  }
-
-  .c-card:last-child {
-    /*一番最後の商品の下の余白だけ長さが違う*/
-    margin-bottom: 0 !important;
   }
 
   .c-card__caption-group {
@@ -2087,22 +2076,34 @@ a {
     width: 50%;
   }
 
-  .c-photo__sp {
-    display: none !important;
+  .c-photo-group {
+    /*card内写真の枠*/
+    display: block;
+    width: 100%;
   }
 
-  .c-photo__pc {
-    /*消えた*/
+  .c-card__picture {
+    /*cardの写真の枠*/
+    width: 50%;
+  }
+
+  .c-photo {
     display: block !important;
     max-width: 100%;
     height: 0;
+    /*高さは設定しない*/
     padding-bottom: 69.57%;
     /*アスペクト比を保つ*/
-    background-image: url(../img/item_pc_archive.png);
-    background-position: center　 !important;
+    background-image: url(../img/item__archive.png);
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     vertical-align: bottom;
+  }
+
+  .c-card:last-child {
+    /*一番最後の商品の下の余白だけ長さが違う*/
+    margin-bottom: 0 !important;
   }
 
   .p-contents__archive {
