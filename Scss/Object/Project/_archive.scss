@@ -78,16 +78,14 @@ margin: 30px 5.33%  19px 5.33% !important;
 
 .p-contents__archive__cards{/*cardのグループ*/
   width:89.62%;
-  margin-top: 0 5.33% 0 5.33%  !important;
+  margin: 0 5.33% 0 5.33%  !important;
   border: solid green 1px;
 }
 .c-card{/*（card）各商品の外枠*/
   width: 100%;
   margin-bottom: 30px;/*下の余白*/
-  margin-left: 5.33% ;
-  margin-right: 5.33% ;
-}
 
+}
 
 .c-photo{/*card内の写真--スマホを表示*/
   max-width:100%;
@@ -195,17 +193,18 @@ margin: 30px 5.33%  19px 5.33% !important;
 /* PC */
 @media screen and (min-width: 1250px){
 /* hero */
+.p-hero__archive{
+  position: relative;
+  max-width: 100%;
+  height: 0;
+  padding-bottom: 15.38% !important;
+  background-color: $color--mask-op-100;
+}
   .c-hero__png__archive--sp{/* pcの時は隠す */
    display: none !important;
   }
-  .p-hero__archive{
-    position: relative;
-    max-width: 100%;
-    height: 0;
-    padding-bottom: 15.38% !important;
-    background-color: $color--mask-op-100;
-  }
-  .c-hero__png__archive--pc{
+
+  .c-hero__png__archive--pc{/* heroの画像 */
     display: block !important;
     position: absolute;
     top:0;
@@ -274,61 +273,44 @@ margin: 30px 5.33%  19px 5.33% !important;
       word-wrap:break-word;
     }
 
-    .p-contents__archive__cards{/*cardのグループ*/
-      display: inline-block !important;
-      width:87.12%;
-      margin: 0 6.43% 150px 6.43%;
-      box-sizing: border-box;
-    }
+
 
 /* card */
+/* card の集まり*/
+.p-contents__archive__cards{/*cardのグループ*/
+  display: inline-block !important;
+  width:87.12%;
+  margin: 0 6.43% 160px 6.43% !important;
+  box-sizing: border-box;
+}
   .c-card{
     display: flex;
-    width: 87.12%;
     flex-direction: row;/*画像を左・文章を右に*/
-    width: 100%;
+    max-width: 100%;
+    min-width: 78.55% !important;
+    height: auto;
     margin-left: 0;
     margin-bottom: 30px;
     box-sizing: border-box;
   }
-
-  .c-card__caption-group{/*card内の文章の外枠*/
-    width: 50%;
-    padding: 0;
-    background-color: #3C2B1C;
-  }
-  .c-photo-group{/*50でないとおかしい*/
-    width: 50%;
-  }
-
-  .c-photo-group{/*card内写真の枠*/
-    display: block;
-    width: 100%;
-  }
-  .c-card__picture{/*cardの写真の枠*/
-    width: 50%;
-  }
-  .c-photo{
-    display: block !important;
-    max-width:100%;
-    height: 0;/*高さは設定しない*/
-    padding-bottom: 69.57%;/*アスペクト比を保つ*/
-    background-image:url(../img/item__archive.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat:no-repeat;
-    vertical-align:bottom;
-  }
-  .c-card:last-child{/*一番最後の商品の下の余白だけ長さが違う*/
+  /*c-card 一番最後の商品*/
+  .c-card:last-child{/*下の余白だけ長さが違う*/
     margin-bottom: 0 !important;
   }
-  .p-contents__archive{
-    max-width: 100%;
-    height: auto;
+/*card内の文章の外枠*/
+  .c-card__caption-group{
+    max-width: 50%;
+    padding: 0;
+    padding-top:53px;
+    padding-bottom: 60px;
+    min-height: 100%;
+    min-height: 100%;
+    background-color: #3C2B1C;
   }
   .c-category{/*card内の大きい見出し*/
     display: inline-block;
-    margin-top: 53px;
+
+    margin-bottom: 47px;
     margin-left: 12.35%;
     font-size:1.87vw;
     font-weight: bold;
@@ -352,10 +334,33 @@ margin: 30px 5.33%  19px 5.33% !important;
     word-wrap:break-word;
     box-sizing: border-box
   }
+  .c-card__detail{/* card内説明の詳細 */
+    margin-bottom: 60px;
+    font-size:0.83vw;
+    word-wrap:break-word;
+  }
+
+/*c-card 写真側*/
+  .c-card__picture{/*cardの写真の枠*/
+    width: 50%;
+    height: auto;
+  }
+  .c-photo{/*写真*/
+    display: block !important;
+    width:100%;
+    height:100%;
+    background-image:url(../img/item__archive.png);
+    background-position: left center;
+    background-size: cover;
+    background-repeat:no-repeat;
+    vertical-align:bottom;
+  box-sizing: border-box;
+  }
+
   .c-button--card{
     @include c-button;
     position: relative;
-    width: 292px;
+    min-width: 292px;
     height: 76px;
     padding: 10px;
     background-color: #FFFFFF;
@@ -363,16 +368,13 @@ margin: 30px 5.33%  19px 5.33% !important;
     border-radius:38px;
     box-sizing: border-box;
   }
-  .c-card__detail{/* card内説明の詳細 */
-    font-size:0.83vw;
-    word-wrap:break-word;
-  }
+
 
   .c-button__wrapper{/*card内のbuttonのwrapper*/
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
+
   }
   }
