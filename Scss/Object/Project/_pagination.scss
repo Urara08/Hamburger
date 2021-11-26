@@ -1,0 +1,27 @@
+/*pagination*/
+    /* pagenation */
+    .p-pages{
+      display: flex !important;
+      flex-direction: row !important;
+      justify-content: center;/*ページの真ん中へ*/
+      margin-bottom: 64px;
+      font-family: $font-family--Roboto;
+      border: solid red 1px;
+    }
+    .p-pages li{
+      display: inline-block;
+      width: 35px;
+      height: 35px;
+      padding:5px 5px;
+      background-color: #FFFFFF;
+      font-size:16px;
+      font-weight: bold;
+      border:solid 1px #707070;
+    }
+
+    /* 左端のページ送り数のBLOCKみ色が違う */
+    .p-pages li.this {background-color:#3C2B1C;color:#FFFFFF;}
+    .p-pages li>a{
+      display: inline-block;
+
+    }

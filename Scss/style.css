@@ -64,7 +64,7 @@ table {
 /* sidebar */
 /* container */
 /*検索BOXボタンの*/
-/* マスク色 */
+/* マスク色 または薄い画像の背景*/
 /* map */
 /* map */
 /* map */
@@ -74,7 +74,7 @@ table {
 /* ブランチメニュー*/
 /* Take-out Eat-in(大タイトル)*/
 /* Take-out Eat-in(BOXの内側)*/
-/* アイテム色*/
+/* アイテム色　（BOXやボタン）*/
 /* container */
 /* フォントファミリー　*/
 /*Hamburger・MENU(ロゴ)・Take-out Eat-in(大タイトル)*/
@@ -1736,7 +1736,9 @@ a {
   position: relative;
   max-width: 100%;
   height: 0;
-  padding-bottom: 75.46% !important;
+  /*高さは無し*/
+  padding-bottom: 76% !important;
+  /*アスペクト比を保つ*/
   background-color: #000000;
   font-family: "M PLUS 1p", sans-serif;
 }
@@ -1749,13 +1751,44 @@ a {
   left: 0;
   z-index: 100;
   width: 100% !important;
-  padding-bottom: 75.46% !important;
+  padding-bottom: 76% !important;
+  /*アスペクト比を保つ*/
   height: 0;
+  /*高さは無し*/
   background-image: url(../img/hero_sp__archive.png);
-  background-position: top right;
+  background-position: left center;
+  /*left centerがカンプに近い*/
   background-size: cover;
   background-repeat: no-repeat;
   vertical-align: bottom;
+  box-sizing: border-box;
+}
+
+.p-hero__menu-label--archive {
+  /*MENU:の字*/
+  display: inline-block;
+  position: absolute;
+  z-index: 110;
+  top: 36.04%;
+  left: 4.43%;
+  font-size: 9.6vw;
+  font-weight: bold;
+  color: #FFFFFF;
+  line-height: 1.33;
+}
+
+.p-hero__item-label--archive {
+  /*チーズバーガーの字*/
+  display: inline-block;
+  position: absolute;
+  z-index: 110;
+  top: 54.06%;
+  /*MENUの下へ配置*/
+  left: 4.43%;
+  font-size: 4.26vw;
+  font-weight: bold;
+  line-height: 1.43;
+  color: #FFFFFF;
 }
 
 /* contents */
@@ -1775,36 +1808,34 @@ a {
   font-family: "M PLUS 1p", sans-serif;
 }
 
+.contents__archive__introduction__innder {
+  /*introductionのInner*/
+  margin: 30px 5.33% 19px 5.33% !important;
+}
+
 .p-contents__archive__inner--middle {
   /*真ん中contents：スタイル*/
   display: flex;
-  justify-content: center;
+  justify-content: center !important;
   flex-direction: column;
-}
-
-.contents__archive__introduction__innder {
-  /*introductionのInner*/
-  margin: 30px 18px 19px 18px;
-  border: solid red 1px;
+  margin-bottom: 0;
+  background-color: antiquewhite;
 }
 
 .p-contents__archive__cards {
   /*cardのグループ*/
-  margin-top: 0;
-  margin-right: 18px;
-  margin-bottom: 113px !important;
-  margin-left: 18px;
+  width: 89.62%;
+  margin-top: 0 5.33% 0 5.33% !important;
   border: solid green 1px;
 }
 
-/* pagenation */
-.c-pages {
-  display: flex !important;
-  flex-direction: row !important;
-  justify-content: center !important;
-  margin-bottom: 64px;
-  background-color: blueb !important;
-  font-family: "Roboto", sans-serif;
+.c-card {
+  /*（card）各商品の外枠*/
+  width: 100%;
+  margin-bottom: 30px;
+  /*下の余白*/
+  margin-left: 5.33%;
+  margin-right: 5.33%;
 }
 
 .c-photo__pc {
@@ -1816,18 +1847,14 @@ a {
   /*card内の写真--スマホを表示*/
   max-width: 100%;
   height: 0;
-  padding-bottom: 68.72%;
+  /*高さは設定しない*/
+  padding-bottom: 68.58%;
+  /*アスペクト比を維持*/
   background-image: url(../img/item_sp_archive.png);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   vertical-align: bottom;
-}
-
-.c-card {
-  /*（card）各商品の外枠*/
-  margin-bottom: 30px;
-  /*下の余白*/
 }
 
 .c-photo-group {
@@ -1841,10 +1868,9 @@ a {
   width: 100%;
   padding-top: 30.5px;
   padding-bottom: 43.7px;
-  background-color: #3C2B1C;
+  background-color: #3C2A10;
   color: #FFFFFF;
   font-size: 16px;
-  border: solid white 1px;
   box-sizing: border-box;
 }
 
@@ -1856,7 +1882,6 @@ a {
   align-items: center;
   margin-top: 40px;
   margin-bottom: 20px;
-  border: solid white 1px;
 }
 
 .c-button--card {
@@ -1871,6 +1896,7 @@ a {
   padding: 10px;
   background-color: #FFFFFF;
   color: #707070 !important;
+  font-weight: 600;
   border-radius: 30px;
   box-sizing: border-box;
 }
@@ -1888,11 +1914,13 @@ a {
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   font-size: 16px;
-  color: red !important;
+  color: #707070;
+  font-weight: bold;
 }
 
 .p-contents__archive__introduction__title {
-  font-size: 16px;
+  margin-bottom: 30px;
+  font-size: 7.46vw;
   font-family: "M PLUS 1p", sans-serif;
   color: #3C2A10;
   font-weight: bold;
@@ -1903,6 +1931,7 @@ a {
   /*card内の大きい見出し*/
   display: inline-block;
   margin-bottom: 30px;
+  margin-left: 5.05%;
   font-size: 20px;
   font-weight: bold;
   font-family: "M PLUS 1p", sans-serif;
@@ -1910,21 +1939,23 @@ a {
 }
 
 .c-sub-heading {
+  margin-left: 5.05%;
   margin-bottom: 10px;
 }
 
 .p-contents__archive__introduction__text {
   display: inline-block;
-  font-size: 16px;
+  font-size: 4.26vw;
   color: #3C2A10;
   font-family: "M PLUS 1p", sans-serif;
   line-height: 1.43;
   word-wrap: break-word;
-  border: solid red 1px;
 }
 
 .c-card__detail {
   /* card内説明の詳細 */
+  margin-left: 5.05%;
+  margin-right: 5.05%;
   word-wrap: break-word;
 }
 
@@ -1961,47 +1992,87 @@ a {
     vertical-align: bottom;
   }
 
+  .p-hero__menu-label--archive {
+    /*MENU:*/
+    display: inline-block;
+    position: absolute;
+    z-index: 110;
+    top: 33.47%;
+    left: 5.53%;
+    font-size: 3.12vw;
+    font-weight: bold;
+    color: #FFFFFF;
+    line-height: 1.31;
+  }
+
+  .p-hero__item-label--archive {
+    /*チーズバーガーの字*/
+    display: inline-block;
+    position: absolute;
+    z-index: 110;
+    top: 47.28%;
+    /*MENUの横へ配置*/
+    left: 17.7%;
+    font-size: 1.03vw;
+    font-weight: bold;
+    line-height: 1.43;
+    color: #FFFFFF;
+  }
+
   /* contents */
   .contents__archive__introduction__innder {
-    margin: 60px 100px 70px 100px;
+    margin: 60px 6.43% 70px 6.43% !important;
+    width: 87.12%;
+    box-sizing: border-box;
   }
 
   .p-contents__archive__inner--top {
+    width: 100% !important;
     margin-bottom: 0px;
+    box-sizing: border-box;
   }
 
   /* introduction */
   .p-contents__archive__introduction__title {
     display: inline-block;
-    font-size: 28px !important;
+    margin-bottom: 30px !important;
+    font-size: 2.31vw !important;
     font-family: "M PLUS 1p", sans-serif;
     line-height: 1.5;
-    margin-bottom: 30px !important;
+  }
+
+  .p-contents__archive__introduction__text {
+    display: inline-block;
+    font-size: 1.03vw;
+    color: #3C2A10;
+    font-family: "M PLUS 1p", sans-serif;
+    line-height: 1.43;
+    word-wrap: break-word;
   }
 
   .p-contents__archive__cards {
     /*cardのグループ*/
-    margin-top: 0;
-    margin-right: 100px;
-    margin-bottom: 150px !important;
-    margin-left: 100px;
-    border: solid green 1px;
+    display: inline-block !important;
+    width: 87.12%;
+    margin: 0 6.43% 150px 6.43%;
+    box-sizing: border-box;
   }
 
   /* card */
   .c-card {
     display: flex;
+    width: 87.12%;
     flex-direction: row-reverse;
     /*画像を左・文章を右に*/
     width: 100%;
+    margin-left: 0;
     margin-bottom: 30px;
-    background: cornsilk;
+    box-sizing: border-box;
   }
 
   .c-card:last-child {
     /*一番最後の商品の下の余白だけ長さが違う*/
-    margin-bottom: 150px;
-    margin-bottom: 0;
+    margin-bottom: 0 !important;
   }
 
   .c-card__caption-group {
@@ -2009,9 +2080,6 @@ a {
     width: 50%;
     padding: 0;
     background-color: #3C2B1C;
-    color: #FFFFFF;
-    font-size: 16px;
-    border: solid red 1px;
   }
 
   .c-photo-group {
@@ -2024,12 +2092,14 @@ a {
   }
 
   .c-photo__pc {
+    /*消えた*/
     display: block !important;
     max-width: 100%;
     height: 0;
     padding-bottom: 69.57%;
+    /*アスペクト比を保つ*/
     background-image: url(../img/item_pc_archive.png);
-    background-position: center;
+    background-position: center　 !important;
     background-size: cover;
     background-repeat: no-repeat;
     vertical-align: bottom;
@@ -2038,36 +2108,36 @@ a {
   .p-contents__archive {
     max-width: 100%;
     height: auto;
-    overflow: visible;
   }
 
   .c-category {
     /*card内の大きい見出し*/
     display: inline-block;
     margin-top: 53px;
-    margin-left: 63px;
-    font-size: 36px;
+    margin-left: 12.35%;
+    font-size: 1.87vw;
     font-weight: bold;
     font-family: "M PLUS 1p", sans-serif;
     line-height: 1.5;
   }
 
   .c-sub-heading {
-    margin-left: 63px;
     margin-bottom: 17px;
-    font-size: 24px;
+    margin-left: 12.35%;
+    font-size: 1.25vw;
     line-height: 1.5;
   }
 
   .c-card__detail__wrapper {
     display: block;
-    width: 75.29%;
-    margin-left: 63px;
+    width: 81.38%;
+    margin-left: 9.31%;
+    margin-right: 9.31%;
     margin-bottom: 40px;
-    font-size: 16px;
     font-family: "M PLUS 1p", sans-serif;
     line-height: 1.43;
-    border: solid red 1px;
+    word-wrap: break-word;
+    box-sizing: border-box;
   }
 
   .c-button--card {
@@ -2081,8 +2151,14 @@ a {
     padding: 10px;
     background-color: #FFFFFF;
     color: #707070 !important;
-    border-radius: 30px;
+    border-radius: 38px;
     box-sizing: border-box;
+  }
+
+  .c-card__detail {
+    /* card内説明の詳細 */
+    font-size: 0.83vw;
+    word-wrap: break-word;
   }
 
   .c-button__wrapper {
@@ -2092,9 +2168,41 @@ a {
     justify-content: center;
     align-items: center;
     margin-bottom: 20px;
-    border: solid white 1px;
   }
 }
+/*pagination*/
+/* pagenation */
+.p-pages {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: center;
+  /*ページの真ん中へ*/
+  margin-bottom: 64px;
+  font-family: "Roboto", sans-serif;
+  border: solid red 1px;
+}
+
+.p-pages li {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  padding: 5px 5px;
+  background-color: #FFFFFF;
+  font-size: 16px;
+  font-weight: bold;
+  border: solid 1px #707070;
+}
+
+/* 左端のページ送り数のBLOCKみ色が違う */
+.p-pages li.this {
+  background-color: #3C2B1C;
+  color: #FFFFFF;
+}
+
+.p-pages li > a {
+  display: inline-block;
+}
+
 /* Component ------------ */
 /*スマホ----*/
 /*ロゴ*/
