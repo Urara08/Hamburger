@@ -36,6 +36,7 @@
   font-size: 16px;
   box-sizing: border-box;
 }
+
 .c-button__wrapper{/*card内のbuttonのwrapper*/
   position: relative;
   display: flex;
@@ -82,7 +83,11 @@
 
 .c-category{/*card内の大きい見出し*/
   display: inline-block;
-  margin-bottom: 30px;
+  width: 89.9%;
+
+  margin-left:5.05%;
+  margin-right:5.05%;
+  margin-bottom: 24px;
   margin-left:5.05%;
   font-size:20px;
   font-weight: bold;
@@ -90,21 +95,21 @@
   line-height: 1.5;
 }
 .c-sub-heading{
+  width: 89.9%;
   margin-left:5.05%;
-  margin-bottom: 10px;
+  margin-right:5.05%;
+  margin-bottom: 10px !important;
+  font-weight: bold;
 }
 
-.p-contents__archive__introduction__text{
-  display: inline-block;
-  font-size: 4.26vw;
-  color:#3C2A10;
-  font-family:$font-family--M-plus;
-  line-height: 1.43;
-  word-wrap:break-word;
-}
 .c-card__detail{/* card内説明の詳細 */
+  width: 89.9%;
   padding-bottom: 10px;
+  margin-left:5.05%;
+  margin-right:5.05%;
+  margin-bottom: 40px;
   word-wrap:break-word;
+  line-height: 1.43;
 }
 
 /* タブレット */
@@ -136,33 +141,36 @@
 }
 .c-category{/*card内の大きい見出し*/
   display: inline-block;
+  width:81.84%;
   margin-bottom: 24px;
-  margin-left: 9.17%;
+  margin-left: 9.08% !important;
+  margin-right: 9.08% !important;
   font-size:2.39vw;
   font-weight: bold;
   font-family:$font-family--M-plus;
   line-height: 1.5;
+
 }
 .c-sub-heading{
+  width:81.84%;
   margin-bottom: 10px;
-  margin-left: 9.17%;
+  margin-left: 9.08% !important;
+  margin-right: 9.08% !important;
   font-size: 1.91vw;
+  font-weight: bold;
   line-height: 1.5;
+
 }
-.c-card__detail__wrapper{
-  display: block;
-  width: 74.34%;
-  margin-left: 9.31%;
-  margin-right: 9.31%;
-  margin-bottom: 40px;
-  font-family:$font-family--M-plus;
-  line-height: 1.43;
-  word-wrap:break-word;
-  box-sizing: border-box;
-}
+
 .c-card__detail{/* card内説明の詳細 */
+  display: block;
+  width:81.84%;
+
   padding-bottom: 10px;
+  margin-left: 9.08% !important;
+  margin-right: 9.08% !important;
   margin-bottom: 53px;
+  font-family:$font-family--M-plus;
   font-size:1.91vw;
   word-wrap:break-word;
   box-sizing: border-box;
@@ -229,6 +237,7 @@
 }
 .c-category{/*card内の大きい見出し*/
   display: inline-block;
+  width: 81.38%;
   margin-left: 9.31% !important;
   margin-bottom: 47px;
   margin-left: 12.35%;
@@ -238,28 +247,25 @@
   line-height: 1.5;
 }
 .c-sub-heading{
-  margin-left: 9.31%  !important;;
+  width: 81.38%;
+  margin-right: 9.31%;
+  margin-left: 9.31%;
   margin-bottom: 17px;
   margin-left: 12.35%;
   font-size: 1.25vw;
+  font-weight: bold;
   line-height: 1.5;
 }
-.c-card__detail__wrapper{
-  display: block;
-  width: 81.38%;
-  margin-left: 9.31%;
-  margin-right: 9.31%;
-  margin-bottom: 40px;
-  font-family:$font-family--M-plus;
-  line-height: 1.43;
-  word-wrap:break-word;
-  box-sizing: border-box
-}
 .c-card__detail{/* card内説明の詳細 */
+  width: 81.38%;
   padding-bottom: 10px;
+  margin-right: 9.31%;
+  margin-left: 9.31%;
   margin-bottom: 60px;
   font-size:0.83vw;
+  font-family:$font-family--M-plus;
   word-wrap:break-word;
+  box-sizing: border-box;
 }
 /*c-card 写真側*/
 .c-card__picture{/*cardの写真の枠*/

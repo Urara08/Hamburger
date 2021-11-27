@@ -6,6 +6,7 @@
 .p-hero__archive{/*hero外枠*/
   position: relative;
   max-width: 100%;
+  min-width: 375px;
   height: 0;/*高さは無し*/
   padding-bottom: 76% !important;/*アスペクト比を保つ*/
   background-color: $color--mask-op-100;
@@ -53,6 +54,7 @@
 .p-contents__archive{/*archiveページのcontents外枠*/
   display: block;
   max-width: 100%;
+  min-width: 375px;
   height: auto;
   overflow: visible;
   background-color: $color--base-WH;
@@ -103,6 +105,7 @@ margin: 30px 5.33%  19px 5.33% !important;
 .p-hero__archive{
   position: relative;
   max-width: 100%;
+  min-width: 375px;
   height: 0;
   padding-bottom: 33.93% !important;
 }
