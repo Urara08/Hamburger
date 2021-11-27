@@ -1,6 +1,6 @@
 /* スマホ */
 /* hero */
-.c-hero__png__archive--pc{/* spの時はpc用写真は隠す */
+.p-hero__png__archive--pc{/* spの時はpc用写真は隠す */
   display: none !important;
 }
 .p-hero__archive{/*hero外枠*/
@@ -12,7 +12,7 @@
   background-color: $color--mask-op-100;
   font-family:$font-family--M-plus;
 }
-.c-hero__png__archive--sp{/*heroスマホ用写真を表示する*/
+.p-hero__png__archive--sp{/*heroスマホ用写真を表示する*/
   display: block !important;
   position: absolute !important;
   top:0;
@@ -64,8 +64,25 @@
   margin-bottom: 70px;
   font-family:$font-family--M-plus;
 }
-.contents__archive__introduction__innder{/*introductionのInner*/
+
+.p-contents__archive__introduction__innder{/*introductionのInner*/
 margin: 30px 5.33%  19px 5.33% !important;
+}
+.p-contents__archive__introduction__title{
+  margin-bottom: 30px;
+  font-size: 7.46vw;
+  font-family:$font-family--M-plus;
+  color: #3C2A10;
+  font-weight: bold;
+  line-height: 1.43;
+}
+.p-contents__archive__introduction__text{
+  display: inline-block;
+  font-size: 4.26vw;
+  color:#3C2A10;
+  font-family:$font-family--M-plus;
+  line-height: 1.43;
+  word-wrap:break-word;
 }
 .p-contents__archive__inner--middle{/*真ん中contents：スタイル*/
   display: flex;
@@ -78,28 +95,10 @@ margin: 30px 5.33%  19px 5.33% !important;
   margin: 0 5.33% 0 5.33%  !important;
 }
 
-.p-contents__archive__introduction__title{
-  margin-bottom: 30px;
-  font-size: 7.46vw;
-  font-family:$font-family--M-plus;
-  color: #3C2A10;
-  font-weight: bold;
-  line-height: 1.43;
-}
-
-.p-contents__archive__introduction__text{
-  display: inline-block;
-  font-size: 4.26vw;
-  color:#3C2A10;
-  font-family:$font-family--M-plus;
-  line-height: 1.43;
-  word-wrap:break-word;
-}
-
 /* タブレット */
 @media screen and (min-width: 600px){
 /* hero */
-.c-hero__png__archive--sp{/* pcの時は隠す */
+.p-hero__png__archive--sp{/* pcの時は隠す */
   display: none !important;
  }
 .p-hero__archive{
@@ -109,7 +108,7 @@ margin: 30px 5.33%  19px 5.33% !important;
   height: 0;
   padding-bottom: 33.93% !important;
 }
-.c-hero__png__archive--pc{/* heroの画像 */
+.p-hero__png__archive--pc{/* heroの画像 */
   display: block !important;
   position: absolute;
   top:0;
@@ -145,7 +144,7 @@ margin: 30px 5.33%  19px 5.33% !important;
   color:$color--char-WH;
 }
 /* contents */
-.contents__archive__introduction__innder{
+.p-contents__archive__introduction__innder{
   margin: 36px 4.68% 37px 4.68% !important;
   width:90.76%;
   box-sizing: border-box;
@@ -181,7 +180,7 @@ margin: 30px 5.33%  19px 5.33% !important;
 /* PC */
 @media screen and (min-width: 1250px){
 /* hero */
-.c-hero__png__archive--sp{/* pcの時は隠す */
+.p-hero__png__archive--sp{/* pcの時は隠す */
   display: none !important;
  }
 .p-hero__archive{
@@ -191,7 +190,7 @@ margin: 30px 5.33%  19px 5.33% !important;
   padding-bottom: 15.38% !important;
   background-color: $color--mask-op-100;
 }
-.c-hero__png__archive--pc{/* heroの画像 */
+.p-hero__png__archive--pc{/* heroの画像 */
   display: block !important;
   position: absolute;
   top:0;
@@ -229,7 +228,7 @@ margin: 30px 5.33%  19px 5.33% !important;
   color:$color--char-WH;
 }
 /* contents */
-.contents__archive__introduction__innder{
+.p-contents__archive__introduction__innder{
     margin: 60px 6.43% 70px 6.43% !important;
     width:87.12%;
     box-sizing: border-box;

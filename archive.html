@@ -37,8 +37,8 @@
       <main class="l-main">
         <div class="l-hero"><!-- アイキャッチ（ヒーロー）　ここから -->
           <section class="p-hero__archive"><!-- 見出しのある文章記事なのでsection -->
-            <div class="c-hero__png__archive--pc" alt="ハンバーガーの画像"></div>
-            <div class="c-hero__png__archive--sp" alt="ハンバーガーの画像"></div>
+            <div class="p-hero__png__archive--pc" alt="ハンバーガーの画像"></div>
+            <div class="p-hero__png__archive--sp" alt="ハンバーガーの画像"></div>
             <h2 class="p-hero__menu-label--archive">Menu:</h2>
             <h3 class="p-hero__item-label--archive">チーズバーガー</h3>
           </section>
@@ -46,7 +46,7 @@
         <article class="p-contents__archive"><!-- ここから下コンテンツ -->
           <div class="p-contents__archive__inner--top">
             <section class="p-contents__archive__introduction"><!-- 導入記事　ここから -->
-              <div class="contents__archive__introduction__innder">
+              <div class="p-contents__archive__introduction__innder">
                 <h2 class="p-contents__archive__introduction__title">小見出しが入ります</h2>
                 <p class="p-contents__archive__introduction__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
               </div>
@@ -102,20 +102,22 @@
               </div>
             </section><!-- 商品詳細　ここまで --><!-- Inner--bottomの最後 -->
             <div class="p-contents__archive__inner--bottom">
-              <ul class="p-pages list-group"><!-- ページネーション -->
-                <li class="list-group-item__title">page</li>
-                <li class="list-group-item__counter">1/10</li>
-                <li class="list-group-item__back"><a href="#"><img src="img/グループ 7.png" alt=""></a></li>
-                <li class="list-group-item this"><a href="#">1</a></li>
-                <li class="list-group-item"><a href="#">2</a></li>
-                <li class="list-group-item"><a href="#">3</a></li>
-                <li class="list-group-item"><a href="#">4</a></li>
-                <li class="list-group-item"><a href="#">5</a></li>
-                <li class="list-group-item"><a href="#">6</a></li>
-                <li class="list-group-item"><a href="#">7</a></li>
-                <li class="list-group-item"><a href="#">8</a></li>
-                <li class="list-group-item"><a href="#">9</a></li>
-                <li class="list-group-item__next"><a href="#"><img src="img/グループ 8.png" alt=""></a></li>
+              <ul class="p-pages__list-group"><!-- ページネーション -->
+                <li class="p-pages__list-group-item__title">page</li>
+                <li class="p-pages__list-group-item__counter js--pages__list-group-item__counter">1/10</li>
+                <li class="p-pages__list-group-item__back--sp js--pages__list-group-item__back"><a href="#"><img src="img/グループ 7.png" alt="前のページへ"><span>前へ</span></a></li>
+                <li class="p-pages__list-group-item__back js--pages__list-group-item__back"><a href="#"><img src="img/グループ 7.png" alt="前のページへ"></a></li>
+                <li class="p-pages__list-group-item this js-pages__list-group-item "><a href="#">1</a></li>
+                <li class="p-pages__list-group-item js-pages__list-group-item"><a href="#">2</a></li>
+                <li class="p-pages__list-group-item js-pages__list-group-item"><a href="#">3</a></li>
+                <li class="p-pages__list-group-item js-pages__list-group-item"><a href="#">4</a></li>
+                <li class="p-pages__list-group-item js-pages__list-group-item"><a href="#">5</a></li>
+                <li class="p-pages__list-group-item js-pages__list-group-item"><a href="#">6</a></li>
+                <li class="p-pages__list-group-item js-pages__list-group-item"><a href="#">7</a></li>
+                <li class="p-pages__list-group-item js-pages__list-group-item"><a href="#">8</a></li>
+                <li class="p-pages__list-group-item js-pages__list-group-item"><a href="#">9</a></li>
+                <li class="p-pages__list-group-item__next--sp js-pages__list-group-item__next"><a href="#"><span>次へ</span><img src="img/グループ 8.png" alt="次のページへ"></a></li>
+                <li class="p-pages__list-group-item__next js-pages__list-group-item__next"><a href="#"><img src="img/グループ 8.png" alt="次のページへ"></a></li>
                 </ul>
                 </div>
             </main>
