@@ -12,6 +12,8 @@
   <script src="jquery/jquery-3.6.0.min.js"></script>
   <script src="jquery/script_sidebar.js"></script>
   <script src="jquery/script_search-form.js"></script>
+  <script src="jquery/script_pagination.js"></script>
+  <script type="text/javascript" src="paginathing.min.js"></script>
 </head>
 <body>
   <div class="l-body">
@@ -100,20 +102,20 @@
               </div>
             </section><!-- 商品詳細　ここまで --><!-- Inner--bottomの最後 -->
             <div class="p-contents__archive__inner--bottom">
-              <ul class="p-pages"><!-- ページネーション -->
-                <li>page</li>
-                <li class="counter"></li>
-                <li><div>＜＜</div></li>
-                <li class="this"><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-                <li><a href="#">6</a></li>
-                <li><a href="#">7</a></li>
-                <li><a href="#">8</a></li>
-                <li><a href="#">9</a></li>
-                <li><a href="#">＞＞</a></li>
+              <ul class="p-pages list-group"><!-- ページネーション -->
+                <li class="list-group-item__title">page</li>
+                <li class="list-group-item__counter">1/10</li>
+                <li class="list-group-item__back"><a href="#"><img src="img/グループ 7.png" alt=""></a></li>
+                <li class="list-group-item this"><a href="#">1</a></li>
+                <li class="list-group-item"><a href="#">2</a></li>
+                <li class="list-group-item"><a href="#">3</a></li>
+                <li class="list-group-item"><a href="#">4</a></li>
+                <li class="list-group-item"><a href="#">5</a></li>
+                <li class="list-group-item"><a href="#">6</a></li>
+                <li class="list-group-item"><a href="#">7</a></li>
+                <li class="list-group-item"><a href="#">8</a></li>
+                <li class="list-group-item"><a href="#">9</a></li>
+                <li class="list-group-item__next"><a href="#"><img src="img/グループ 8.png" alt=""></a></li>
                 </ul>
                 </div>
             </main>

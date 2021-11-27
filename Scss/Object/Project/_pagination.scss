@@ -6,13 +6,21 @@
       justify-content: center;/*ページの真ん中へ*/
       margin-bottom: 64px;
       font-family: $font-family--Roboto;
-      border: solid red 1px;
+
     }
-    .p-pages li{
+    .p-pages> li{/*page ＜＜ ＞＞の装飾*/
+      padding:10px;
+      font-weight: bold;
+      color:#707070;
+      text-align: center;
+
+    }
+    .list-group-item{
       display: inline-block;
       width: 35px;
       height: 35px;
       padding:10px 5px;
+      margin-left: 15px;
       background-color: #FFFFFF;
       font-size:16px;
       font-weight: bold;
@@ -21,11 +29,19 @@
       box-sizing: border-box;
     }
 
-
     /* 左端のページ送り数のBLOCKみ色が違う */
-    .p-pages li.this {background-color:#3C2B1C;color:#FFFFFF;}
-    .p-pages li>a{
-      display: inline-block;
-
-
-    }
+    .list-group-item.this {background-color:#3C2B1C;color:#FFFFFF;}
+    .list-group-item__title,
+    .list-group-item__back,
+    .list-group-item__counter,
+    .list-group-item__next{
+      border:none !important;
+      text-align: center;
+      box-sizing: border-box;
+  }
+  .list-group-item__back__png,
+  .list-group-item__next__png{
+    display: inline-block;
+    width: 17px;
+    color:#707070;
+  }
