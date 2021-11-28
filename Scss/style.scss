@@ -26,16 +26,16 @@
 
 /* Project
 * ========================== */
-@import "./Object/project/header";
+@import "./Object/project/_header";
 @import "./Object/project/_search-form" ;
 @import "./Object/Project/_hero" ;
 @import "./Object/Project/_branch-menu";
 @import "./Object/project/_map" ;
 @import "./Object/Project/_footer";
-@import "./Object/project/sidebar" ;
+@import "./Object/project/_sidebar" ;
 
 @import "./Object/project/_archive" ;
 @import "./Object/project/_pagination" ;
 /* Component ------------ */
-@import "./Object/Component/component" ;
-@import "./Object/Component/component__card" ;
+@import "./Object/Component/_component" ;
+@import "./Object/Component/_component__card" ;
