@@ -3,10 +3,9 @@
 .p-contents__archive{/*archiveページのcontents共通*/
   display: block;
   max-width: 100%;
-
   height: auto;
   overflow: visible;
-  background-color: $color--base-WH;
+  background-color:$color--base-WH;
   font-family: $font-family--M-plus;
 
 &__inner--top{/* 導入記事の埋め込み先 */
