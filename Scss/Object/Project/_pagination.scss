@@ -12,7 +12,6 @@
   font-family: $font-family--Roboto;
   font-weight: normal;
   line-height: 1.43;
-  border: solid red 1px;
 }
 /* 隠す */
 .p-pages__list-group-item{/*ページ数(#1～９)*/
@@ -216,7 +215,7 @@ text-align: center !important;
 font-size: 16px;
 vertical-align: middle;
 }
-..p-pages__list-group-item__title{
+.p-pages__list-group-item__title{
   margin-right: 5px;
 }
 .p-pages__list-group-item__back--pc{
