@@ -497,13 +497,13 @@ a {
   font-family: "M PLUS 1p", sans-serif;
 }
 
-.p-hero__archive--pc__png {
+.p-hero__archive__png--pc {
   /* pc用の写真は隠す */
   display: none !important;
 }
 
 /*↓クラス名をp-hero__archiveにすると表示されなくなるためいったんこのまま */
-.p-hero__archive--sp__png {
+.p-hero__archive__png--sp {
   /*heroスマホ用写真を表示する*/
   display: block !important;
   position: absolute !important;
@@ -604,13 +604,13 @@ a {
     padding-bottom: 33.93% !important;
   }
 
-  .p-hero__archive--sp__png {
+  .p-hero__archive__png--sp {
     /* スマホ用の画像は隠す */
     display: none !important;
   }
 
   /*↓クラス名をp-hero__archiveにすると表示されなくなるためいったんこのままにいたします */
-  .p-hero__archive--pc__png {
+  .p-hero__archive__png--pc {
     /* pc用の画像 */
     display: block !important;
     position: absolute !important;
@@ -691,12 +691,12 @@ a {
   }
 
   /*↓クラス名をp-hero__archiveにすると表示されなくなるためいったんこのままにいたします */
-  .p-hero__archive--sp__png {
+  .p-hero__archive__png--sp {
     /* pcの時は隠す */
     display: none !important;
   }
 
-  .p-hero__archive--pc__png {
+  .p-hero__archive__png--pc {
     /* pc用の画像 */
     display: block !important;
     /* 表示する */
@@ -2405,7 +2405,7 @@ a {
   /*下の余白*/
 }
 
-.c-card {
+.c-card--archive {
   /*一番外側の枠*/
   width: 100%;
   margin-bottom: 30px;
@@ -2417,6 +2417,17 @@ a {
   /*写真の外側の枠*/
   display: block;
   width: 100%;
+}
+
+.c-caption-group--card {
+  /*文章の一番外側の枠*/
+  width: 100%;
+  padding-top: 30.5px;
+  padding-bottom: 43.7px;
+  background-color: #3C2A10;
+  color: #FFFFFF;
+  font-size: 16px;
+  box-sizing: border-box;
 }
 
 .c-photo {
@@ -2446,28 +2457,7 @@ a {
   background-repeat: no-repeat;
 }
 
-.c-card__caption-group {
-  /*文章の一番外側の枠*/
-  width: 100%;
-  padding-top: 30.5px;
-  padding-bottom: 43.7px;
-  background-color: #3C2A10;
-  color: #FFFFFF;
-  font-size: 16px;
-  box-sizing: border-box;
-}
-
-.c-button__wrapper {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 40px;
-  margin-bottom: 20px;
-}
-
-/*↓.c-btn--cardに修正したいのですが、変えるとstyleが反映しません*/
-.c-button--card {
+.c-btn--card {
   /*cardのbutton*/
   display: block;
   height: auto;
@@ -2484,8 +2474,16 @@ a {
   box-sizing: border-box;
 }
 
-/*↓.c-btn--cardに修正したいのですが、変えるとstyleが反映しません*/
-.c-button--card__label {
+.c-btn-wrapper--card {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.c-btn-label--card {
   /*buttonの文字*/
   display: inline-block;
   position: absolute;
@@ -2503,7 +2501,7 @@ a {
   line-height: 1.06;
 }
 
-.c-category {
+.c-category--card {
   /*大見出し*/
   display: inline-block;
   width: 89.9%;
@@ -2517,7 +2515,7 @@ a {
   line-height: 1.5;
 }
 
-.c-sub-heading {
+.c-sub-heading--card {
   /* 中見出し */
   width: 89.9%;
   margin-left: 5.05%;
@@ -2526,7 +2524,7 @@ a {
   font-weight: bold;
 }
 
-.c-card__detail {
+.c-detail--card {
   /* 説明の詳細（長文の部分） */
   width: 89.9%;
   padding-bottom: 10px;
@@ -2539,7 +2537,7 @@ a {
 
 /* タブレット */
 @media screen and (min-width: 600px) {
-  .c-card {
+  .c-card--archive {
     /*一番外側の枠*/
     width: 100%;
     margin-bottom: 30px;
@@ -2559,7 +2557,7 @@ a {
     margin-bottom: 0 !important;
   }
 
-  .c-card__caption-group {
+  .c-caption-group--card {
     /*文章の一番外側の枠*/
     max-width: 50%;
     padding: 0;
@@ -2569,7 +2567,7 @@ a {
     background-color: #3C2B1C;
   }
 
-  .c-category {
+  .c-category--card {
     /*大見出し*/
     display: inline-block;
     width: 81.84%;
@@ -2582,7 +2580,7 @@ a {
     line-height: 1.5;
   }
 
-  .c-sub-heading {
+  .c-sub-heading--card {
     /* 中見出し */
     width: 81.84%;
     margin-bottom: 10px;
@@ -2593,7 +2591,7 @@ a {
     line-height: 1.5;
   }
 
-  .c-card__detail {
+  .c-detail--card {
     /* 説明の詳細（長文の部分） */
     display: block;
     width: 81.84%;
@@ -2608,8 +2606,8 @@ a {
   }
 
   /*c-card 写真側*/
-  .c-card__picture {
-    /*cardの写真の枠*/
+  .c-photo-frame--card--archive {
+    /*cardの写真の外枠*/
     width: 50%;
     height: auto;
   }
@@ -2627,7 +2625,7 @@ a {
     box-sizing: border-box;
   }
 
-  .c-button--card {
+  .c-btn--card {
     display: block;
     height: auto;
     cursor: pointer;
@@ -2640,13 +2638,13 @@ a {
     box-sizing: border-box;
   }
 
-  .c-button--card__label {
+  .c-btn-label--card {
     /*card内のbuttonのlabel*/
     font-size: 16px;
     line-height: 1.06;
   }
 
-  .c-button__wrapper {
+  .c-btn-wrapper--card {
     /*card内のbuttonのwrapper*/
     position: relative;
     display: flex;
@@ -2656,7 +2654,7 @@ a {
 }
 /* PC */
 @media screen and (min-width: 1250px) {
-  .c-card {
+  .c-card--archive {
     /*一番外側の枠*/
     width: 100%;
     margin-bottom: 30px;
@@ -2675,7 +2673,7 @@ a {
     margin-bottom: 0 !important;
   }
 
-  .c-card__caption-group {
+  .c-caption-group--card {
     /*文章の一番外側の枠*/
     max-width: 50%;
     padding: 0;
@@ -2684,7 +2682,7 @@ a {
     min-height: 100%;
   }
 
-  .c-category {
+  .c-category--card {
     /*card内の大きい見出し*/
     display: inline-block;
     width: 81.38%;
@@ -2697,7 +2695,7 @@ a {
     line-height: 1.5;
   }
 
-  .c-sub-heading {
+  .c-sub-heading--card {
     /* 中見出し */
     width: 81.38%;
     margin-right: 9.31%;
@@ -2709,7 +2707,7 @@ a {
     line-height: 1.5;
   }
 
-  .c-card__detail {
+  .c-detail--card {
     /* 説明の詳細（長文の部分） */
     width: 81.38%;
     padding-bottom: 10px;
@@ -2723,7 +2721,7 @@ a {
   }
 
   /*c-card 写真側*/
-  .c-card__picture {
+  .c-photo-frame--card--archive {
     /*cardの写真の外枠*/
     width: 50%;
     height: auto;
@@ -2736,7 +2734,7 @@ a {
     /*カンプに近い*/
   }
 
-  .c-button--card {
+  .c-btn--card {
     display: block;
     height: auto;
     cursor: pointer;
@@ -2749,7 +2747,7 @@ a {
     box-sizing: border-box;
   }
 
-  .c-button__wrapper {
+  .c-btn-wrapper--card {
     /*card内のbuttonのwrapper*/
     position: relative;
     display: flex;
@@ -2757,7 +2755,7 @@ a {
     align-items: center;
   }
 
-  .c-button--card__label {
+  .c-btn-label--card {
     /*card内のbuttonのlabel*/
     font-size: 16px;
     line-height: 2.06;

@@ -6,12 +6,22 @@
   margin-bottom: 30px;/*下の余白*/
 }
 
-.c-card{/*一番外側の枠*/
+.c-card--archive{/*一番外側の枠*/
   @include c-card;
 }
 .c-photo-group{/*写真の外側の枠*/
   display: block;
   width: 100%;
+}
+
+.c-caption-group--card{/*文章の一番外側の枠*/
+  width: 100%;
+  padding-top: 30.5px;
+  padding-bottom: 43.7px;
+  background-color: $color--char-BR;
+  color:$color--char-WH;
+  font-size: 16px;
+  box-sizing: border-box;
 }
 
 .c-photo{/* mixin */
@@ -32,26 +42,7 @@
   background-repeat:no-repeat ;
 }
 
-.c-card__caption-group{/*文章の一番外側の枠*/
-  width: 100%;
-  padding-top: 30.5px;
-  padding-bottom: 43.7px;
-  background-color: $color--char-BR;
-  color:$color--char-WH;
-  font-size: 16px;
-  box-sizing: border-box;
-}
-
-.c-button__wrapper{
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 40px;
-  margin-bottom: 20px;
-}
-/*↓.c-btn--cardに修正したいのですが、変えるとstyleが反映しません*/
-.c-button--card{/*cardのbutton*/
+.c-btn--card{/*cardのbutton*/
   @include c-button;
   position: relative;
   min-width: 167px;
@@ -63,8 +54,17 @@
   border-radius:30px;
   box-sizing: border-box;
 }
-/*↓.c-btn--cardに修正したいのですが、変えるとstyleが反映しません*/
-.c-button--card__label{/*buttonの文字*/
+
+.c-btn-wrapper--card{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.c-btn-label--card{/*buttonの文字*/
   display: inline-block;
   position: absolute;
   z-index: 140;
@@ -79,7 +79,7 @@
   line-height: 1.06;
 }
 
-.c-category{/*大見出し*/
+.c-category--card{/*大見出し*/
   display: inline-block;
   width: 89.9%;
   margin-left:5.05%;
@@ -92,7 +92,7 @@
   line-height: 1.5;
 }
 
-.c-sub-heading{/* 中見出し */
+.c-sub-heading--card{/* 中見出し */
   width: 89.9%;
   margin-left:5.05%;
   margin-right:5.05%;
@@ -100,7 +100,7 @@
   font-weight: bold;
 }
 
-.c-card__detail{/* 説明の詳細（長文の部分） */
+.c-detail--card{/* 説明の詳細（長文の部分） */
   width: 89.9%;
   padding-bottom: 10px;
   margin-left:5.05%;
@@ -112,7 +112,7 @@
 
 /* タブレット */
 @media screen and (min-width: 600px){
-.c-card{/*一番外側の枠*/
+.c-card--archive{/*一番外側の枠*/
   @include c-card;
   display: flex;
   flex-direction: row;/*画像を左・文章を右に*/
@@ -126,7 +126,7 @@
   margin-bottom: 0 !important;
 }
 
-.c-card__caption-group{/*文章の一番外側の枠*/
+.c-caption-group--card{/*文章の一番外側の枠*/
   max-width: 50%;
   padding: 0;
   padding-top:29px;
@@ -135,7 +135,7 @@
   background-color: $color--item-BK-tea;
 }
 
-.c-category{/*大見出し*/
+.c-category--card{/*大見出し*/
   display: inline-block;
   width:81.84%;
   margin-bottom: 24px;
@@ -147,7 +147,7 @@
   line-height: 1.5;
 }
 
-.c-sub-heading{/* 中見出し */
+.c-sub-heading--card{/* 中見出し */
   width:81.84%;
   margin-bottom: 10px;
   margin-left: 9.08% !important;
@@ -157,7 +157,7 @@
   line-height: 1.5;
 }
 
-.c-card__detail{/* 説明の詳細（長文の部分） */
+.c-detail--card{/* 説明の詳細（長文の部分） */
   display: block;
   width:81.84%;
   padding-bottom: 10px;
@@ -171,7 +171,7 @@
 }
 
 /*c-card 写真側*/
-.c-card__picture{/*cardの写真の枠*/
+.c-photo-frame--card--archive{/*cardの写真の外枠*/
   width: 50%;
   height: auto;
 }
@@ -187,7 +187,7 @@
   box-sizing: border-box;
 }
 
-.c-button--card{
+.c-btn--card{
   @include c-button;
   position: relative;
   min-width: 163.16px;
@@ -197,12 +197,12 @@
   box-sizing: border-box;
 }
 
-.c-button--card__label{/*card内のbuttonのlabel*/
+.c-btn-label--card{/*card内のbuttonのlabel*/
   font-size:16px;
   line-height: 1.06;
 }
 
-.c-button__wrapper{/*card内のbuttonのwrapper*/
+.c-btn-wrapper--card{/*card内のbuttonのwrapper*/
   position: relative;
   display: flex;
   justify-content: center;
@@ -212,7 +212,7 @@
 
 /* PC */
 @media screen and (min-width: 1250px){
-.c-card{/*一番外側の枠*/
+.c-card--archive{/*一番外側の枠*/
   @include c-card;
   display: flex;
   flex-direction: row;/*画像を左側、文章を右側に*/
@@ -225,7 +225,7 @@
   margin-bottom: 0 !important;
 }
 
-.c-card__caption-group{/*文章の一番外側の枠*/
+.c-caption-group--card{/*文章の一番外側の枠*/
   max-width: 50%;
   padding: 0;
   padding-top:53px;
@@ -233,7 +233,7 @@
   min-height: 100%;
 }
 
-.c-category{/*card内の大きい見出し*/
+.c-category--card{/*card内の大きい見出し*/
   display: inline-block;
   width: 81.38%;
   margin-left: 9.31% !important;
@@ -245,7 +245,7 @@
   line-height: 1.5;
 }
 
-.c-sub-heading{/* 中見出し */
+.c-sub-heading--card{/* 中見出し */
   width: 81.38%;
   margin-right: 9.31%;
   margin-left: 9.31%;
@@ -256,7 +256,7 @@
   line-height: 1.5;
 }
 
-.c-card__detail{/* 説明の詳細（長文の部分） */
+.c-detail--card{/* 説明の詳細（長文の部分） */
   width: 81.38%;
   padding-bottom: 10px;
   margin-right: 9.31%;
@@ -269,7 +269,7 @@
 }
 
 /*c-card 写真側*/
-.c-card__picture{/*cardの写真の外枠*/
+.c-photo-frame--card--archive{/*cardの写真の外枠*/
   width: 50%;
     height: auto;
 }
@@ -279,7 +279,7 @@
   background-position: left center;/*カンプに近い*/
 }
 
-.c-button--card{
+.c-btn--card{
   @include c-button;
   position: relative;
   min-width: 292px;
@@ -289,14 +289,14 @@
   box-sizing: border-box;
 }
 
-.c-button__wrapper{/*card内のbuttonのwrapper*/
+.c-btn-wrapper--card{/*card内のbuttonのwrapper*/
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.c-button--card__label{/*card内のbuttonのlabel*/
+.c-btn-label--card{/*card内のbuttonのlabel*/
   font-size:16px;
   line-height: 2.06;
 }
