@@ -96,8 +96,8 @@
   margin-left: 12.53%;
 
 &__title{/*バーガー・サイド・ドリンク*/
-  display: block;
-  font-size: 20px;
+  display: block !important;
+  font-size: 20px !important;
   font-weight: 500;
   color:$color--char-GY;
   line-height: 1.5;
@@ -105,8 +105,8 @@
 
 &__list{/*__titleを除いた各（バーガー・サイド・ドリンク）メーニュー群の箱*/
   margin-bottom: 40px !important;
-  padding-left: 9px;/*title（バーガー・サイド・ドリンク）とのインデント*/
-  width:92.3%;
+  padding-left: 9px !important;/*title（バーガー・サイド・ドリンク）とのインデント*/
+  width:92.3% !important;
   font-weight: 400;
   font-size: 20px;
   line-height: 1.5;

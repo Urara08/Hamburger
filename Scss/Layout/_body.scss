@@ -8,7 +8,7 @@ max-width: 100%;
 min-height: 100vh;
 }
 .l-body.is-show{/*サイドバーが開いたらbodyは固定する*/
-  position: fixed;
+  position: fixed !important;
 }
 /*パソコン画面1250px以上--*/
 @media screen and (min-width: 1250px){

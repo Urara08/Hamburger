@@ -13,32 +13,37 @@
   <script src="jquery/script_sidebar.js"></script>
   <script src="jquery/script_search-form.js"></script>
 </head>
+
 <body>
-  <div class="l-body">
+  <div class="l-body js-body">
     <header  class="l-header">
       <div class="p-header">
         <div class="p-header__wrapper">
           <div class="c-wrapper__logo">
             <h1 class="c-logo--title--hamburger">Hamburger</h1>
-          </div>
-            <form class="p-search-form">
+          </div><!-- c-wrapper__logoここまで -->
+          <form class="p-search-form">
             <input   placeholder=""  class="p-search-form__input" type="search" >
-            <a class="js-search-form__icon"><img class="p-search-form__icon" src="img/search-icon.png"></a>
-            <button class= "p-search-form__button" ><a class= "p-search-form__button__label">検索</a></button>
+            <a class="js-search-form__icon">
+              <img class="p-search-form__icon" src="img/search-icon.png">
+            </a>
+            <button class= "p-search-form__button" >
+              <a class= "p-search-form__button__label">検索</a>
+            </button>
           </form>
-        </div>
-      </div>
-      <div class="c-btn--menu__wrapper">
-        <div class="toggle_btn c-btn--menu "><p class="c-btn--menu__label">Menu</p></div>
-      </div>
+          <div class="c-btn--menu__wrapper">
+            <div class="toggle_btn c-btn--menu "><p class="c-btn--menu__label">Menu</p></div>
+          </div><!-- c-btn--menu__wrapperここまで -->
+        </div><!-- p-header__wrapperここまで -->
+      </div><!-- p-headerここまで -->
     </header>
-      <main class="l-main">
-        <div class="l-hero"><!-- アイキャッチ（ヒーロー）　ここから -->
+    <main class="l-main">
+      <div class="l-hero"><!-- アイキャッチ（ヒーロー）　ここから -->
           <section class="p-hero__archive"><!-- 見出しのある文章記事なのでsection -->
-            <div class="p-hero__png__archive--pc" alt="ハンバーガーの画像"></div>
-            <div class="p-hero__png__archive--sp" alt="ハンバーガーの画像"></div>
-            <h2 class="p-hero__menu-label--archive">Menu:</h2>
-            <h3 class="p-hero__item-label--archive">チーズバーガー</h3>
+            <div class="p-hero__archive--pc__png" alt="ハンバーガーの画像"></div>
+            <div class="p-hero__archive--sp__png" alt="ハンバーガーの画像"></div>
+            <h2 class="p-hero__archive__menu-label">Menu:</h2>
+            <h3 class="p-hero__archive__item-label">チーズバーガー</h3>
           </section>
         </div><!-- アイキャッチ（ヒーロー）　ここまで -->
         <article class="p-contents__archive"><!-- ここから下コンテンツ -->
@@ -49,34 +54,34 @@
                 <p class="p-contents__archive__introduction__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
               </div>
             </section><!-- 導入記事　ここまで -->
-          <section class="p-contents__archive__inner--middle">
-            <div  class="p-contents__archive__cards"><!-- 商品詳細　ここから -->
-              <figure class="c-card"><!-- 商品詳細　① -->
+          </div><!-- p-contents__archive__inner--top　ここまで -->
+          <div class="p-contents__archive__inner--middle">
+            <div  class="p-contents__archive__cards"><!-- card　ここから -->
+              <figure class="c-card"><!-- 商品詳細　③ -->
                 <div class="c-card__picture">
                 <div class="c-photo--archive" alt="ハンバーガーの画像"></div>
                 </div>
                 <figcaption class="c-card__caption-group">
-
-                <h3 class="c-category">チーズバーガー</h3>
+                <h3 class="c-category">スペシャルチーズバーガー</h3>
                 <h4 class="c-sub-heading">小見出しが入ります</h4>
-                  <div class="c-card__detail__wrapper">
+
                     <p class="c-card__detail">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-                  </div>
+
                     <div class="c-button__wrapper">
                       <div class="c-button--card"><a class="c-button--card__label">詳しくみる</a></div>
                     </div>
                   </figcaption>
                 </figure>
-                <figure class="c-card"><!-- 商品詳細　② -->
+                <figure class="c-card"><!-- 商品詳細　③ -->
                   <div class="c-card__picture">
                   <div class="c-photo--archive" alt="ハンバーガーの画像"></div>
                   </div>
                   <figcaption class="c-card__caption-group">
-                  <h3 class="c-category">ダブルチーズバーガー</h3>
+                  <h3 class="c-category">スペシャルチーズバーガー</h3>
                   <h4 class="c-sub-heading">小見出しが入ります</h4>
-                    <div class="c-card__detail__wrapper">
+
                       <p class="c-card__detail">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-                    </div>
+
                       <div class="c-button__wrapper">
                         <div class="c-button--card"><a class="c-button--card__label">詳しくみる</a></div>
                       </div>
@@ -97,8 +102,8 @@
                         </div>
                       </figcaption>
                     </figure>
-              </div>
-            </section><!-- 商品詳細　ここまで --><!-- Inner--bottomの最後 -->
+              </div><!-- card　ここまで -->
+            </div><!-- Inner--middleの最後 -->
             <div class="p-contents__archive__inner--bottom">
               <ul class="p-pages__list-group"><!-- ページネーション -->
                 <li class="p-pages__list-group-item__title">page</li>
@@ -116,9 +121,10 @@
                 <li class="p-pages__list-group-item"><a href="#">9</a></li>
                 <li class="p-pages__list-group-item__next--sp"><a href="#"><span>次へ</span><img src="img/グループ 8.png" alt="次のページへ"></a></li>
                 <li class="p-pages__list-group-item__next"><a href="#"><img src="img/グループ 8.png" alt="次のページへ"></a></li>
-                </ul>
-                </div>
-            </main>
+                </ul><!-- pagenationの最後 -->
+                </div><!-- Inner--middleここまで -->
+              </article>
+              </main>
             <footer class="l-footer">
               <div class="p-footer">
                 <div class="p-footer__wrapper">
@@ -129,7 +135,7 @@
                 </div>
               </div>
             </footer>
-          </article>
+
           <aside class="l-sidebar">
             <div class="p-sidebar js-sidebar">
               <a class=" p-sidebar__menu__close-btn">

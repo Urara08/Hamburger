@@ -3,7 +3,7 @@
 .p-contents__archive{/*archiveページのcontents共通*/
   display: block;
   max-width: 100%;
-  min-width: 375px;/*最小の画面幅*/
+
   height: auto;
   overflow: visible;
   background-color: $color--base-WH;
@@ -63,6 +63,7 @@
 /* introduction(導入記事) */
 .p-contents__archive__introduction{
 &__innder{/* 外枠 */
+  max-width: 100%;
   margin: 36px 4.68% 37px 4.68% !important;
   width:90.76%;
   box-sizing: border-box;
@@ -95,7 +96,7 @@
 @media screen and (min-width: 1250px){
 /* contents */
 .p-contents__archive__inner--top{/* 導入記事の埋め込み先 */
-  width:100% !important;
+  max-width:100% !important;
   margin-bottom: 0px;/*無し*/
   box-sizing: border-box;
 }
