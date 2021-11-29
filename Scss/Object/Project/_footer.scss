@@ -9,6 +9,7 @@
   height: auto;
   background-image: url(../img/c-footer.png);
   object-fit: cover;/*要素全体を画像で覆う*/
+  overflow-y: hidden;
 
   &__wrapper{/*縦に潰れないように*/
     padding-top: 39px;/*px以外長さが合わない*/
@@ -43,7 +44,8 @@
 /* タブレット */
 @media screen and (min-width: 600px){
 .p-footer{
-  height: auto;
+  height: 150px;
+  overflow-y: hidden !important;
 
 &__wrapper{/*縦に潰れないように*/
   padding-top: 39px;/*px以外長さがおかしい為px*/
@@ -74,6 +76,7 @@
     left: 0;
     z-index: 140;
     height: 150px;
+    overflow-y: hidden;
 
   &__wrapper{/*可変で縦が潰れないように設定*/
     padding-top: 39px;/*px以外長さが合わない*/

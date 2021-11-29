@@ -174,7 +174,6 @@ a {
     /*２カラムのレイアウト*/
     grid-template-rows: auto 1fr 150px !important;
     max-width: 100%;
-    overflow: hidden;
   }
 }
 /*スマホ--タブレット--パソコン画面1249pxまで--*/
@@ -221,6 +220,7 @@ a {
   grid-row: 3/-1;
   max-width: 100%;
   min-width: 375px;
+  overflow-y: hidden !important;
 }
 
 /*パソコン画面1250px以上--*/
@@ -1620,6 +1620,7 @@ a {
   -o-object-fit: cover;
      object-fit: cover;
   /*要素全体を画像で覆う*/
+  overflow-y: hidden;
 }
 .p-footer__wrapper {
   /*縦に潰れないように*/
@@ -1659,7 +1660,8 @@ a {
 /* タブレット */
 @media screen and (min-width: 600px) {
   .p-footer {
-    height: auto;
+    height: 150px;
+    overflow-y: hidden !important;
   }
   .p-footer__wrapper {
     /*縦に潰れないように*/
@@ -1694,6 +1696,7 @@ a {
     left: 0;
     z-index: 140;
     height: 150px;
+    overflow-y: hidden;
   }
   .p-footer__wrapper {
     /*可変で縦が潰れないように設定*/
@@ -1947,6 +1950,7 @@ a {
   /* 導入記事の埋め込み先 */
   margin-bottom: 70px;
   font-family: "M PLUS 1p", sans-serif;
+  overflow-y: hidden !important;
 }
 
 /* introduction(導入記事) */
@@ -2026,6 +2030,7 @@ a {
   .p-contents__archive__cards {
     /*cardグループの外側の余白*/
     width: 90.76%;
+    min-height: 52.75%;
     margin: 0 4.68% 105px 4.68% !important;
   }
 }
@@ -2147,7 +2152,6 @@ a {
   font-size: 16px;
   font-weight: normal;
   line-height: 1.43;
-  background-color: chartreuse;
   vertical-align: top;
 }
 .p-pages__list-group-item__next__word--sp {
@@ -2160,7 +2164,6 @@ a {
   font-size: 16px;
   font-weight: normal;
   line-height: 1.43;
-  background-color: chartreuse;
   vertical-align: top;
 }
 .p-pages__list-group-item__back__png--sp {
@@ -2652,6 +2655,7 @@ a {
     flex-direction: row;
     /*画像を左・文章を右に*/
     min-width: 85.44% !important;
+    min-height: 45.16%;
     height: auto;
     margin-left: 0;
     margin-bottom: 20.5px;

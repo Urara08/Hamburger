@@ -11,6 +11,7 @@
 &__inner--top{/* 導入記事の埋め込み先 */
   margin-bottom: 70px;
   font-family:$font-family--M-plus;
+  overflow-y: hidden !important;
 }
 }
 
@@ -87,6 +88,7 @@
 }
 .p-contents__archive__cards{/*cardグループの外側の余白*/
   width:90.76%;
+  min-height: 52.75%;
   margin: 0 4.68% 105px 4.68%  !important;
 }
 }
