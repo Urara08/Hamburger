@@ -82,15 +82,20 @@ table {
 /* 上記以外の文字 */
 /* フォントオーサム */
 /*関数の定義*/
-/*ロゴ*/
+/*ロゴ-----------------*/
 /*Hamburgerの文字・MENUボタン*/
-/*ボタン*/
-/*フィルター*/
+/*ボタン-----------------*/
+/*フィルター-----------------*/
 /*c-overlay*/
-/*カード*/
-/*c-card*/
-/*カード*/
-/*c-photo*/
+/*カード---------------------------------------*/
+/*c-card-----------------*/
+/*c-wrapper--card-----------------*/
+/*c-photo-----------------*/
+/*buttonのwrapper-----------------*/
+/*buttonの上の字-----------------*/
+/*文章の一番外側の枠-----------------*/
+/*説明の詳細（長文の部分）-----------------*/
+/*--------------------------------カードここまで*/
 /* Base */
 html {
   text-decoration: none;
@@ -2376,6 +2381,7 @@ a {
   position: absolute;
   height: auto;
   cursor: pointer;
+  box-sizing: border-box;
   transition: transform 0.3s, opacity 0.3s;
 }
 
@@ -2384,6 +2390,7 @@ a {
   display: block;
   height: auto;
   cursor: pointer;
+  box-sizing: border-box;
   transition: transform 0.3s opacity 0.3s;
   width: 13.6%;
 }
@@ -2508,17 +2515,14 @@ a {
 .c-card {
   /* mixin */
   width: 100%;
-  /*画像を上・文章を下*/
-  margin-bottom: 30px;
-  /*下の余白*/
 }
 
 .c-card--archive {
   /*一番外側の枠*/
   width: 100%;
-  margin-bottom: 30px;
-  /*下の余白*/
   box-sizing: border-box;
+  /*画像を上・文章を下*/
+  margin: 0;
 }
 
 .c-photo-group {
@@ -2527,15 +2531,34 @@ a {
   width: 100%;
 }
 
-.c-caption-group--card {
-  /*文章の一番外側の枠*/
+.c-wrapper--card {
   width: 100%;
-  padding-top: 30.5px;
-  padding-bottom: 43.7px;
+}
+
+.c-wrapper--card--archive {
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 20.9px;
+  /*下の余白を調整*/
+}
+
+/*mixin*/
+.c-caption-group--card--archive {
+  /*文章の一番外側の枠*/
   background-color: #3C2A10;
   color: #FFFFFF;
-  font-size: 16px;
   box-sizing: border-box;
+}
+
+.c-caption-group--card--archive {
+  /*文章の一番外側の枠*/
+  background-color: #3C2B1C;
+  color: #FFFFFF;
+  box-sizing: border-box;
+  max-width: 100%;
+  padding-top: 30.5px;
+  padding-bottom: 43.7px;
+  font-size: 16px;
 }
 
 .c-photo {
@@ -2570,6 +2593,7 @@ a {
   display: block;
   height: auto;
   cursor: pointer;
+  box-sizing: border-box;
   transition: transform 0.3s opacity 0.3s;
   position: relative;
   min-width: 167px;
@@ -2579,10 +2603,17 @@ a {
   color: #707070 !important;
   font-weight: 600;
   border-radius: 30px;
-  box-sizing: border-box;
 }
 
+/*mixin*/
 .c-btn-wrapper--card {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.c-btn-wrapper--card--archive {
   position: relative;
   display: flex;
   justify-content: center;
@@ -2591,11 +2622,11 @@ a {
   margin-bottom: 20px;
 }
 
-.c-btn-label--card {
+/* mixin */
+.c-btn-label {
   /*buttonの文字*/
   display: inline-block;
   position: absolute;
-  z-index: 140;
   top: 50%;
   /*真ん中に配置*/
   left: 50%;
@@ -2603,9 +2634,25 @@ a {
   /*真ん中に配置*/
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
-  font-size: 16px !important;
   color: #707070;
   font-weight: bold;
+}
+
+.c-btn-label--card {
+  /*buttonの文字*/
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  /*真ん中に配置*/
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /*真ん中に配置*/
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  color: #707070;
+  font-weight: bold;
+  z-index: 140;
+  font-size: 16px !important;
   line-height: 1.06;
 }
 
@@ -2613,10 +2660,7 @@ a {
   /*大見出し*/
   display: inline-block;
   width: 89.9%;
-  margin-left: 5.05%;
-  margin-right: 5.05%;
-  margin-bottom: 24px;
-  margin-left: 5.05%;
+  margin: 0 5.05% 24px 5.05%;
   font-size: 20px;
   font-weight: bold;
   font-family: "M PLUS 1p", sans-serif;
@@ -2632,14 +2676,25 @@ a {
   font-weight: bold;
 }
 
+/*mixsin*/
 .c-detail--card {
   /* 説明の詳細（長文の部分） */
+  display: block;
+  font-family: "M PLUS 1p", sans-serif;
+  word-wrap: break-word;
+  box-sizing: border-box;
+}
+
+.c-detail--card--archive {
+  /* 説明の詳細（長文の部分）*/
+  display: block;
+  font-family: "M PLUS 1p", sans-serif;
+  word-wrap: break-word;
+  box-sizing: border-box;
   width: 89.9%;
   padding-bottom: 10px;
-  margin-left: 5.05%;
   margin-right: 5.05%;
-  margin-bottom: 40px;
-  word-wrap: break-word;
+  margin-left: 5.05%;
   line-height: 1.43;
 }
 
@@ -2648,8 +2703,6 @@ a {
   .c-card--archive {
     /*一番外側の枠*/
     width: 100%;
-    margin-bottom: 30px;
-    /*下の余白*/
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
@@ -2657,23 +2710,30 @@ a {
     min-width: 85.44% !important;
     min-height: 45.16%;
     height: auto;
-    margin-left: 0;
-    margin-bottom: 20.5px;
   }
 
-  .c-card:last-child {
+  .c-wrapper--card--archive {
+    width: 100%;
+    box-sizing: border-box;
+    margin-left: 0;
+    margin-bottom: 20.5px;
+    /*下の余白*/
+  }
+
+  .c-card--archive:last-child {
     /*一番下のcardのmarginの調整*/
     margin-bottom: 0 !important;
   }
 
-  .c-caption-group--card {
+  .c-caption-group--card--archive {
     /*文章の一番外側の枠*/
+    background-color: #3C2B1C;
+    color: #FFFFFF;
+    box-sizing: border-box;
     max-width: 50%;
-    padding: 0;
     padding-top: 29px;
     padding-bottom: 40px;
     min-height: 100%;
-    background-color: #3C2B1C;
   }
 
   .c-category--card {
@@ -2697,21 +2757,17 @@ a {
     margin-right: 9.08% !important;
     font-size: 1.91vw;
     font-weight: bold;
+    font-family: "M PLUS 1p", sans-serif;
     line-height: 1.5;
   }
 
-  .c-detail--card {
+  .c-detail--card--archive {
     /* 説明の詳細（長文の部分） */
-    display: block;
     width: 81.84%;
     padding-bottom: 10px;
-    margin-left: 9.08% !important;
     margin-right: 9.08% !important;
-    margin-bottom: 53px;
-    font-family: "M PLUS 1p", sans-serif;
+    margin-left: 9.08% !important;
     font-size: 1.91vw;
-    word-wrap: break-word;
-    box-sizing: border-box;
   }
 
   /*c-card 写真側*/
@@ -2722,7 +2778,6 @@ a {
   }
 
   .c-photo--archive {
-    /*写真*/
     display: block !important;
     height: 100%;
     background-image: url(../img/item__archive.png);
@@ -2738,27 +2793,38 @@ a {
     display: block;
     height: auto;
     cursor: pointer;
+    box-sizing: border-box;
     transition: transform 0.3s opacity 0.3s;
     position: relative;
     min-width: 163.16px;
     height: 42.47px;
     padding: 10px;
     border-radius: 38px;
-    box-sizing: border-box;
   }
 
   .c-btn-label--card {
-    /*card内のbuttonのlabel*/
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    /*真ん中に配置*/
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*真ん中に配置*/
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    color: #707070;
+    font-weight: bold;
     font-size: 16px;
     line-height: 1.06;
   }
 
-  .c-btn-wrapper--card {
+  .c-btn-wrapper--card--archive {
     /*card内のbuttonのwrapper*/
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 45px;
   }
 }
 /* PC */
@@ -2766,15 +2832,20 @@ a {
   .c-card--archive {
     /*一番外側の枠*/
     width: 100%;
-    margin-bottom: 30px;
-    /*下の余白*/
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
     /*画像を左側、文章を右側に*/
     min-width: 78.55% !important;
     height: auto;
+  }
+
+  .c-wrapper--card--archive {
+    width: 100%;
+    box-sizing: border-box;
     margin-left: 0;
+    margin-bottom: 30px;
+    /*下の余白*/
   }
 
   .c-card:last-child {
@@ -2782,8 +2853,11 @@ a {
     margin-bottom: 0 !important;
   }
 
-  .c-caption-group--card {
+  .c-caption-group--card--archive {
     /*文章の一番外側の枠*/
+    background-color: #3C2B1C;
+    color: #FFFFFF;
+    box-sizing: border-box;
     max-width: 50%;
     padding: 0;
     padding-top: 53px;
@@ -2795,9 +2869,8 @@ a {
     /*card内の大きい見出し*/
     display: inline-block;
     width: 81.38%;
-    margin-left: 9.31% !important;
-    margin-bottom: 47px;
     margin-left: 12.35%;
+    margin-bottom: 47px;
     font-size: 1.87vw;
     font-weight: bold;
     font-family: "M PLUS 1p", sans-serif;
@@ -2807,31 +2880,24 @@ a {
   .c-sub-heading--card {
     /* 中見出し */
     width: 81.38%;
-    margin-right: 9.31%;
-    margin-left: 9.31%;
-    margin-bottom: 17px;
     margin-left: 12.35%;
+    margin-bottom: 17px;
     font-size: 1.25vw;
     font-weight: bold;
     line-height: 1.5;
   }
 
-  .c-detail--card {
+  .c-detail--card--archive {
     /* 説明の詳細（長文の部分） */
     width: 81.38%;
     padding-bottom: 10px;
     margin-right: 9.31%;
     margin-left: 9.31%;
-    margin-bottom: 60px;
     font-size: 0.83vw;
-    font-family: "M PLUS 1p", sans-serif;
-    word-wrap: break-word;
-    box-sizing: border-box;
   }
 
   /*c-card 写真側*/
   .c-photo-frame--card--archive {
-    /*cardの写真の外枠*/
     width: 50%;
     height: auto;
   }
@@ -2840,32 +2906,42 @@ a {
     /*写真*/
     display: block !important;
     background-position: left center;
-    /*カンプに近い*/
+    /*left centerがカンプに近い*/
   }
 
   .c-btn--card {
     display: block;
     height: auto;
     cursor: pointer;
+    box-sizing: border-box;
     transition: transform 0.3s opacity 0.3s;
     position: relative;
     min-width: 292px;
     height: 76px;
     padding: 10px;
     border-radius: 38px;
-    box-sizing: border-box;
   }
 
-  .c-btn-wrapper--card {
-    /*card内のbuttonのwrapper*/
+  .c-btn-wrapper--card--archive {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 60px;
   }
 
   .c-btn-label--card {
-    /*card内のbuttonのlabel*/
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    /*真ん中に配置*/
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*真ん中に配置*/
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    color: #707070;
+    font-weight: bold;
     font-size: 16px;
     line-height: 2.06;
   }

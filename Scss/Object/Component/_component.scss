@@ -29,6 +29,7 @@
   position: absolute;
   height: auto;
   cursor: pointer;
+  box-sizing: border-box;
   transition: transform .3s, opacity .3s;
 }
 /*header側：MENUボタン*/
