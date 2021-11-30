@@ -1,14 +1,31 @@
 /* スマホ */
 
   /*------------- single */
-  /* single */
+  /* contents */
+.p-contents__single{/*archiveページのcontents共通*/
+  max-width: 100%;
+  display: block;
+  max-width: 100%;
+  height: auto;
+  overflow: visible;
+  background-color:$color--base-WH;
+  font-family: $font-family--M-plus;
+
+&__inner--top{/* 導入記事の埋め込み先 */
+  margin-bottom: 70px;
+  font-family:$font-family--M-plus;
+  overflow-y: hidden !important;
+  border: solid red 1px;
+}
+}
+  /* hero */
   .p-hero__single{
     display: block !important;
     position: relative;
     max-width: 100%;
     min-width: 375px;
-    height: 0;/*高さは無し*/
-    padding-bottom: 76% !important;/*アスペクト比を保つ*/
+    height: 225px;/*高さは無し*/
+    padding-bottom: 60% !important;/*アスペクト比を保つ*/
     background-color: $color--mask-op-100;
     font-family:$font-family--M-plus;
   }
@@ -22,11 +39,11 @@
     position: absolute !important;
     top:0;
     left: 0;
-    z-index: 100;
+    z-index: 120;
     width: 100% !important;
-    padding-bottom: 76% !important;/*アスペクト比を保つ*/
+    padding-bottom: 60% !important;/*アスペクト比を保つ*/
     height: 0;/*高さは設定しない*/
-    background-image:url(../img/hero_sp__archive.png);
+    background-image:url(../img/hero_pc__single.png);
     background-position: left center;/*left centerがカンプに近い*/
     background-size: cover;
     background-repeat:no-repeat;
@@ -44,16 +61,49 @@
     color:$color--char-WH;
     line-height: 1.33;
   }
+/* introduction(導入記事) */
+.p-contents__single__introduction{
+  &__inner{/* 外枠 */
+    margin: 30px 5.33%  19px 5.33% !important;
+    border: solid red 1px;
+  }
 
+  &__title{/* 見出し */
+    margin-bottom: 30px;
+    font-size: 7.46vw;
+    font-family:$font-family--M-plus;
+    color: #3C2A10;
+    font-weight: bold;
+    line-height: 1.43;
+    border: solid red 1px;
+  }
+
+  &__text{/* 文章 */
+    display: inline-block;
+    font-size: 4.26vw;
+    color:#3C2A10;
+    font-family:$font-family--M-plus;
+    line-height: 1.43;
+    word-wrap:break-word;
+  }
+  }
   /* タブレット */
   @media screen and (min-width: 600px){
-  /*------------- archive */
+  /*------------- single */
+  .p-contents__single{/*archiveページのcontents共通*/
+    max-width: 100% !important;
+    display: block;
+    max-width: 100%;
+    height: auto;
+
+  }
+
   .p-hero__single{
     position: relative;
     max-width: 100%;
     min-width: 375px;
     height: 0;
-    padding-bottom: 33.93% !important;
+    padding-bottom: 59.95% !important;
   }
 
 
@@ -68,9 +118,9 @@
     left: 0;
     z-index: 110;
     width: 100% !important;
-    padding-bottom: 33.93% !important;/* アスペクト比を保つ */
+    padding-bottom: 59.95% !important;/* アスペクト比を保つ */
     height: 0;/* 高さは設定しない */
-    background-image:url(../img/hero_pc__archive.png);
+    background-image:url(../img/hero_pc__single.png);
     background-position: center;/* centerがカンプに近い */
     background-size: cover !important;
     background-repeat:no-repeat;
@@ -86,19 +136,55 @@
     font-size:7.19vw;
     line-height:1.31;
   }
+  .p-contents__single__inner--top{/* 導入記事の埋め込み先 */
+    width:100% !important;
+    margin-bottom: 0px;/*無し*/
+    box-sizing: border-box;
+  }
+  .p-contents__single__introduction{/* introduction(導入記事) */
+    &__inner{/* 外枠 */
+      max-width: 100%;
+      margin: 36px 4.68% 37px 4.68% !important;
+      width:90.76%;
+      box-sizing: border-box;
+    }
 
+    &__title{/* 見出し */
+      display: inline-block;
+      margin-bottom: 25px !important;
+      font-size: 4.31vw !important;
+      font-family:$font-family--M-plus;
+      line-height: 1.5;
+    }
+
+    &__text{/* 文章 */
+      display: inline-block;
+      font-size: 1.91vw;
+      color:#3C2A10;
+      font-family:$font-family--M-plus;
+      line-height: 1.43;
+      word-wrap:break-word;
+    }
+    }
   }
 
   /* PC */
   @media screen and (min-width: 1250px){
+  /* contents */
 
-  /*------------- archive */
+.p-contents__single__inner--top{/* 導入記事の埋め込み先 */
+  max-width:100% !important;
+  margin-bottom: 0px;/*無し*/
+  box-sizing: border-box;
+}
+
+  /*------------- single */
   /* hero */
   .p-hero__single{
     position: relative;
     max-width: 100%;
     height: 0;
-    padding-bottom: 15.38% !important;
+    padding-bottom: 32.19% !important;
     background-color: $color--mask-op-100;
   }
 
@@ -114,16 +200,15 @@
     left: 0;
     z-index: 100;
     width: 100% !important;
-    padding-bottom: 15.38% !important;/* アスペクト比を保つ */
+    padding-bottom: 32.19% !important;/* アスペクト比を保つ */
     height: 0;/* 高さは設定しない */
-    background-image:url(../img/hero_pc__archive.png);
+    background-image:url(../img/hero_pc__single.png);
     background-position: top right !important;
     background-size: cover !important;
     background-repeat:no-repeat;
     vertical-align:bottom;
   }
 
-  /*↓クラス名をp-hero__archiveにすると表示されなくなるためいったんこのままにいたします */
   .p-hero__single__menu-label{/*MENU:*/
     display: inline-block;
     position: absolute;
@@ -135,6 +220,33 @@
     color:$color--char-WH;
     line-height:1.31;
   }
-
-
+  /* introduction(導入記事) */
+.p-contents__single__introduction__inner{/* 外枠 */
+  margin: 60px 6.43% 70px 6.43% !important;
+  width:87.12%;
+  box-sizing: border-box;
+}
+.p-contents__single__introduction{
+&__title{/* 見出し */
+  display: inline-block;
+  margin-bottom: 30px !important;
+  font-size: 2.31vw !important;
+  font-family:$font-family--M-plus;
+  line-height: 1.5;
+}
+&__text{/* 文章 */
+  display: inline-block;
+  font-size: 1.03vw !important;
+  font-family:$font-family--M-plus;
+  line-height: 1.43;
+  word-wrap:break-word;
+}
+}
+/* card の集まり*/
+.p-contents__single__cards{/*cardグループの外側の余白*/
+  display: inline-block !important;
+  width:87.12% !important;
+  margin: 0 6.43% 150px 6.43% !important;
+  box-sizing: border-box;
+}
   }
