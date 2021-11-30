@@ -56,7 +56,6 @@ color:  $color--char-WH;
   display: none !important;
 }
 
-/*↓クラス名をp-hero__archiveにすると表示されなくなるためいったんこのまま */
 .p-hero__archive__png--sp{/*heroスマホ用写真を表示する*/
   display: block !important;
   position: absolute !important;
@@ -74,7 +73,6 @@ color:  $color--char-WH;
   box-sizing: border-box;
 }
 
-/*↓クラス名をp-hero__archiveにすると表示されなくなるためいったんこのままにいたします */
 .p-hero__archive__menu-label{/*MENU:の字*/
   display: inline-block;
   position: absolute;
@@ -87,7 +85,6 @@ color:  $color--char-WH;
   line-height: 1.33;
 }
 
-/*↓クラス名をp-hero__archiveにすると表示されなくなるためいったんこのままにいたします */
 .p-hero__archive__item-label{/*チーズバーガーの字*/
   display: inline-block !important;
   position: absolute;
@@ -157,7 +154,6 @@ line-height:54 / 36;
 }
 
 
-/*↓クラス名をp-hero__archiveにすると表示されなくなるためいったんこのままにいたします */
 .p-hero__archive__png--pc{/* pc用の画像 */
   display: block !important;
   position: absolute !important;
@@ -174,7 +170,6 @@ line-height:54 / 36;
   vertical-align:bottom;
 }
 
-/*↓クラス名をp-hero__archiveにすると表示されなくなるためいったんこのままにいたします */
 .p-hero__archive__menu-label{/*MENU:*/
   display: inline-block;
   position: absolute;
@@ -185,7 +180,6 @@ line-height:54 / 36;
   line-height:1.31;
 }
 
-/*↓クラス名をp-hero__archiveにすると表示されなくなるためいったんこのままにいたします */
 .p-hero__archive__item-label{/*チーズバーガーの字*/
   display: inline-block !important;
   position: absolute;
@@ -232,7 +226,6 @@ line-height:60 / 40;
   background-color: $color--mask-op-100;
 }
 
-/*↓クラス名をp-hero__archiveにすると表示されなくなるためいったんこのままにいたします */
 .p-hero__archive__png--sp{/* pcの時は隠す */
   display: none !important;
 }
@@ -253,7 +246,6 @@ line-height:60 / 40;
   vertical-align:bottom;
 }
 
-/*↓クラス名をp-hero__archiveにすると表示されなくなるためいったんこのままにいたします */
 .p-hero__archive__menu-label{/*MENU:*/
   display: inline-block;
   position: absolute;
@@ -266,7 +258,6 @@ line-height:60 / 40;
   line-height:1.31;
 }
 
-/*↓クラス名をp-hero__archiveにすると表示されなくなるためいったんこのままにいたします */
 .p-hero__archive__item-label{/*チーズバーガーの字*/
   display: inline-block !important;
   position: absolute;
