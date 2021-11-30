@@ -2105,7 +2105,7 @@ a {
   position: relative;
   max-width: 100%;
   min-width: 375px;
-  height: 225px;
+  height: 0;
   /*高さは無し*/
   padding-bottom: 60% !important;
   /*アスペクト比を保つ*/
@@ -2178,6 +2178,116 @@ a {
   word-wrap: break-word;
 }
 
+/* 写真のみのcardーーーーーーー*/
+.c-card--single {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.c-photo-frame--card__full--single {
+  display: block;
+  width: 100% !important;
+  height: 0;
+  padding-bottom: 37.01%;
+  /*アスペクト比を維持*/
+}
+
+.c-photo--single {
+  max-width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  vertical-align: bottom;
+  display: block;
+  width: 100%;
+  height: 0;
+  padding-bottom: 37.01%;
+  /*アスペクト比を維持*/
+  background-image: url(../img/cheese-burger.png);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* 写真のみのcardここまでーーーーーーー*/
+/* card largeーーーーーーーーーーー*/
+.c-card--single--large--pic_first {
+  /* 外枠 */
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row !important;
+  height: auto;
+}
+
+.c-photo-frame--card--single--large {
+  min-width: 42.72%;
+  border: solid blue 1px;
+}
+
+.p-hero__single__png--pc {
+  display: none !important;
+}
+
+.c-photo--single--min {
+  display: block !important;
+  height: 0;
+  /*高さは設定しない*/
+  padding-bottom: 68.58%;
+  /*アスペクト比を維持*/
+  background-image: url(../img/cheese-burger--2.png);
+  background-position: left top;
+  /*カンプに近い*/
+  background-size: cover;
+  background-repeat: no-repeat;
+  vertical-align: bottom;
+  box-sizing: border-box;
+}
+
+/* card 大きな枠ここまでーーーーーーー*/
+/* 写真を左にする*/
+.c-card--single--large--char_first {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row-reverse !important;
+  height: auto;
+}
+
+/* 写真が幅100%で周りに余白付きーーーーーーー*/
+.c-wrapper--card--single {
+  max-width: 100%;
+}
+
+.c-wrapper--card--single--frame-type {
+  padding: 30px;
+}
+
+.c-photo-frame--card__full--single--frame-type {
+  width: 100%;
+  box-sizing: border-box;
+  height: 0;
+  padding-bottom: 62.17%;
+}
+
+.c-photo--single--frame-type {
+  max-width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  vertical-align: bottom;
+  height: 0;
+  padding-bottom: 62.17%;
+  background-image: url(../img/cheese-burger--2.png);
+}
+
+.c-photo-frame--card__full--single-nomal {
+  padding: 0 !important;
+  width: 100%;
+}
+
+/* 写真が幅100%で周りに余白付きここまでーーーーーーー*/
 /* タブレット */
 @media screen and (min-width: 600px) {
   /*------------- single */
@@ -2354,6 +2464,7 @@ a {
   }
 
   /* card の集まり*/
+  /* 余白ーーーーーーーーーーーーーーーー*/
   .p-contents__single__cards {
     /*cardグループの外側の余白*/
     display: inline-block !important;
@@ -2361,6 +2472,8 @@ a {
     margin: 0 6.43% 150px 6.43% !important;
     box-sizing: border-box;
   }
+
+  /* 余白ここまでーーーーーーーーーーーー*/
 }
 /* pagination */
 /* スマホ */
