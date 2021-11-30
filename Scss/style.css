@@ -1993,7 +1993,7 @@ a {
 .p-contents__archive__cards {
   /* cardグループの外側の余白 */
   width: 89.62%;
-  margin: 0 5.33% 0 5.33% !important;
+  margin: 0 5.33% 113px 5.33% !important;
 }
 
 /* タブレット */
@@ -2006,7 +2006,9 @@ a {
     box-sizing: border-box;
   }
 
-  /* introduction(導入記事) */
+  .p-contents__archive__introduction {
+    /* introduction(導入記事) */
+  }
   .p-contents__archive__introduction__innder {
     /* 外枠 */
     max-width: 100%;
@@ -2036,7 +2038,7 @@ a {
     /*cardグループの外側の余白*/
     width: 90.76%;
     min-height: 52.75%;
-    margin: 0 4.68% 105px 4.68% !important;
+    margin: 0 4.68% 129px 4.68% !important;
   }
 }
 /* PC */
@@ -2080,14 +2082,14 @@ a {
     /*cardグループの外側の余白*/
     display: inline-block !important;
     width: 87.12%;
-    margin: 0 6.43% 160px 6.43% !important;
+    margin: 0 6.43% 150px 6.43% !important;
     box-sizing: border-box;
   }
 }
 /* pagination */
 /* スマホ */
 .p-pages__list-group {
-  /*ページネーション全体 */
+  /* ページネーション全体 */
   display: flex !important;
   /*横並びに配置*/
   flex-direction: row !important;
@@ -2104,13 +2106,12 @@ a {
   line-height: 1.43;
 }
 
-/* 隠す */
+/* 隠す ここから-----------*/
 .p-pages__list-group-item {
   /*ページ数(#1～９)*/
   display: none !important;
 }
 
-/* 隠す */
 .p-pages__list-group-item {
   /* page */
 }
@@ -2130,8 +2131,10 @@ a {
   display: none !important;
 }
 
-/* 表示する */
+/* ここまで-----------*/
+/* 表示する スタイリング--------- */
 .p-pages__list-group-item__back--sp {
+  /* ＜＜前へ */
   display: inline-block;
   border: none !important;
   /* 枠で囲まない */
@@ -2139,6 +2142,7 @@ a {
   color: #707070;
 }
 .p-pages__list-group-item__next--sp {
+  /* 次へ＞＞*/
   display: inline-block;
   border: none !important;
   /* 枠で囲まない */
@@ -2189,94 +2193,115 @@ a {
 
 /* タブレット */
 @media screen and (min-width: 600px) {
-  /*ページネーションの埋め込み */
-  .p-pages__list-group {
-    justify-content: center;
-    /*両端に*/
-    max-width: 100%;
-    min-width: 71.8%;
-    height: 35px;
-    margin-bottom: 30px;
+  /* 隠す部分 ここから-----------*/
+  .p-pages__list-group-item__back--sp {
+    /*＜＜前へ*/
+    display: none !important;
   }
-
-  /*表示しない*/
-  .p-pages__list-group-item__back--sp,
-.p-pages__list-group-item__next--sp {
+  .p-pages__list-group-item__next--sp {
     /*次へ＞＞*/
     display: none !important;
   }
 
-  /*□ページ数の部分のスタイリング */
+  /* ここまで-----------*/
+  /* ページネーション全体----------- */
+  .p-pages__list-group {
+    justify-content: center;
+    /*両端に配置する*/
+    max-width: 100%;
+    min-width: 71.8%;
+    height: 35px;
+    margin-bottom: 30px;
+    font-weight: bold !important;
+  }
+
+  /* ----------- */
+  /* 表示する スタイリング--------- */
+  /*ページ数の部分 */
   .p-pages__list-group-item {
     display: inline-block !important;
     /* 表示する */
     width: 35px;
     height: 35px;
     padding: 7px;
-    /*数字を枠の真ん中に配置 */
+    /*枠の上下中央に配置*/
     margin-left: 2.5%;
     background-color: #FFFFFF;
     font-size: 16px;
-    font-family: "Roboto", sans-serif;
-    font-weight: bold;
     text-align: center;
-    /*数字を枠の中央に配置 */
+    /*数字を枠の左右中央に配置 */
     border: solid 1px #707070;
     box-sizing: border-box;
   }
 
-  .p-pages__list-group-item.this {
+  .p-pages__list-group.this {
     margin-left: 0;
   }
 
-  /*□外枠がつかないアイテム（ページ数以外）のスタイリング */
-  .p-pages__list-group-item__title,
-.p-pages__list-group-item__back--pc,
-.p-pages__list-group-item__counter,
-.p-pages__list-group-item__next--pc {
-    /* >> */
-    display: inline-block !important;
-    padding: 7px;
-    font-weight: bold;
-    color: #707070;
-    font-size: 16px;
-    font-family: "Roboto", sans-serif;
-    border: none !important;
+  /*現在のページ数は色を変える(is-activeで指定予定)*/
+  .p-pages__list-group-item.this {
+    background-color: #3C2B1C;
+    color: #FFFFFF;
   }
 
+  /*ページ数以外の部分 */
+  .p-pages__list-group-item {
+    /* page*/
+  }
+  .p-pages__list-group-item__title {
+    display: inline-block !important;
+    padding: 7px;
+    /*枠の上下中央に配置*/
+    border: none !important;
+    /*枠は無し*/
+  }
   .p-pages__list-group-item__counter {
-    margin-right: 19px;
+    /*1/10*/
     display: inline-block !important;
+    margin-right: 19px;
     padding: 7px;
-    font-weight: bold;
-    color: #707070;
-    font-family: "Roboto", sans-serif;
+    /*枠の上下中央に配置*/
     border: none !important;
   }
-
   .p-pages__list-group-item__back--pc {
     /* << */
+    display: inline-block !important;
+    /*表示する*/
     margin-right: 15px;
+    padding: 7px;
+    /*枠の上下中央に配置*/
+    border: none !important;
+    /*枠は無し*/
     box-sizing: border-box;
   }
-
   .p-pages__list-group-item__next--pc {
     /* >> */
+    display: inline-block !important;
+    /*表示する*/
     margin-left: 15px;
+    padding: 7px;
+    /*枠の上下中央に配置*/
+    border: none !important;
+    /*枠は無し*/
     box-sizing: border-box;
   }
 }
 /*PＣ*/
 @media screen and (min-width: 1250px) {
-  /*表示しない*/
-  .p-pages__list-group-item__back--sp,
-.p-pages__list-group-item__next--sp {
+  /* 隠す部分 ここから-----------*/
+  .p-pages__list-group-item__back--sp {
+    /*＜＜前へ*/
+    display: none !important;
+  }
+  .p-pages__list-group-item__next--sp {
     /*次へ＞＞*/
     display: none !important;
   }
 
+  /*ここまで-----------*/
+  /* 表示する スタイリング--------- */
+  /* ページネーション全体 */
   .p-pages__list-group {
-    /*ページネーションの埋め込み */
     display: flex !important;
     /*横並びに配置*/
     flex-direction: row !important;
@@ -2286,60 +2311,45 @@ a {
     min-width: 38.55%;
     height: 36px;
     margin-bottom: 64px;
-    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    vertical-align: middle;
+    /*無いと中央に配置されない*/
   }
 
+  /*ページ数の部分*/
   .p-pages__list-group-item {
-    /*□ページ数の部分のスタイリング */
     display: inline-block;
     width: 35px;
     height: 35px;
     padding: 7px !important;
     margin-left: 0.96%;
-    background-color: #FFFFFF;
-    font-size: 16px;
-    font-weight: bold;
-    border: solid 1px #707070;
-    text-align: center;
     box-sizing: border-box;
-    vertical-align: middle;
   }
 
-  /*現在のページ数は色を変える*/
-  .p-pages__list-group-item.is-active {
-    background-color: #3C2B1C;
-  }
-
-  /* 枠□がないitemのスタイリング */
-  .p-pages__list-group-item__title,
-.p-pages__list-group-item__back--pc,
-.p-pages__list-group-item__counter,
-.p-pages__list-group-item__next--pc {
-    /* >> */
-    border: none !important;
-    padding: 8px;
-    font-weight: bold;
-    color: #707070;
-    font-family: "Roboto", sans-serif;
-    text-align: center !important;
-    font-size: 16px;
-    vertical-align: middle;
-  }
-
+  /* ページ数以外 */
   .p-pages__list-group-item__title {
+    /* page */
     margin-right: 5px;
+    padding: 8px;
+    border: none !important;
   }
-
   .p-pages__list-group-item__back--pc {
+    /* << */
     margin-right: 17.2px;
+    padding: 8px;
+    border: none !important;
   }
-
   .p-pages__list-group-item__next--pc {
+    /* 1/10 */
     margin-left: 17.2px;
+    padding: 8px;
+    border: none !important;
   }
-
   .p-pages__list-group-item__counter {
+    /* >> */
     margin-left: 19.3px;
+    padding: 8px;
+    border: none !important;
   }
 }
 /* Component ------------ */
@@ -2511,7 +2521,7 @@ a {
   }
 }
 /* c-card用のcomponent----------- */
-/* スマホ */
+/* スマホ ------*/
 .c-card {
   /* mixin */
   width: 100%;
@@ -2543,7 +2553,7 @@ a {
 }
 
 /*mixin*/
-.c-caption-group--card--archive {
+.c-caption-group--card {
   /*文章の一番外側の枠*/
   background-color: #3C2A10;
   color: #FFFFFF;
@@ -2698,7 +2708,7 @@ a {
   line-height: 1.43;
 }
 
-/* タブレット */
+/* タブレット------ */
 @media screen and (min-width: 600px) {
   .c-card--archive {
     /*一番外側の枠*/
@@ -2827,7 +2837,7 @@ a {
     margin-top: 45px;
   }
 }
-/* PC */
+/* PC------ */
 @media screen and (min-width: 1250px) {
   .c-card--archive {
     /*一番外側の枠*/
