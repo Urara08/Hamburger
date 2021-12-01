@@ -87,6 +87,12 @@
     word-wrap:break-word;
   }
   }
+
+.p-contents__archive__cards{
+  border: solid green 5px;
+}
+
+
 /* 写真のみのcardーーーーーーー*/
   .c-card--single{
     @include c-card;
@@ -146,9 +152,12 @@
 /* 写真が幅100%で周りに余白付きーーーーーーー*/
 .c-wrapper--card--single{
   max-width: 100%;
+  border: solid red 1px;
 }
 .c-wrapper--card--single--frame-type{
-  padding: 30px
+  padding: 60px 30px;
+  box-sizing: border-box;
+  background-color:blue;
 }
 .c-photo-frame--card__full--single--frame-type{
   @include c-card;
