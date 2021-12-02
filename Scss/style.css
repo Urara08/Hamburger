@@ -2193,7 +2193,7 @@ a {
 
 .p-contents__single__block__area {
   /* block__area各本体 */
-  clear: both;
+  float: none;
   font-family: "M PLUS 1p", sans-serif;
   overflow-y: hidden !important;
   background-color: yellowgreen;
@@ -2395,7 +2395,8 @@ a {
 
 .c-caption-group--card--single {
   /* 文章の外枠ーーー*/
-  width: 57.28% !important;
+  max-width: 57.28% !important;
+  min-height: 88.43%;
   padding-right: 5.18%;
   padding-left: 5.18%;
   box-sizing: border-box;
@@ -2497,8 +2498,11 @@ a {
 /* 以下、リストーーーーーーーーーーーーー*/
 .p-contents__single__list-block {
   /**/
-  clear: both;
-  width: 100%;
+  display: block;
+  float: none !important;
+  max-width: 100%;
+  min-width: 53.86%;
+  min-height: 87.23%;
   margin-top: 60px;
   margin-bottom: 60px;
   font-size: 16px;
@@ -2508,19 +2512,80 @@ a {
 }
 
 .p-contents__single__list--1 {
-  display: inline-block;
+  display: block;
+  max-width: 100%;
+  clear: both;
+  float: none;
   margin-left: 0;
   margin-bottom: 20px;
 }
 
 .p-contents__single__list--2 {
-  display: inline-block;
+  display: block;
+  float: none;
+  clear: both;
   margin-left: 18px;
   margin-bottom: 20px;
 }
 
 .p-contents__single__list--1._for-margin {
   margin-bottom: 60px;
+}
+
+/* 以下、コードーーーーーーーーーーーーー*/
+.p-contents__single__code-block__inner {
+  background-color: #F5F5F5;
+}
+
+.p-contents__single__code {
+  display: inline-block;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 49px;
+  margin-right: 60p;
+  font-size: 16px;
+  line-height: 1.43;
+  border: solid red 1px;
+}
+
+/* 以下、テーブルーーーーーーーーーーーーー*/
+.p-contents__single__table-block {
+  display: block;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.p-contents__single__table {
+  display: block;
+  border-collapse: collapse;
+  width: 100% !important;
+  border: solid 1px black;
+}
+
+table > th {
+  display: block;
+  width: 50%;
+  height: auto;
+  background-color: blanchedalmond;
+  padding: 28px 43px 28px 30px !important;
+  border: solid 1px black;
+}
+
+table > td {
+  width: 50%;
+  height: auto;
+  background-color: blanchedalmond;
+  display: block;
+  padding: 28px 126px 28px 30px !important;
+  border: solid 1px black;
+}
+
+table > th {
+  width: 50%;
+  height: auto;
+  background-color: blanchedalmond;
+  display: block;
+  border: solid 1px black;
 }
 
 /* タブレット */
@@ -2769,6 +2834,12 @@ a {
 
   .c-wrapper--card--single--frame-type._for-margin {
     margin-bottom: 180px;
+  }
+
+  .c-wrapper--card--single--pattern-area::after {
+    content: "";
+    display: block;
+    clear: both;
   }
 }
 /* PC */
