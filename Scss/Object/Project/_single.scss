@@ -396,40 +396,38 @@
 }
 /* 以下、テーブルーーーーーーーーーーーーー*/
 .p-contents__single__table-block{
-  display: block;
+
   width: 100%;
   margin-top: 30px;
 }
 .p-contents__single__table{
-  display: block;
-  border-collapse: collapse;
+
+  border-collapse: collapse !important;
   width: 100% !important;
-  border: solid 1px black;
+  border: solid 1px black !important;
 }
 
-table> th{
+table th{
   display: block;
-  width:50%;
+  border-collapse: collapse;
+  width:40.89%;
   height: auto;
   background-color: blanchedalmond;
   padding: 28px 43px 28px 30px !important;
   border: solid 1px black;
+  color: black;
 }
-table> td{
-  width:50%;
+table　td{
+  display: block;
+  border-collapse: collapse;
+  width:59.11%;
   height: auto;
   background-color: blanchedalmond;
-  display: block;
-  padding: 28px 126px 28px 30px !important;
+  padding: 28px 0 28px 0!important;
   border: solid 1px black;
+  color: black;
 }
-table> th{
-  width:50%;
-  height: auto;
-  background-color: blanchedalmond;
-  display: block;
-  border: solid 1px black;
-}
+
 
 
   /* タブレット */
