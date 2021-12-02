@@ -100,6 +100,7 @@
 }
 
 .p-contents__single__block__area{/* block__area各本体 */
+  clear: both;
   font-family:$font-family--M-plus;
   overflow-y: hidden !important;
   background-color: yellowgreen;
@@ -325,6 +326,9 @@
   padding-bottom:62.17%;
   background-image:url(../img/cheese-burger--2.png);
 }
+.c-wrapper--card--single--frame-type._for-margin{
+  margin-bottom: 0;
+}
 /* 写真が幅100%で周りに余白付きここまでーーーーーーー*/
 /* 写真が幅100%で余白無し、最後の複数パターンーーーーーーー*/
 
@@ -342,6 +346,30 @@
 .c-wrapper--card--single--pattern-area{
   display: flex;
   flex-direction: column;
+}
+/* 以下、リストーーーーーーーーーーーーー*/
+.p-contents__single__list-block{/**/
+clear: both;
+width: 100%;
+margin-top: 60px;
+margin-bottom: 60px;
+font-size: 16px;
+font-weight: normal;
+color:#3C2A10;
+line-height: 1.43;
+}
+.p-contents__single__list--1{
+  display: inline-block;
+  margin-left: 0;
+  margin-bottom: 20px;
+}
+.p-contents__single__list--2{
+  display: inline-block;
+  margin-left: 18px;
+  margin-bottom: 20px;
+}
+.p-contents__single__list--1._for-margin{
+  margin-bottom: 60px;
 }
 
   /* タブレット */
@@ -538,7 +566,7 @@ background-color: #F5F5F5;
   display: block !important;
   max-width: 100%;
   height: 100%;
-  border: solid red 5px;
+  border: solid red 1px;
   padding: 0;
   }
   .c-wrapper--card--single--pattern{
@@ -555,7 +583,9 @@ background-color: #F5F5F5;
   {margin-right:16px !important;
 
 }
-
+.c-wrapper--card--single--frame-type._for-margin{
+  margin-bottom: 180px;
+}
 
 
 }
