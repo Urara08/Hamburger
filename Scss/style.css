@@ -2269,6 +2269,7 @@ a {
 .p-contents__single__article__text--detail {
   /* 文章 */
   display: inline-block;
+  margin-top: 30px;
   font-size: 4.26vw;
   line-height: 1.43;
 }
@@ -2277,6 +2278,8 @@ a {
   display: flex;
   flex-direction: row !important;
   margin-top: 30px;
+  border: solid red 1px;
+  margin-bottom: 30px;
   font-size: 16px !important;
   font-family: "M PLUS 1p", sans-serif;
   font-weight: normal;
@@ -2551,34 +2554,28 @@ a {
 .p-contents__single__table-block {
   width: 100%;
   margin-top: 30px;
+  background-color: #FFFFFF;
 }
 
 .p-contents__single__table {
   border-collapse: collapse !important;
   width: 100% !important;
-  border: solid 1px black !important;
 }
 
-table th {
-  display: block;
+th {
   border-collapse: collapse;
   width: 40.89%;
   height: auto;
-  background-color: blanchedalmond;
-  padding: 28px 43px 28px 30px !important;
-  border: solid 1px black;
-  color: black;
+  padding: 28px 0px 28px 30px !important;
+  border: solid 1px #707070;
 }
 
-table　td {
-  display: block;
+td {
   border-collapse: collapse;
   width: 59.11%;
   height: auto;
-  background-color: blanchedalmond;
-  padding: 28px 0 28px 0 !important;
-  border: solid 1px black;
-  color: black;
+  padding: 28px 0 28px 30px !important;
+  border: solid 1px #707070;
 }
 
 /* 以下、buttonーーーーーーーーーーーー*/
