@@ -103,7 +103,6 @@
   float: none;
   font-family:$font-family--M-plus;
   overflow-y: hidden !important;
-  background-color: yellowgreen;
   border: solid red 1px;
 }
 
@@ -427,7 +426,33 @@ table　td{
   border: solid 1px black;
   color: black;
 }
+/* 以下、buttonーーーーーーーーーーーー*/
+.p-contents__single__button-block__inner{
+  margin-top: 30px;
+  margin-bottom: 177px;
+}
 
+.p-contents__single__button-block{
+  position: relative;
+  display: block !important;
+  width: 100;
+  height: 0;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.43;
+  padding-bottom: 24.17%;
+  background-color: #F2EDE9;
+  border: solid 1px #707070;
+  border-radius: 20px;
+  margin-bottom: 30px;
+}
+.p-contents__single__button-block__supplement{
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.43;
+  color:#3C2A10;
+}
 
 
   /* タブレット */
@@ -653,12 +678,7 @@ background-color: #F5F5F5;
   display: block;
   clear: both;
 }
-
-
-
 }
-
-
 
   /* PC */
   @media screen and (min-width: 1250px){
