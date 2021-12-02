@@ -259,6 +259,7 @@ a {
 /* スマートフォン・タブレット */
 .p-header {
   position: relative;
+  z-index: 140;
   height: 217px;
   padding-top: 40px;
   /*可変で縦が潰れないように設定*/
@@ -2089,24 +2090,16 @@ a {
   height: auto;
   overflow: visible;
   background-color: #FFFDFA;
-  /*contents共通*/
   font-family: "M PLUS 1p", sans-serif;
-  /*contents共通*/
   font-weight: normal;
   /*contents共通*/
 }
-.p-contents__single__block__area {
-  /* 導入記事の埋め込み先 */
-  font-family: "M PLUS 1p", sans-serif;
-  overflow-y: hidden !important;
-}
 
-/* hero */
-.p-hero__single {
+　 .p-hero__single {
   display: block !important;
-  position: relative;
-  max-width: 100%;
-  min-width: 375px;
+  position: relative !important;
+  z-index: 100;
+  max-width: 100% !important;
   height: 0;
   /*高さは無し*/
   padding-bottom: 60% !important;
@@ -2121,16 +2114,16 @@ a {
 .p-hero__single__png--sp {
   /*heroスマホ用写真を表示する*/
   display: block !important;
-  position: absolute !important;
-  top: 0;
+  position: relative !important;
+  top: 0 !important;
   left: 0;
-  z-index: 120;
+  z-index: 100;
   width: 100% !important;
   padding-bottom: 60% !important;
   /*アスペクト比を保つ*/
   height: 0;
   /*高さは設定しない*/
-  background-image: url(../img/hero_pc__single.png);
+  background-image: url(../img/hero_sp__single.png);
   background-position: left center;
   /*left centerがカンプに近い*/
   background-size: cover;
@@ -2141,10 +2134,10 @@ a {
 
 .p-hero__single__menu-label {
   /*h1 チーズバーガ―:重なった字*/
-  display: inline-block;
-  position: absolute;
-  z-index: 140;
-  top: 40.44%;
+  display: inline-block !important;
+  position: absolute !important;
+  z-index: 140 !important;
+  top: 0%;
   /*91px*/
   left: 6.93%;
   /*26px*/
@@ -2154,10 +2147,28 @@ a {
   line-height: 1.5;
 }
 
-/* section(sectionブロックの内側) */
+/* 文字のgroupの外枠 */
+.p-contents__single__inner--top {
+  border: solid blue 5px;
+  margin: 0px 5.33% 0 5.33% !important;
+}
+
+/* section(見出し+導入記事) */
+.p-contents__single__section__area {
+  /* sectionの外枠 */
+  max-width: 100% !important;
+  padding-top: 30px;
+  /* 上のheroとの余白 */
+  padding-bottom: 34px;
+  box-sizing: border-box;
+  border: solid green 5px;
+}
+
+/* section(見出し+導入記事の内側) */
 .p-contents__single__section__inner {
   /* 外枠 */
-  margin: 30px 5.33% 34px 5.33% !important;
+  box-sizing: border-box;
+  border: solid green 5px;
 }
 .p-contents__single__section__title {
   /* 見出し */
@@ -2177,20 +2188,32 @@ a {
   line-height: 1.43;
   font-weight: normal;
   word-wrap: break-word;
+  border: solid red 1px;
 }
 
-/* tex-block(テキストブロック) */
+.p-contents__single__block__area {
+  /* block__area各本体 */
+  font-family: "M PLUS 1p", sans-serif;
+  overflow-y: hidden !important;
+  background-color: yellowgreen;
+  border: solid red 1px;
+}
+
+/* tex-block(テキストブロック) の内側*/
 .p-contents__single__text-block__inner {
   /* 外枠 */
-  margin: 0px 5.33% 0 5.33% !important;
+  border: solid green 5px;
 }
 .p-contents__single__text-block__title {
   /* 見出し(h2) */
   display: inline-block;
+  color: #3C2A10;
+  font-family: "M PLUS 1p", sans-serif;
   font-weight: bold;
   line-height: 1.5;
 }
 
+/* tex-block(テキストブロック)見出し毎の下との余白*/
 .__h2 {
   margin-bottom: 30px;
   font-size: 28px;
@@ -2220,39 +2243,50 @@ a {
   line-height: 1.5;
 }
 
-/* article(引用記事　テキスト+出典) */
+/* article(引用記事　テキスト+出典 全体) 外側 */
+.p-contents__single__article {
+  display: inline-block;
+  width: 100%;
+  margin-top: 0px;
+  padding-bottom: 0px;
+  box-sizing: border-box;
+}
+
+/* article(引用記事　テキスト+出典 全体) 内側 */
 .p-contents__single__article__inner {
   /* 外枠 */
-  width: 79.8%;
-  margin: 30px 10.1% 30px 10.1% !important;
-  background-color: hotpink;
+  display: inline-block;
+  margin: 0px 7.19% 0px 7.19% !important;
+  box-sizing: border-box;
 }
 .p-contents__single__article__text {
+  color: #3C2A10;
+  font-family: "M PLUS 1p", sans-serif;
+  font-weight: normal;
+  word-wrap: break-word;
+  box-sizing: border-box;
+}
+.p-contents__single__article__text--detail {
   /* 文章 */
   display: inline-block;
   font-size: 4.26vw;
-  color: #3C2A10;
-  font-family: "M PLUS 1p", sans-serif;
   line-height: 1.43;
-  font-weight: normal;
-  word-wrap: break-word;
 }
 
 .p-contents__single__article__source {
-  /* 出典元全体*/
   display: flex;
   flex-direction: row !important;
-  width: 78.8%;
   margin-top: 30px;
-  margin-bottom: 30px;
-  background-color: #F5F5F5;
   font-size: 16px !important;
+  font-family: "M PLUS 1p", sans-serif;
+  font-weight: normal;
+  line-height: 1.43;
 }
 
 　　 .p-contents__single__article__source__title {
   /* 出典元*/
   display: inline-block !important;
-  font-size: 30px !important;
+  font-size: 16px !important;
   color: #3C2A10;
   line-height: 1.43;
 }
@@ -2270,32 +2304,62 @@ a {
   display: inline-block !important;
   content: "";
   position: absolute;
-  top: 0;
+  top: 100%;
   left: 0px;
   width: 100%;
   height: 1px;
-  color: #4A6C9B;
 }
 
-/* 以下、cardーーーーーーー*/
-.p-contents__archive__cards {
+/* 以下、cardーーーーーーーーーーーーー*/
+.p-contents__single__cards {
+  margin-bottom: 0;
   border: solid green 5px;
+}
+
+.p-contents__single__inner--middle {
+  /* ワイヤー*/
+  height: 100%;
+  margin: 0px 5.33% 0 5.33% !important;
+  padding-bottom: 0;
+  margin-bottom: 0 !important;
+  border: solid pink 3px;
+}
+
+.c-wrapper--card--single {
+  /* カード外側のmargin調整*/
+  max-width: 100%;
+  margin-bottom: 30px;
+}
+
+.c-wrapper--card--single--pattern {
+  /* カード外側のmargin調整*/
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+.c-wrapper--card--single--pattern:last-child {
+  margin-bottom: 0 !important;
 }
 
 /* 写真のみのcardーーーーーーー*/
 .c-card--single {
+  /* カード外枠*/
   width: 100%;
   box-sizing: border-box;
+  border: solid red 1px;
 }
 
-.c-photo-frame--card__full--single {
+/* 写真frame*/
+.c-photo-frame--card--single--full {
   display: block;
   width: 100% !important;
+  /* 横幅100%*/
   height: 0;
   padding-bottom: 37.01%;
   /*アスペクト比を維持*/
 }
 
+/* 画像 */
 .c-photo--single {
   max-width: 100%;
   height: 100%;
@@ -2305,6 +2369,7 @@ a {
   vertical-align: bottom;
   display: block;
   width: 100%;
+  /* 横幅100%*/
   height: 0;
   padding-bottom: 37.01%;
   /*アスペクト比を維持*/
@@ -2315,28 +2380,52 @@ a {
 
 /* 写真のみのcardここまでーーーーーーー*/
 /* card largeーーーーーーーーーーー*/
-.c-card--single--large--pic_first {
+.c-card--single--large {
   /* 外枠 */
   width: 100%;
   box-sizing: border-box;
   display: flex;
   flex-direction: row !important;
-  height: auto;
+  /* 左が写真、右が文 */
+  max-width: 100%;
+  height: 100%;
+  border: solid red 1px;
 }
 
-.c-photo-frame--card--single--large {
-  min-width: 42.72%;
+.c-caption-group--card--single {
+  /* 文章の外枠ーーー*/
+  width: 57.28% !important;
+  padding-right: 5.18%;
+  padding-left: 5.18%;
+  box-sizing: border-box;
+}
+
+.c-detail--card--single {
+  /* 文章の詳細ーーー*/
+  width: 100% !important;
+  font-size: 16px;
+  line-height: 1.43;
+  word-wrap: break-word;
+  border: solid red 1px;
+}
+
+.c-photo-frame--card--single--1-4 {
+  /* 写真の外枠ーーー*/
+  display: block !important;
+  width: 42.72%;
+  border: solid red 1px;
 }
 
 .p-hero__single__png--pc {
   display: none !important;
 }
 
-.c-photo--single--min {
+.c-photo--card--single--1-4 {
+  /*画像*/
   display: block !important;
   height: 0;
   /*高さは設定しない*/
-  padding-bottom: 68.58%;
+  padding-bottom: 61.8%;
   /*アスペクト比を維持*/
   background-image: url(../img/cheese-burger--2.png);
   background-position: left top;
@@ -2348,26 +2437,15 @@ a {
 }
 
 /* card 大きな枠ここまでーーーーーーー*/
-/* 写真を左にする*/
-.c-card--single--large--char_first {
-  width: 100%;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: row-reverse !important;
-  height: auto;
-}
-
 /* 写真が幅100%で周りに余白付きーーーーーーー*/
-.c-wrapper--card--single {
-  max-width: 100%;
-}
-
 .c-wrapper--card--single--frame-type {
-  padding: 60px 30px;
+  /* 余白付き*/
+  padding: 30px 34px;
+  /* 余白の幅*/
   box-sizing: border-box;
 }
 
-.c-photo-frame--card__full--single--frame-type {
+.c-photo-frame--card--single--full--frame-type {
   width: 100%;
   box-sizing: border-box;
   height: 0;
@@ -2386,12 +2464,31 @@ a {
   background-image: url(../img/cheese-burger--2.png);
 }
 
-.c-photo-frame--card__full--single-nomal {
-  padding: 0 !important;
+/* 写真が幅100%で周りに余白付きここまでーーーーーーー*/
+/* 写真が幅100%で余白無し、最後の複数パターンーーーーーーー*/
+.c-photo-frame--card--full--single--pattern {
   width: 100%;
+  height: 0;
+  padding-bottom: 60.89%;
 }
 
-/* 写真が幅100%で周りに余白付きここまでーーーーーーー*/
+.c-photo--single--full--single--pattern {
+  max-width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  vertical-align: bottom;
+  height: 0;
+  padding-bottom: 60.89%;
+  background-image: url(../img/cheese-burger--2.png);
+}
+
+.c-wrapper--card--single--pattern-area {
+  display: flex;
+  flex-direction: column;
+}
+
 /* タブレット */
 @media screen and (min-width: 600px) {
   /*------------- single */
@@ -2406,7 +2503,6 @@ a {
   .p-hero__single {
     position: relative;
     max-width: 100%;
-    min-width: 375px;
     height: 0;
     padding-bottom: 59.95% !important;
   }
@@ -2450,6 +2546,7 @@ a {
   .p-contents__single__section__area {
     /* sectionの外枠 */
     width: 100% !important;
+    padding-top: 60px;
     margin-bottom: 0px;
     /*無し*/
     box-sizing: border-box;
@@ -2462,7 +2559,7 @@ a {
   .p-contents__single__section__inner {
     /* 外枠 */
     max-width: 100%;
-    margin: 60px 7.19% 60px 7.19% !important;
+    margin: 0 7.19% 60px 7.19% !important;
     width: 85.61%;
     box-sizing: border-box;
   }
@@ -2551,8 +2648,6 @@ a {
     display: flex;
     flex-direction: row !important;
     margin-top: 60px;
-    margin-bottom: 60px;
-    background-color: #F5F5F5;
     font-size: 16px !important;
     line-height: 1.43;
   }
@@ -2585,28 +2680,59 @@ a {
     height: 1px;
     color: #4A6C9B;
   }
-}
-.p-contents__single__article {
-  /* introduction(導入記事) */
-}
-.p-contents__single__article__inner {
-  /* 外枠 */
-  max-width: 100%;
-  margin: 50px 13.1% 60px 13.1% !important;
-  width: 73.8%;
-  background-color: #F5F5F5;
-  box-sizing: border-box;
-}
-.p-contents__single__article__text {
-  /* 文章 */
-  display: inline-block;
-  font-size: 1.91vw;
-  color: #3C2A10;
-  font-family: "M PLUS 1p", sans-serif;
-  line-height: 1.43;
-  word-wrap: break-word;
-}
 
+  /* ここ*/
+  /* ここ*/
+  /* ここ*/
+  /* ここ*/
+  /* ここ*/
+  /* ここ*/
+  .p-contents__single__article {
+    /* 引用記事*/
+    background-color: #F5F5F5;
+  }
+
+  .p-contents__single__article {
+    /* 引用記事*/
+  }
+  .p-contents__single__article__inner {
+    /* 外枠 */
+    max-width: 100%;
+    margin: 50px 7.19% 60px 7.19% !important;
+    box-sizing: border-box;
+  }
+  .p-contents__single__article__text--detail {
+    /* 文章 */
+    display: inline-block;
+    font-size: 1.91vw;
+    color: #3C2A10;
+    font-family: "M PLUS 1p", sans-serif;
+    line-height: 1.43;
+    word-wrap: break-word;
+  }
+
+  .c-wrapper--card--single--pattern-area {
+    display: block !important;
+    max-width: 100%;
+    height: 100%;
+    border: solid red 5px;
+    padding: 0;
+  }
+
+  .c-wrapper--card--single--pattern {
+    width: calc(50% - 8px);
+    float: left;
+    margin-bottom: 20px;
+  }
+
+  .c-wrapper--card--single--pattern._one,
+.c-wrapper--card--single--pattern._three,
+.c-wrapper--card--single--pattern._five,
+.c-wrapper--card--single--pattern._seven,
+.c-wrapper--card--single--pattern._nine {
+    margin-right: 16px !important;
+  }
+}
 /* PC */
 @media screen and (min-width: 1250px) {
   /* contents */
@@ -2742,9 +2868,9 @@ a {
     flex-direction: row !important;
     margin-top: 50px;
     margin-bottom: 132px;
-    background-color: #F5F5F5;
     font-size: 16px !important;
     line-height: 1.43;
+    font-family: "M PLUS 1p", sans-serif;
   }
 
   　　 .p-contents__single__article__source__title {
@@ -2784,10 +2910,9 @@ a {
     max-width: 100%;
     margin: 50px 10.3% 60px 10.3% !important;
     width: 79.4%;
-    background-color: #F5F5F5;
     box-sizing: border-box;
   }
-  .p-contents__single__article__text {
+  .p-contents__single__article__text--detail {
     /* 文章 */
     display: inline-block;
     font-size: 1.91vw;
