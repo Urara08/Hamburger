@@ -2403,10 +2403,9 @@ a {
   height: 1px;
 }
 
-/* 以下、cardーーーーーーーーーーーーー*/
-.p-contents__single__cards {
-  margin-bottom: 0;
-  border: solid green 5px;
+/* cardーーーーーーーーーーーーー*/
+.c-wrapper--card--single--for-pc {
+  display: none;
 }
 
 .p-contents__single__inner--middle {
@@ -2414,24 +2413,25 @@ a {
   height: 100%;
   margin: 0px 5.33% 0 5.33% !important;
   padding-bottom: 0;
-  margin-bottom: 0 !important;
+  margin-bottom: 117px !important;
   border: solid pink 3px;
 }
 
 .c-wrapper--card--single {
-  /* カード外側のmargin調整*/
+  /*カード同士の間隔（くり返しの部分迄）*/
   max-width: 100%;
   margin-bottom: 30px;
 }
 
 .c-wrapper--card--single--pattern {
-  /* カード外側のmargin調整*/
+  /*カード同士の間隔（くり返し）*/
   max-width: 100%;
   margin-bottom: 20px;
 }
 
 .c-wrapper--card--single--pattern:last-child {
   margin-bottom: 0 !important;
+  /*カードの最後は下の余白は無し*/
 }
 
 /* 写真のみのcardーーーーーーー*/
@@ -2556,10 +2556,6 @@ a {
   height: 0;
   padding-bottom: 62.17%;
   background-image: url(../img/cheese-burger--per_62.png);
-}
-
-.c-wrapper--card--single--frame-type._for-margin {
-  margin-bottom: 0;
 }
 
 /* 写真が幅100%で周りに余白付きここまでーーーーーーー*/
@@ -2873,8 +2869,41 @@ td {
     margin: 0px 7.19% 0 7.19% !important;
     /* 左右フレームの余白*/
     padding-bottom: 0;
-    margin-bottom: 0 !important;
+    margin-bottom: 228px !important;
     border: solid pink 3px;
+  }
+
+  .c-wrapper--card--single--for-pc {
+    display: none;
+  }
+
+  .c-wrapper--card--single {
+    /*カード同士の間隔（くり返しの部分迄）*/
+    max-width: 100%;
+    margin-bottom: 0px;
+  }
+
+  .c-wrapper--card--single--pattern {
+    /*カード同士の間隔（くり返し）*/
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .c-wrapper--card--single--pattern:last-child {
+    margin-bottom: 0 !important;
+    /*カードの最後は下の余白は無し*/
+  }
+
+  .c-wrapper--card--single._margin-bottom--60 {
+    margin-bottom: 60px;
+  }
+
+  .c-wrapper--card--single._margin-bottom--61 {
+    margin-bottom: 61px;
+  }
+
+  .c-wrapper--card--single._margin-bottom--117 {
+    margin-bottom: 117px;
   }
 
   .c-wrapper--card--single--pattern-area {
@@ -2901,6 +2930,10 @@ td {
 
   .c-wrapper--card--single--frame-type._for-margin {
     margin-bottom: 180px;
+    padding: 61px 67px;
+    /* 余白の幅*/
+    box-sizing: border-box;
+    background-color: black;
   }
 
   .c-wrapper--card--single--pattern-area::after {
@@ -2925,9 +2958,7 @@ td {
 
   /* 文字のワイヤーフレーム --------------*/
   .p-contents__single__inner--top {
-    margin-right: 5.2%;
     margin-bottom: 60px;
-    margin-left: 5.2%;
   }
 
   /* lead(見出し+導入記事の内側) */
@@ -3060,11 +3091,15 @@ td {
 
   /* card の集まり*/
   /* 余白ーーーーーーーーーーーーーーーー*/
+  .c-wrapper--card--single--for-pc {
+    display: block !important;
+  }
+
   .p-contents__single__cards {
     /*cardグループの外側の余白*/
     display: inline-block !important;
     max-width: 100% !important;
-    margin-bottom: 177px !important;
+    margin-bottom: 0 !important;
     padding: 0;
     box-sizing: border-box;
   }
@@ -3075,11 +3110,89 @@ td {
     margin: 0px 5.2% 0 5.2%;
     /* 左右フレームの余白*/
     padding-bottom: 0;
-    margin-bottom: 0 !important;
-    border: solid pink 3px;
+    margin-bottom: 353px !important;
+    background-color: blanchedalmond;
   }
 
   /* 余白ここまでーーーーーーーーーーーー*/
+  .c-photo-frame--card--single--full {
+    width: 100% !important;
+    /* 横幅100%*/
+    height: 0;
+    padding-bottom: 37.39%;
+    /*アスペクト比を維持*/
+  }
+
+  /* 画像 */
+  .c-photo--single {
+    width: 100%;
+    /* 横幅100%*/
+    padding-bottom: 37.39%;
+    /*アスペクト比を維持*/
+  }
+
+  .c-wrapper--card--single._margin-bottom--117 {
+    margin-bottom: 60px;
+  }
+
+  .c-wrapper--card--single--frame-type._for-margin {
+    display: none;
+  }
+
+  .c-photo-frame--card--single--full--frame-type {
+    display: none;
+  }
+
+  .c-photo--single--frame-type {
+    display: none;
+  }
+
+  .c-wrapper--card--single--pattern {
+    width: calc(33.333% - 6.66px);
+    float: left;
+    margin-bottom: 20px;
+  }
+
+  .c-wrapper--card--single--pattern._one,
+.c-wrapper--card--single--pattern._two,
+.c-wrapper--card--single--pattern._four,
+.c-wrapper--card--single--pattern._five,
+.c-wrapper--card--single--pattern._seven,
+.c-wrapper--card--single--pattern._eight {
+    margin-right: 10px !important;
+  }
+
+  .c-wrapper--card--single--pattern._three,
+.c-wrapper--card--single--pattern._nine,
+.c-wrapper--card--single--pattern._six {
+    margin-right: 0 !important;
+  }
+
+  .c-caption-group--card--single {
+    /* 文章の外枠ーーー*/
+    max-width: 57.13% !important;
+    min-height: 53.35%;
+    padding-right: 0;
+    padding-left: 5.18%;
+    box-sizing: border-box;
+  }
+
+  .c-wrapper--card--single {
+    margin-bottom: 60px;
+  }
+
+  .c-wrapper--card--single--for-pc {
+    margin-bottom: 60px;
+    position: relative;
+  }
+
+  .c-content {
+    content: "";
+    position: absolute;
+    max-width: 21.435%;
+    height: 358px;
+    background-color: chartreuse;
+  }
 }
 /* pagination */
 /* スマホ */
