@@ -6,65 +6,62 @@
   display: block;
   max-width: 100%;
   height: auto;
-  overflow: visible;
   background-color:$color--base-WH;
   font-family: $font-family--M-plus;
-  font-weight: normal;/*contents共通*/
+  font-weight: normal;
+  overflow: visible;
 }
 
- /*確認要*/
-.p-contents__single__inner--top{/* 文字のグループの大外枠 */
-  border: solid blue 5px;
-  margin: 0px 5.33%  0 5.33% !important;/* ワイヤーフレーム */
+/* 文字のワイヤーフレーム --------------*/
+.p-contents__single__inner--top{
+  margin-right:5.33%;
+  margin-left:5.33%;
 }
 
-
-/* section(見出し+導入記事) */
-.p-contents__single__section__area{/* sectionの外枠 */
+/* lead(見出し+記事)---- */
+.p-contents__single__lead__area{/* leadの埋め込み先 */
   max-width:100% !important;
-  padding-top: 30px;/* 上のheroとの余白 */
-  padding-bottom: 34px;
+  padding-top: 30px;/*内側の余白 */
+  padding-bottom: 34px;/*内側の余白 */
   box-sizing: border-box;
   border: solid green 5px;
 }
 
-/* section(見出し+導入記事の内側) */
-.p-contents__single__section{
+/* lead(見出し+リード記事の内側)------- */
+.p-contents__single__lead{
 &__inner{/* 外枠 */
-  box-sizing: border-box;
-  border: solid green 5px;
+  max-width:100% !important;
 }
 
 &__title{/* 見出し */
   margin-bottom: 30px;
   font-size: 7.46vw;
+  color: $color--char-BR;
   font-family:$font-family--M-plus;
-  color: #3C2A10;
   font-weight: bold;
   line-height: 1.5;
 }
 
 &__text{/* 文章 */
   display: inline-block;
-  font-size: 6.13vw;
-  color:#3C2A10;
+  font-size: 4.26vw;
+  color: $color--char-BR;
   font-family:$font-family--M-plus;
-  line-height: 1.43;
   font-weight: normal;
+  line-height: 1.43;
   word-wrap:break-word;
   border: solid red 1px;
 }
 }
-/*------------ 各Blockの埋め込み先 */
-.p-contents__single__block__area{/* block__area各本体 */
-  float: none;
+
+/* ブロックの埋め込み先共通　詳細は設定しない */
+.p-contents__single__block__area{
+  float: none;/* floatは解除 */
   font-family:$font-family--M-plus;
   overflow-y: hidden !important;
-  border: solid red 1px;
-}/*------------ 各Blockの埋め込み先ここまで */
+}
 
-
-/* ------------tex-block(テキストブロック) の内容*/
+/* ------------テキスト系のブロック------------*/
 .p-contents__single__text-block{
 &__inner{/* 外枠 */
   border: solid green 5px;
@@ -421,6 +418,7 @@ th{
   /* タブレット */
 @media screen and (min-width: 600px){
 /*------------- single */
+/* contents */
 .p-contents__single{/*archiveページのcontents共通*/
   max-width: 100% !important;
   display: block;
@@ -428,144 +426,147 @@ th{
   height: auto;
 }
 
-.p-contents__single__inner--top{/* 文字グループのワイヤー */
-  border: solid blue 5px;
-  margin: 0px 7.19%  0 7.19% !important;/* 左右フレームの余白*/
+/* 文字のワイヤーフレーム --------------*/
+.p-contents__single__inner--top{
+  margin-right:7.19%;
+  margin-left:7.19%;
 }
 
-
-/* section(見出し+導入記事) */
-.p-contents__single__section__area{/* sectionの外枠 */
-  width:100% !important;
-  padding-top: 60px;
-  margin-bottom: 0px;/*無し*/
+/* lead(見出し+導入記事)---- */
+.p-contents__single__lead__area{/* leadの埋め込み先 */
+  max-width:100% !important;
+  padding-top: 60px;/* 内側の余白 */
+  padding-bottom: 60px;/* 内側の余白 */
   box-sizing: border-box;
 }
 
-/* section(テキストのブロックの内側) */
-.p-contents__single__section{/* introduction(導入記事) */
+/* lead(テキストのブロックの内側) */
+.p-contents__single__lead{/* introduction(導入記事) */
   &__inner{/* 外枠 */
-    max-width: 100%;
-    margin: 0 7.19% 60px 7.19% !important;
-    width:85.61%;
-    box-sizing: border-box;
+  max-width: 100%;
   }
 
   &__title{/* 見出し */
     display: inline-block;
     margin-bottom: 60px !important;
-    font-size: 36px !important;
+    font-size: 4.31vw !important;
+    font-weight: bold;
     font-family:$font-family--M-plus;
     line-height: 1.5;
   }
 
   &__text{/* 文章 */
     display: inline-block;
-    font-size: 16px;
-    color:#3C2A10;
+    font-size: 1.91vw !important;
+    font-weight: normal;
+    color:$color--char-BR;
     font-family:$font-family--M-plus;
     line-height: 1.43;
     word-wrap:break-word;
   }
   }
 
-/* ------------tex-block(テキストブロック) の内容*/
+/* ------------テキスト系のブロック------------*/
 .p-contents__single__text-block{
 &__inner{/* 外枠 */
   max-width: 100%;
-  margin: 0 7.19% 0 7.19% !important;
   box-sizing: border-box;
-    }
+}
 
-    &__title{/* 見出し */
-      display: inline-block;
-      font-weight: bold;
-      font-family:$font-family--M-plus;
-      line-height: 1.5;
-    }
-    }
-      .__h2{
-        margin-bottom: 60px;
-        font-size: 36px;
-      }
-      .__h3{
-        margin-bottom: 59px;
-        font-size: 28px;
-        line-height: 1.5;
-      }
-      .__h4{
-        margin-bottom: 75px;
-        font-size: 24px;
-        line-height: 1.5;
-      }
-      .__h5{
-        margin-bottom: 20px;
-        font-size: 20px;
-        line-height: 1.5;
-      }
-      .__h6{
-        margin-bottom: 60px;
-        font-size: 20px;
-        line-height: 1.5;
-      }
+&__title{/* 見出し */
+  display: inline-block;
+  font-weight: bold;
+  font-family:$font-family--M-plus;
+  line-height: 1.5;
+}
+}
+
+.__h2{
+  margin-bottom: 60px;
+  font-size: 36px;
+}
+
+.__h3{
+  margin-bottom: 59px;
+  font-size: 28px;
+  line-height: 1.5;
+}
+
+.__h4{
+  margin-bottom: 75px;
+  font-size: 24px;
+  line-height: 1.5;
+}
+
+.__h5{
+  margin-bottom: 20px;
+  font-size: 20px;
+  line-height: 1.5;
+}
+.__h6{
+  margin-bottom: 60px;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
 /* ------------tex-block(テキストブロック) の内容*こここまで*/
 
-
-      .p-contents__single__quote__source{/* 出典元全体*/
-        display: flex;
-        flex-direction: row !important;
-        margin-top: 60px;
-        font-size: 16px !important;
-        line-height: 1.43;
-        }
+.p-contents__single__quote__source{/* 出典元全体*/
+  display: flex;
+  flex-direction: row !important;
+  margin-top: 60px;
+  font-size: 16px !important;
+  line-height: 1.43;
+}
       　　
-        .p-contents__single__quote__source__title{/* 出典元*/
-          display: inline-block !important;
-          font-size: 16px !important;
-          color:#3C2A10;
-          line-height: 1.43;
-        }
+.p-contents__single__quote__source__title{/* 出典元*/
+  display: inline-block !important;
+  font-size: 16px !important;
+  color:#3C2A10;
+  line-height: 1.43;
+}
 
-        .p-contents__single__quote__source__link{/*リンク*/
-          position: relative;
-          display: inline-block !important;
-          margin-left: 15px;
-          font-size: 16px;
-          color: #4A6C9B;
-        }
-        .p-contents__single__quote__source__link::after{/*下線（リンク）*/
-          display: inline-block !important;
-          content: "";
-          position: absolute;
-          top:0;
-          left:0px;
-          width: 100%;
-          height: 1px;
-          color: #4A6C9B;
-          }
+.p-contents__single__quote__source__link{/*リンク*/
+  position: relative;
+  display: inline-block !important;
+  margin-left: 15px;
+  font-size: 16px;
+  color: #4A6C9B;
+}
+
+.p-contents__single__quote__source__link::after{/*下線（リンク）*/
+  display: inline-block !important;
+  content: "";
+  position: absolute;
+  top:0;
+  left:0px;
+  width: 100%;
+  height: 1px;
+  color: #4A6C9B;
+}
 
 /* ここ*//* ここ*//* ここ*//* ここ*//* ここ*//* ここ*/
 .p-contents__single__quote{/* 引用記事*/
-background-color: #F5F5F5;
-
+  background-color: #F5F5F5;
 }
-  .p-contents__single__quote{/* 引用記事*/
-    &__inner{/* 外枠 */
-      max-width: 100%;
-      margin: 50px 7.19% 60px 7.19% !important;
-      box-sizing: border-box;
-    }
 
-    &__text--detail{/* 文章 */
-      display: inline-block;
-      font-size: 1.91vw;
-      color:#3C2A10;
-      font-family:$font-family--M-plus;
-      line-height: 1.43;
-      word-wrap:break-word;
+.p-contents__single__quote{/* 引用記事*/
+&__inner{/* 外枠 */
+  max-width: 100%;
+  margin: 50px 7.19% 60px 7.19% !important;
+  box-sizing: border-box;
+}
 
+&__text--detail{/* 文章 */
+  display: inline-block;
+  font-size: 1.91vw;
+  color:#3C2A10;
+  font-family:$font-family--M-plus;
+  line-height: 1.43;
+  word-wrap:break-word;
 }
 }
+
 .p-contents__single__inner--middle{/* 中間部分のワイヤー*/
   height: 100%;
   margin: 0px 7.19%  0 7.19% !important;/* 左右フレームの余白*/
@@ -581,24 +582,22 @@ background-color: #F5F5F5;
   height: 100%;
   border: solid red 1px;
   padding: 0;
-  }
-
-
-
-  .c-wrapper--card--single--pattern{
-    width:calc(50% - 8px) ;
-    float:left;
-    margin-bottom: 20px;
-  }
-
-  .c-wrapper--card--single--pattern._one,
-  .c-wrapper--card--single--pattern._three,
-  .c-wrapper--card--single--pattern._five,
-  .c-wrapper--card--single--pattern._seven,
-  .c-wrapper--card--single--pattern._nine
-  {margin-right:16px !important;
-
 }
+
+.c-wrapper--card--single--pattern{
+  width:calc(50% - 8px) ;
+  float:left;
+  margin-bottom: 20px;
+}
+
+.c-wrapper--card--single--pattern._one,
+.c-wrapper--card--single--pattern._three,
+.c-wrapper--card--single--pattern._five,
+.c-wrapper--card--single--pattern._seven,
+.c-wrapper--card--single--pattern._nine{
+  margin-right:16px !important;
+}
+
 .c-wrapper--card--single--frame-type._for-margin{
   margin-bottom: 180px;
 }
@@ -611,53 +610,49 @@ background-color: #F5F5F5;
 }
 
   /* PC */
-  @media screen and (min-width: 1250px){
-  /* contents */
-/* section(見出し+導入記事) */
-.p-contents__single__section__area{/* sectionの外枠 */
+@media screen and (min-width: 1250px){
+/* contents */
+/* lead(見出し+導入記事)---- */
+.p-contents__single__lead__area{/* leadの埋め込み先 */
   max-width:100% !important;
-  margin-bottom: 0px;/*無し*/
+  padding-top: 60px;/* 内側の余白 */
+  padding-bottom: 60px;/* 内側の余白 */
   box-sizing: border-box;
 }
 
-/*------------- single */
-/* hero */
+/* 文字のワイヤーフレーム --------------*/
+.p-contents__single__inner--top{
+  margin-right: 5.2%;
+  margin-left: 5.2%;
+}
 
-  /*確認要*/
-  .p-contents__single__inner--top{/* 文字グループのワイヤー */
-    border: solid blue 5px;
-    margin: 0px 5.2%  0 5.2% !important;/* 左右フレームの余白*/
-  }
+/* lead(見出し+導入記事の内側) */
+.p-contents__single__lead{/*  */
+&__inner{/* 外枠 */
+  max-width: 100%;
+}
 
-/* section(見出し+導入記事の内側) */
-.p-contents__single__section{/* introduction(導入記事) */
-  &__inner{/* 外枠 */
-    max-width: 100%;
-    margin: 60px 6.43% 60px 6.43% !important;
-    width:87.31%;
-    box-sizing: border-box;
-  }
+&__title{/* 見出し */
+  display: inline-block;
+  margin-bottom: 60px !important;
+  font-size: 36px !important;
+  font-weight: bold;
+  font-family:$font-family--M-plus;
+  line-height: 1.5;
+}
 
-  &__title{/* 見出し */
-    display: inline-block;
-    margin-bottom: 60px !important;
-    font-size: 36px !important;
-    font-family:$font-family--M-plus;
-    line-height: 1.5;
-  }
+&__text{/* 文章 */
+  display: inline-block;
+  font-size: 16px;
+  font-weight: normal;
+  color:#3C2A10;
+  font-family:$font-family--M-plus;
+  line-height: 1.43;
+  word-wrap:break-word;
+}
+}
 
-  &__text{/* 文章 */
-    display: inline-block;
-    font-size: 16px;
-    color:#3C2A10;
-    font-family:$font-family--M-plus;
-    line-height: 1.43;
-    word-wrap:break-word;
-  }
-  }
-
-
-
+/* ------------テキスト系のブロック------------*/
 .p-contents__single__text-block{/*  */
 &__inner{/* 外枠 */
   max-width: 100%;
@@ -706,51 +701,50 @@ background-color: #F5F5F5;
   line-height: 1.43;
 }
       　　
-        .p-contents__single__quote__source__title{/* 出典元*/
-          display: inline-block !important;
-          font-size: 16px !important;
-          color:#3C2A10;
-          line-height: 1.43;
-        }
+.p-contents__single__quote__source__title{/* 出典元*/
+  display: inline-block !important;
+  font-size: 16px !important;
+  color:#3C2A10;
+  line-height: 1.43;
+}
 
-        .p-contents__single__quote__source__link{/*リンク*/
-          position: relative;
-          display: inline-block !important;
-          margin-left: 15px;
-          font-size: 16px;
-          color: #4A6C9B;
-        }
-        .p-contents__single__quote__source__link::after{/*下線（リンク）*/
-          display: inline-block !important;
-          content: "";
-          position: absolute;
-          top:0;
-          left:0px;
-          width: 100%;
-          height: 1px;
-          color: #4A6C9B;
-          }
+.p-contents__single__quote__source__link{/*リンク*/
+  position: relative;
+  display: inline-block !important;
+  margin-left: 15px;
+  font-size: 16px;
+  color: #4A6C9B;
+}
+
+.p-contents__single__quote__source__link::after{/*下線（リンク）*/
+  display: inline-block !important;
+  content: "";
+  position: absolute;
+  top:0;
+  left:0px;
+  width: 100%;
+  height: 1px;
+  color: #4A6C9B;
+}
 
 
-  .p-contents__single__quote{/* introduction(導入記事) */
-    &__inner{/* 外枠 */
-      max-width: 100%;
-      margin: 50px 10.3% 60px 10.3% !important;
-      width: 79.4%;
+.p-contents__single__quote{/* introduction(導入記事) */
+&__inner{/* 外枠 */
+  max-width: 100%;
+  margin: 50px 10.3% 60px 10.3% !important;
+  width: 79.4%;
+  box-sizing: border-box;
+}
 
-      box-sizing: border-box;
-    }
-
-    &__text--detail{/* 文章 */
-      display: inline-block;
-
-      font-size: 1.91vw;
-      color:#3C2A10;
-      font-family:$font-family--M-plus;
-      line-height: 1.43;
-      word-wrap:break-word;
-    }
-    }
+&__text--detail{/* 文章 */
+  display: inline-block;
+  font-size: 1.91vw;
+  color:#3C2A10;
+  font-family:$font-family--M-plus;
+  line-height: 1.43;
+  word-wrap:break-word;
+}
+}
 /* card の集まり*/
 /* 余白ーーーーーーーーーーーーーーーー*/
 .p-contents__single__cards{/*cardグループの外側の余白*/
@@ -766,7 +760,5 @@ background-color: #F5F5F5;
   padding-bottom: 0;
   margin-bottom: 0 !important;
   border: solid pink 3px;
-}
-
-/* 余白ここまでーーーーーーーーーーーー*/
+}/* 余白ここまでーーーーーーーーーーーー*/
 }

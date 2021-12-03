@@ -58,7 +58,7 @@
 
 .p-hero__archive__png--sp{/*heroスマホ用写真を表示する*/
   display: block !important;
-  position: absolute !important;
+  position: relative;
   top:0;
   left: 0;
   z-index: 100;
@@ -196,7 +196,7 @@
 
 .p-hero__archive__png--pc{/* pc用の画像 */
   display: block !important;
-  position: absolute !important;
+  position: relative;
   top:0;
   left: 0;
   z-index: 110;
@@ -310,8 +310,8 @@
 }
 
 .p-hero__archive__png--pc{/* pc用の画像 */
-  display: block !important;/* 表示する */
-  position: absolute;
+  display: block !important;
+  position: relative;
   top:0;
   left: 0;
   z-index: 100;
