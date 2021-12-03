@@ -556,6 +556,58 @@ a {
   color: #FFFFFF;
 }
 
+/*------------- single */
+.p-hero__single {
+  display: block !important;
+  position: relative !important;
+  z-index: 100;
+  max-width: 100% !important;
+  height: 0;
+  /*高さは無し*/
+  padding-bottom: 60% !important;
+  /*アスペクト比を保つ*/
+}
+
+.p-hero__single__png--pc {
+  /* pc用の写真は隠す */
+  display: none !important;
+}
+
+.p-hero__single__png--sp {
+  /*heroスマホ用写真を表示する*/
+  display: block !important;
+  position: relative !important;
+  top: 0 !important;
+  left: 0;
+  z-index: 100;
+  max-width: 100% !important;
+  padding-bottom: 60% !important;
+  /*アスペクト比を保つ*/
+  height: 0;
+  /*高さは設定しない*/
+  background-image: url(../img/hero__single--sp.png);
+  background-position: left center;
+  /*left centerがカンプに近い*/
+  background-size: cover;
+  background-repeat: no-repeat;
+  vertical-align: bottom !important;
+  box-sizing: border-box;
+}
+
+.p-hero__single__menu-label {
+  /*h1 チーズバーガ―:画像に重なる字*/
+  display: inline-block !important;
+  position: absolute !important;
+  z-index: 140 !important;
+  top: 40.44%;
+  left: 6.93%;
+  font-size: 9.6vw;
+  color: #FFFFFF;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+/* single */
 /* タブレット */
 @media screen and (min-width: 600px) {
   /*------------- frontpage */
@@ -592,7 +644,7 @@ a {
     top: 40%;
     left: 10%;
     /*86px*/
-    z-index: 110;
+    z-index: 140;
     font-size: 4.31vw;
     font-weight: bold;
     line-height: 54/36;
@@ -620,10 +672,10 @@ a {
     left: 0;
     z-index: 110;
     width: 100% !important;
-    padding-bottom: 33.93% !important;
-    /* アスペクト比を保つ */
     height: 0;
     /* 高さは設定しない */
+    padding-bottom: 33.93% !important;
+    /* アスペクト比を保つ */
     background-image: url(../img/hero_pc__archive.png);
     background-position: center;
     /* centerがカンプに近い */
@@ -652,11 +704,58 @@ a {
     /*MENUの横へ配置*/
     left: 32.97%;
     font-size: 1.91vw;
+    color: #FFFFFF;
     font-weight: bold;
     line-height: 1.43;
-    color: #FFFFFF;
+  }
+
+  /*------------- single */
+  .p-hero__single {
+    /*heroの外枠 */
+    display: block !important;
+    position: relative;
+    max-width: 100%;
+    height: 0;
+    padding-bottom: 59.95% !important;
+  }
+
+  .p-hero__single__png--sp {
+    /* スマホ用の画像は隠す */
+    display: none !important;
+  }
+
+  .p-hero__single__png--pc {
+    /* pc用の画像 */
+    display: block !important;
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    z-index: 110;
+    width: 100% !important;
+    padding-bottom: 59.95% !important;
+    /* アスペクト比を保つ */
+    height: 0;
+    /* 高さは設定しない */
+    background-image: url(../img/hero__single--pc.png);
+    background-position: center;
+    /* centerがカンプに近い */
+    background-size: cover !important;
+    background-repeat: no-repeat;
+    vertical-align: bottom;
+  }
+
+  .p-hero__single__menu-label {
+    /*h1 チーズバーガ―:画像に重なる字*/
+    display: inline-block;
+    position: absolute;
+    z-index: 140;
+    top: 36.04%;
+    left: 10.31%;
+    font-size: 7.19vw;
+    line-height: 1.31;
   }
 }
+/* singleここまで */
 /* PC */
 @media screen and (min-width: 1250px) {
   /*------------- frontpage */
@@ -741,7 +840,56 @@ a {
     line-height: 1.43;
     color: #FFFFFF;
   }
+
+  /*------------- single */
+  .p-hero__single {
+    display: block !important;
+    position: relative;
+    max-width: 100%;
+    height: 0;
+    padding-bottom: 32.19% !important;
+    background-color: #000000;
+  }
+
+  .p-hero__single__png--sp {
+    /* pcの時は隠す */
+    display: none !important;
+  }
+
+  .p-hero__single__png--pc {
+    /* pc用の画像 */
+    display: block !important;
+    /* 表示する */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 110;
+    width: 100% !important;
+    padding-bottom: 32.19% !important;
+    /* アスペクト比を保つ */
+    height: 0;
+    /* 高さは設定しない */
+    background-image: url(../img/hero__single--pc.png);
+    background-position: top right !important;
+    background-size: cover !important;
+    background-repeat: no-repeat;
+    vertical-align: bottom;
+  }
+
+  .p-hero__single__menu-label {
+    /*h1 チーズバーガ―:画像に重なる字*/
+    display: inline-block !important;
+    position: absolute;
+    z-index: 140;
+    top: 33.47%;
+    left: 5.53%;
+    font-size: 3.12vw;
+    color: #FFFFFF;
+    font-weight: bold;
+    line-height: 1.31;
+  }
 }
+/* singleここまで */
 /* スマホ */
 .p-contents {
   /*外枠*/
@@ -2083,7 +2231,7 @@ a {
 /*------------- single */
 /* contents */
 .p-contents__single {
-  /*archiveページのcontents共通*/
+  /*contents共通部分*/
   max-width: 100%;
   display: block;
   max-width: 100%;
@@ -2095,62 +2243,12 @@ a {
   /*contents共通*/
 }
 
-　 .p-hero__single {
-  display: block !important;
-  position: relative !important;
-  z-index: 100;
-  max-width: 100% !important;
-  height: 0;
-  /*高さは無し*/
-  padding-bottom: 60% !important;
-  /*アスペクト比を保つ*/
-}
-
-.p-hero__single__png--pc {
-  /* pc用の写真は隠す */
-  display: none !important;
-}
-
-.p-hero__single__png--sp {
-  /*heroスマホ用写真を表示する*/
-  display: block !important;
-  position: relative !important;
-  top: 0 !important;
-  left: 0;
-  z-index: 100;
-  width: 100% !important;
-  padding-bottom: 60% !important;
-  /*アスペクト比を保つ*/
-  height: 0;
-  /*高さは設定しない*/
-  background-image: url(../img/hero_sp__single.png);
-  background-position: left center;
-  /*left centerがカンプに近い*/
-  background-size: cover;
-  background-repeat: no-repeat;
-  vertical-align: bottom !important;
-  box-sizing: border-box;
-}
-
-.p-hero__single__menu-label {
-  /*h1 チーズバーガ―:重なった字*/
-  display: inline-block !important;
-  position: absolute !important;
-  z-index: 140 !important;
-  top: 0%;
-  /*91px*/
-  left: 6.93%;
-  /*26px*/
-  font-size: 9.6vw;
-  font-weight: bold;
-  color: #FFFFFF;
-  line-height: 1.5;
-}
-
-/* 文字のgroupの外枠 */
+/*確認要*/
 .p-contents__single__inner--top {
+  /* 文字のグループの大外枠 */
   border: solid blue 5px;
   margin: 0px 5.33% 0 5.33% !important;
+  /* ワイヤーフレーム */
 }
 
 /* section(見出し+導入記事) */
@@ -2191,6 +2289,7 @@ a {
   border: solid red 1px;
 }
 
+/*------------ 各Blockの埋め込み先 */
 .p-contents__single__block__area {
   /* block__area各本体 */
   float: none;
@@ -2199,7 +2298,8 @@ a {
   border: solid red 1px;
 }
 
-/* tex-block(テキストブロック) の内側*/
+/*------------ 各Blockの埋め込み先ここまで */
+/* ------------tex-block(テキストブロック) の内容*/
 .p-contents__single__text-block__inner {
   /* 外枠 */
   border: solid green 5px;
@@ -2243,8 +2343,9 @@ a {
   line-height: 1.5;
 }
 
-/* article(引用記事　テキスト+出典 全体) 外側 */
-.p-contents__single__article {
+/* ------------tex-block(テキストブロック) の内容*/
+/* 引用記事　テキスト+出典  */
+.p-contents__single__quote {
   display: inline-block;
   width: 100%;
   margin-top: 0px;
@@ -2252,21 +2353,21 @@ a {
   box-sizing: border-box;
 }
 
-/* article(引用記事　テキスト+出典 全体) 内側 */
-.p-contents__single__article__inner {
+/* 引用記事　テキスト+出典  */
+.p-contents__single__quote__inner {
   /* 外枠 */
   display: inline-block;
   margin: 0px 7.19% 0px 7.19% !important;
   box-sizing: border-box;
 }
-.p-contents__single__article__text {
+.p-contents__single__quote__text {
   color: #3C2A10;
   font-family: "M PLUS 1p", sans-serif;
   font-weight: normal;
   word-wrap: break-word;
   box-sizing: border-box;
 }
-.p-contents__single__article__text--detail {
+.p-contents__single__quote__text--detail {
   /* 文章 */
   display: inline-block;
   margin-top: 30px;
@@ -2274,7 +2375,7 @@ a {
   line-height: 1.43;
 }
 
-.p-contents__single__article__source {
+.p-contents__single__quote__source {
   display: flex;
   flex-direction: row !important;
   margin-top: 30px;
@@ -2286,7 +2387,7 @@ a {
   line-height: 1.43;
 }
 
-　　 .p-contents__single__article__source__title {
+　　 .p-contents__single__quote__source__title {
   /* 出典元*/
   display: inline-block !important;
   font-size: 16px !important;
@@ -2294,7 +2395,7 @@ a {
   line-height: 1.43;
 }
 
-.p-contents__single__article__source__link {
+.p-contents__single__quote__source__link {
   /*リンク*/
   position: relative;
   display: inline-block;
@@ -2302,7 +2403,7 @@ a {
   color: #4A6C9B;
 }
 
-.p-contents__single__article__source__link::after {
+.p-contents__single__quote__source__link::after {
   /*下線（リンク）*/
   display: inline-block !important;
   content: "";
@@ -2376,7 +2477,7 @@ a {
   height: 0;
   padding-bottom: 37.01%;
   /*アスペクト比を維持*/
-  background-image: url(../img/cheese-burger.png);
+  background-image: url(../img/cheese-burger--per_37.png);
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -2431,7 +2532,7 @@ a {
   /*高さは設定しない*/
   padding-bottom: 61.8%;
   /*アスペクト比を維持*/
-  background-image: url(../img/cheese-burger--2.png);
+  background-image: url(../img/cheese-burger--per_62.png);
   background-position: left top;
   /*カンプに近い*/
   background-size: cover;
@@ -2465,7 +2566,7 @@ a {
   vertical-align: bottom;
   height: 0;
   padding-bottom: 62.17%;
-  background-image: url(../img/cheese-burger--2.png);
+  background-image: url(../img/cheese-burger--per_62.png);
 }
 
 .c-wrapper--card--single--frame-type._for-margin {
@@ -2489,7 +2590,7 @@ a {
   vertical-align: bottom;
   height: 0;
   padding-bottom: 60.89%;
-  background-image: url(../img/cheese-burger--2.png);
+  background-image: url(../img/cheese-burger--per_62.png);
 }
 
 .c-wrapper--card--single--pattern-area {
@@ -2536,6 +2637,7 @@ a {
 
 /* 以下、コードーーーーーーーーーーーーー*/
 .p-contents__single__code-block__inner {
+  margin-left: 50px;
   background-color: #F5F5F5;
 }
 
@@ -2545,9 +2647,15 @@ a {
   margin-bottom: 50px;
   margin-left: 49px;
   margin-right: 60p;
-  font-size: 16px;
-  line-height: 1.43;
   border: solid red 1px;
+}
+
+.p-contents__single__code__detail {
+  font-size: 16px;
+  color: #3C2A10;
+  line-height: 1.43;
+  font-family: "M PLUS 1p", sans-serif;
+  font-weight: normal;
 }
 
 /* 以下、テーブルーーーーーーーーーーーーー*/
@@ -2562,26 +2670,29 @@ a {
   width: 100% !important;
 }
 
+/* 以下、コードーーーーーーーーーーーーー*/
 th {
   border-collapse: collapse;
   width: 40.89%;
-  height: auto;
-  padding: 28px 0px 28px 30px !important;
+  height: 77px;
+  padding-bottom: 57.03%;
+  padding: 28px 30px 27px 0 !important;
   border: solid 1px #707070;
+  box-sizing: border-box;
 }
 
 td {
   border-collapse: collapse;
   width: 59.11%;
-  height: auto;
-  padding: 28px 0 28px 30px !important;
+  height: 77px;
+  padding: 28px 0 27px 30px !important;
   border: solid 1px #707070;
+  box-sizing: border-box;
 }
 
 /* 以下、buttonーーーーーーーーーーーー*/
 .p-contents__single__button-block__inner {
   margin-top: 30px;
-  margin-bottom: 177px;
 }
 
 .p-contents__single__button-block {
@@ -2618,49 +2729,14 @@ td {
     height: auto;
   }
 
-  .p-hero__single {
-    position: relative;
-    max-width: 100%;
-    height: 0;
-    padding-bottom: 59.95% !important;
+  .p-contents__single__inner--top {
+    /* 文字グループのワイヤー */
+    border: solid blue 5px;
+    margin: 0px 7.19% 0 7.19% !important;
+    /* 左右フレームの余白*/
   }
 
-  .p-hero__single__png--sp {
-    /* スマホ用の画像は隠す */
-    display: none !important;
-  }
-
-  .p-hero__single__png--pc {
-    /* pc用の画像 */
-    display: block !important;
-    position: absolute !important;
-    top: 0;
-    left: 0;
-    z-index: 110;
-    width: 100% !important;
-    padding-bottom: 59.95% !important;
-    /* アスペクト比を保つ */
-    height: 0;
-    /* 高さは設定しない */
-    background-image: url(../img/hero_pc__single.png);
-    background-position: center;
-    /* centerがカンプに近い */
-    background-size: cover !important;
-    background-repeat: no-repeat;
-    vertical-align: bottom;
-  }
-
-  .p-hero__single__menu-label {
-    /*MENU:*/
-    display: inline-block;
-    position: absolute;
-    z-index: 110;
-    top: 36.04%;
-    left: 10.31%;
-    font-size: 7.19vw;
-    line-height: 1.31;
-  }
-
+  /* section(見出し+導入記事) */
   .p-contents__single__section__area {
     /* sectionの外枠 */
     width: 100% !important;
@@ -2699,9 +2775,7 @@ td {
     word-wrap: break-word;
   }
 
-  .p-contents__single__text-block {
-    /* introduction(導入記事) */
-  }
+  /* ------------tex-block(テキストブロック) の内容*/
   .p-contents__single__text-block__inner {
     /* 外枠 */
     max-width: 100%;
@@ -2712,22 +2786,6 @@ td {
     /* 見出し */
     display: inline-block;
     font-weight: bold;
-    font-family: "M PLUS 1p", sans-serif;
-    line-height: 1.5;
-  }
-
-  .p-contents__single__text-block {
-    /*  */
-  }
-  .p-contents__single__text-block__inner {
-    /* 外枠 */
-    max-width: 100%;
-    margin: 0 7.19% 0 7.19% !important;
-    box-sizing: border-box;
-  }
-  .p-contents__single__text-block__title {
-    /* 見出し */
-    display: inline-block;
     font-family: "M PLUS 1p", sans-serif;
     line-height: 1.5;
   }
@@ -2761,7 +2819,8 @@ td {
     line-height: 1.5;
   }
 
-  .p-contents__single__article__source {
+  /* ------------tex-block(テキストブロック) の内容*こここまで*/
+  .p-contents__single__quote__source {
     /* 出典元全体*/
     display: flex;
     flex-direction: row !important;
@@ -2770,7 +2829,7 @@ td {
     line-height: 1.43;
   }
 
-  　　 .p-contents__single__article__source__title {
+  　　 .p-contents__single__quote__source__title {
     /* 出典元*/
     display: inline-block !important;
     font-size: 16px !important;
@@ -2778,7 +2837,7 @@ td {
     line-height: 1.43;
   }
 
-  .p-contents__single__article__source__link {
+  .p-contents__single__quote__source__link {
     /*リンク*/
     position: relative;
     display: inline-block !important;
@@ -2787,7 +2846,7 @@ td {
     color: #4A6C9B;
   }
 
-  .p-contents__single__article__source__link::after {
+  .p-contents__single__quote__source__link::after {
     /*下線（リンク）*/
     display: inline-block !important;
     content: "";
@@ -2805,21 +2864,21 @@ td {
   /* ここ*/
   /* ここ*/
   /* ここ*/
-  .p-contents__single__article {
+  .p-contents__single__quote {
     /* 引用記事*/
     background-color: #F5F5F5;
   }
 
-  .p-contents__single__article {
+  .p-contents__single__quote {
     /* 引用記事*/
   }
-  .p-contents__single__article__inner {
+  .p-contents__single__quote__inner {
     /* 外枠 */
     max-width: 100%;
     margin: 50px 7.19% 60px 7.19% !important;
     box-sizing: border-box;
   }
-  .p-contents__single__article__text--detail {
+  .p-contents__single__quote__text--detail {
     /* 文章 */
     display: inline-block;
     font-size: 1.91vw;
@@ -2827,6 +2886,16 @@ td {
     font-family: "M PLUS 1p", sans-serif;
     line-height: 1.43;
     word-wrap: break-word;
+  }
+
+  .p-contents__single__inner--middle {
+    /* 中間部分のワイヤー*/
+    height: 100%;
+    margin: 0px 7.19% 0 7.19% !important;
+    /* 左右フレームの余白*/
+    padding-bottom: 0;
+    margin-bottom: 0 !important;
+    border: solid pink 3px;
   }
 
   .c-wrapper--card--single--pattern-area {
@@ -2864,6 +2933,7 @@ td {
 /* PC */
 @media screen and (min-width: 1250px) {
   /* contents */
+  /* section(見出し+導入記事) */
   .p-contents__single__section__area {
     /* sectionの外枠 */
     max-width: 100% !important;
@@ -2874,53 +2944,15 @@ td {
 
   /*------------- single */
   /* hero */
-  .p-hero__single {
-    position: relative;
-    max-width: 100%;
-    height: 0;
-    padding-bottom: 32.19% !important;
-    background-color: #000000;
+  /*確認要*/
+  .p-contents__single__inner--top {
+    /* 文字グループのワイヤー */
+    border: solid blue 5px;
+    margin: 0px 5.2% 0 5.2% !important;
+    /* 左右フレームの余白*/
   }
 
-  .p-hero__single__png--sp {
-    /* pcの時は隠す */
-    display: none !important;
-  }
-
-  .p-hero__single__png--pc {
-    /* pc用の画像 */
-    display: block !important;
-    /* 表示する */
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 100;
-    width: 100% !important;
-    padding-bottom: 32.19% !important;
-    /* アスペクト比を保つ */
-    height: 0;
-    /* 高さは設定しない */
-    background-image: url(../img/hero_pc__single.png);
-    background-position: top right !important;
-    background-size: cover !important;
-    background-repeat: no-repeat;
-    vertical-align: bottom;
-  }
-
-  .p-hero__single__menu-label {
-    /*MENU:*/
-    display: inline-block;
-    position: absolute;
-    z-index: 110;
-    top: 33.47%;
-    left: 5.53%;
-    font-size: 3.12vw;
-    font-weight: bold;
-    color: #FFFFFF;
-    line-height: 1.31;
-  }
-
-  /* section(テキストのブロックの内側) */
+  /* section(見出し+導入記事の内側) */
   .p-contents__single__section {
     /* introduction(導入記事) */
   }
@@ -2990,18 +3022,18 @@ td {
     font-size: 20px;
   }
 
-  .p-contents__single__article__source {
+  .p-contents__single__quote__source {
     /* 出典元全体*/
     display: flex;
     flex-direction: row !important;
     margin-top: 50px;
     margin-bottom: 132px;
     font-size: 16px !important;
-    line-height: 1.43;
     font-family: "M PLUS 1p", sans-serif;
+    line-height: 1.43;
   }
 
-  　　 .p-contents__single__article__source__title {
+  　　 .p-contents__single__quote__source__title {
     /* 出典元*/
     display: inline-block !important;
     font-size: 16px !important;
@@ -3009,7 +3041,7 @@ td {
     line-height: 1.43;
   }
 
-  .p-contents__single__article__source__link {
+  .p-contents__single__quote__source__link {
     /*リンク*/
     position: relative;
     display: inline-block !important;
@@ -3018,7 +3050,7 @@ td {
     color: #4A6C9B;
   }
 
-  .p-contents__single__article__source__link::after {
+  .p-contents__single__quote__source__link::after {
     /*下線（リンク）*/
     display: inline-block !important;
     content: "";
@@ -3030,17 +3062,17 @@ td {
     color: #4A6C9B;
   }
 
-  .p-contents__single__article {
+  .p-contents__single__quote {
     /* introduction(導入記事) */
   }
-  .p-contents__single__article__inner {
+  .p-contents__single__quote__inner {
     /* 外枠 */
     max-width: 100%;
     margin: 50px 10.3% 60px 10.3% !important;
     width: 79.4%;
     box-sizing: border-box;
   }
-  .p-contents__single__article__text--detail {
+  .p-contents__single__quote__text--detail {
     /* 文章 */
     display: inline-block;
     font-size: 1.91vw;
@@ -3055,9 +3087,20 @@ td {
   .p-contents__single__cards {
     /*cardグループの外側の余白*/
     display: inline-block !important;
-    width: 87.12% !important;
-    margin: 0 6.43% 150px 6.43% !important;
+    max-width: 100% !important;
+    margin-bottom: 177px !important;
+    padding: 0;
     box-sizing: border-box;
+  }
+
+  .p-contents__single__inner--middle {
+    /* ワイヤー*/
+    height: auto;
+    margin: 0px 5.2% 0 5.2%;
+    /* 左右フレームの余白*/
+    padding-bottom: 0;
+    margin-bottom: 0 !important;
+    border: solid pink 3px;
   }
 
   /* 余白ここまでーーーーーーーーーーーー*/
