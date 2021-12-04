@@ -2913,7 +2913,7 @@ td {
   }
 
   .c-wrapper--card--single--pattern {
-    width: calc(50% - 8px);
+    width: 48.87%;
     float: left;
     margin-bottom: 20px;
   }
@@ -2923,7 +2923,7 @@ td {
 .c-wrapper--card--single--pattern._five,
 .c-wrapper--card--single--pattern._seven,
 .c-wrapper--card--single--pattern._nine {
-    margin-right: 16px !important;
+    margin-right: 2.24% !important;
   }
 
   .c-wrapper--card--single--frame-type._for-margin {
@@ -3243,9 +3243,9 @@ td {
   }
 
   .c-wrapper--card--single--pattern {
-    max-width: calc(33.333% - 13.32px);
+    max-width: 32.3%;
     float: left;
-    margin-bottom: 20px;
+    margin-bottom: 1.47%;
   }
 
   .c-wrapper--card--single--pattern._one,
@@ -3254,7 +3254,7 @@ td {
 .c-wrapper--card--single--pattern._five,
 .c-wrapper--card--single--pattern._seven,
 .c-wrapper--card--single--pattern._eight {
-    margin-right: 20px !important;
+    margin-right: 1.47% !important;
   }
 
   .c-wrapper--card--single--pattern._three,
