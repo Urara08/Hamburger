@@ -2591,8 +2591,8 @@ a {
   max-width: 100%;
   min-width: 53.86%;
   min-height: 87.23%;
-  margin-top: 60px;
-  margin-bottom: 60px;
+  margin-top: 30px;
+  margin-bottom: 30px;
   font-size: 16px;
   font-weight: normal;
   color: #3C2A10;
@@ -2622,17 +2622,16 @@ a {
 
 /* 以下、コードーーーーーーーーーーーーー*/
 .p-contents__single__code-block__inner {
-  margin-left: 50px;
   background-color: #F5F5F5;
 }
 
 .p-contents__single__code {
   display: inline-block;
+  width: 67.55%;
   margin-top: 50px;
   margin-bottom: 50px;
   margin-left: 49px;
   margin-right: 60p;
-  border: solid red 1px;
 }
 
 .p-contents__single__code__detail {
@@ -2655,13 +2654,12 @@ a {
   width: 100% !important;
 }
 
-/* 以下、コードーーーーーーーーーーーーー*/
 th {
   border-collapse: collapse;
-  width: 40.89%;
+  width: 40.29%;
   height: 77px;
-  padding-bottom: 57.03%;
-  padding: 28px 30px 27px 0 !important;
+  text-align: left;
+  padding: 28px 0px 27px 30px !important;
   border: solid 1px #707070;
   box-sizing: border-box;
 }
@@ -2670,14 +2668,14 @@ td {
   border-collapse: collapse;
   width: 59.11%;
   height: 77px;
-  padding: 28px 0 27px 30px !important;
+  padding: 28px 12.6px 27px 30px !important;
   border: solid 1px #707070;
   box-sizing: border-box;
 }
 
 /* 以下、buttonーーーーーーーーーーーー*/
 .p-contents__single__button-block__inner {
-  margin-top: 30px;
+  margin-top: 29px;
 }
 
 .p-contents__single__button-block {
@@ -2691,7 +2689,7 @@ td {
   padding-bottom: 24.17%;
   background-color: #F2EDE9;
   border: solid 1px #707070;
-  border-radius: 20px;
+  border-radius: 22px;
   margin-bottom: 30px;
 }
 
@@ -2941,6 +2939,65 @@ td {
     display: block;
     clear: both;
   }
+
+  /* 以下、リストーーーーーーーーーーーーー*/
+  .p-contents__single__list-block {
+    /**/
+    display: block;
+    float: none !important;
+    max-width: 100%;
+    min-width: 28.15%;
+    min-height: 77.35%;
+    margin-top: 62px;
+    /**/
+    margin-bottom: 60px;
+    /**/
+    margin-left: 50px;
+    /**/
+  }
+
+  /* リストーーーーーーーーーーーーー*/
+  /* 以下、コードーーーーーーーーーーーーー*/
+  .p-contents__single__code {
+    display: inline-block;
+    width: 83.3%;
+  }
+
+  /*コードーーーーーーーーーーーーー*/
+  /* 以下、テーブルーーーーーーーーーーーーー*/
+  .p-contents__single__table-block {
+    width: 100%;
+    margin-top: 60px;
+  }
+
+  /* 以下、テーブルーーーーーーーーーーーーー*/
+  .p-contents__single__table-block {
+    width: 100%;
+    margin-top: 30px;
+    background-color: #FFFFFF;
+  }
+
+  .p-contents__single__table {
+    border-collapse: collapse !important;
+    width: 100% !important;
+  }
+
+  th {
+    border-collapse: collapse;
+    width: 30.11%;
+    padding: 28px 0px 27px 30px !important;
+  }
+
+  td {
+    border-collapse: collapse;
+    width: 69.88%;
+    padding: 28px 0px 27px 30px !important;
+  }
+
+  /* 以下、buttonーーーーーーーーーーーー*/
+  .p-contents__single__button-block__inner {
+    margin-top: 60px;
+  }
 }
 /* PC */
 @media screen and (min-width: 1250px) {
@@ -3095,6 +3152,11 @@ td {
     display: block !important;
   }
 
+  .c-card--single--large.--for-pc {
+    display: flex;
+    justify-content: center;
+  }
+
   .p-contents__single__cards {
     /*cardグループの外側の余白*/
     display: inline-block !important;
@@ -3147,8 +3209,32 @@ td {
     display: none;
   }
 
+  .c-wrapper--card--single--pattern-area {
+    display: flex;
+    flex-direction: column;
+    min-width: 97%;
+  }
+
+  .c-photo-frame--card--full--single--pattern {
+    width: 100%;
+    height: 0;
+    padding-bottom: 58.67%;
+  }
+
+  .c-photo--single--full--single--pattern {
+    max-width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    vertical-align: bottom;
+    height: 0;
+    padding-bottom: 58.67%;
+    background-image: url(../img/cheese-burger--per_62.png);
+  }
+
   .c-wrapper--card--single--pattern {
-    width: calc(33.333% - 6.66px);
+    max-width: calc(33.333% - 13.32px);
     float: left;
     margin-bottom: 20px;
   }
@@ -3159,7 +3245,7 @@ td {
 .c-wrapper--card--single--pattern._five,
 .c-wrapper--card--single--pattern._seven,
 .c-wrapper--card--single--pattern._eight {
-    margin-right: 10px !important;
+    margin-right: 20px !important;
   }
 
   .c-wrapper--card--single--pattern._three,
@@ -3193,6 +3279,52 @@ td {
     height: 358px;
     background-color: chartreuse;
   }
+
+  .c-wrapper--card--single--pattern._seven,
+.c-wrapper--card--single--pattern._eight,
+.c-wrapper--card--single--pattern._nine {
+    margin-bottom: 0 !important;
+    /*7/8/9番目のcardは下の余白無し*/
+  }
+
+  /* 以下、リストーーーーーーーーーーーーー*/
+  .p-contents__single__list-block {
+    /**/
+    display: block;
+    float: none !important;
+    max-width: 100%;
+    min-width: 14.91%;
+    min-height: 77.35%;
+  }
+
+  /* リストーーーーーーーーーーーーー*/
+  /* 以下、コードーーーーーーーーーーーーー*/
+  .p-contents__single__code {
+    display: inline-block;
+    width: 91.86%;
+  }
+
+  /*コードーーーーーーーーーーーーー*/
+  /* 以下、テーブルーーーーーーーーーーーーー*/
+  .p-contents__single__table-block {
+    width: 100%;
+    margin-top: 50px;
+  }
+
+  /* 以下、テーブルーーーーーーーーーーーーー*/
+  th {
+    border-collapse: collapse;
+    width: 31.7%;
+    padding: 28px 0px 27px 30px !important;
+  }
+
+  td {
+    border-collapse: collapse;
+    width: 68.66%;
+    padding: 28px 0px 27px 30px !important;
+  }
+
+  /* テーブルーーーーーーーーーーーーー*/
 }
 /* pagination */
 /* スマホ */
