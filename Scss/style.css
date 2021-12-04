@@ -2362,7 +2362,6 @@ a {
   /* カード外枠*/
   width: 100%;
   box-sizing: border-box;
-  border: solid red 1px;
 }
 
 /* 写真frame*/
@@ -2405,12 +2404,13 @@ a {
   /* 左が写真、右が文 */
   max-width: 100%;
   height: 100%;
-  border: solid red 1px;
 }
 
 .c-caption-group--card--single {
   /* 文章の外枠ーーー*/
-  max-width: 57.28% !important;
+  position: relative;
+  width: 57.28% !important;
+  max-height: 176px;
   min-height: 88.43%;
   padding-right: 5.18%;
   padding-left: 5.18%;
@@ -2419,18 +2419,19 @@ a {
 
 .c-detail--card--single {
   /* 文章の詳細ーーー*/
+  position: relative;
   width: 100% !important;
-  font-size: 16px;
+  height: 100%;
+  font-size: 4.26vw;
   line-height: 1.43;
   word-wrap: break-word;
-  border: solid red 1px;
+  overflow-y: hidden;
 }
 
 .c-photo-frame--card--single--1-4 {
   /* 写真の外枠ーーー*/
   display: block !important;
   width: 42.72%;
-  border: solid red 1px;
 }
 
 .p-hero__single__png--pc {
@@ -2794,6 +2795,65 @@ td {
     border: solid pink 3px;
   }
 
+  /* card largeーーーーーーーーーーー*/
+  .c-card--single--large {
+    /* 外枠 */
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row !important;
+    /* 左が写真、右が文 */
+    max-width: 100%;
+    height: auto;
+    overflow-y: hidden;
+  }
+
+  .c-caption-group--card--single {
+    /* 文章の外枠ーーー*/
+    position: relative;
+    width: 57.28% !important;
+    min-height: 88.43%;
+    padding-right: 5.18%;
+    padding-left: 5.18%;
+    padding-bottom: 6%;
+    box-sizing: border-box;
+  }
+
+  .c-detail--card--single {
+    /* 文章の詳細ーーー*/
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: auto;
+    font-size: 1.91vw;
+    line-height: 1.43;
+    word-wrap: break-word;
+  }
+
+  .c-photo-frame--card--single--1-4 {
+    /* 写真の外枠ーーー*/
+    display: block !important;
+    max-width: 42.85%;
+    height: 0;
+    padding-bottom: 61.8%;
+    /*アスペクト比を維持*/
+  }
+
+  .p-hero__single__png--pc {
+    display: none !important;
+  }
+
+  .c-photo--card--single--1-4 {
+    /*画像*/
+    display: block !important;
+    height: 0;
+    /*高さは設定しない*/
+    padding-bottom: 61.8%;
+    /*アスペクト比を維持*/
+  }
+
+  /* card 大きな枠ここまでーーーーーーー*/
   .c-wrapper--card--single--for-pc {
     display: none;
   }
@@ -2831,7 +2891,6 @@ td {
     display: block !important;
     max-width: 100%;
     height: 100%;
-    border: solid red 1px;
     padding: 0;
   }
 
@@ -2854,7 +2913,6 @@ td {
     padding: 61px 67px;
     /* 余白の幅*/
     box-sizing: border-box;
-    background-color: black;
   }
 
   .c-wrapper--card--single--pattern-area::after {
@@ -3149,7 +3207,6 @@ td {
     /* 左右フレームの余白*/
     padding-bottom: 0;
     margin-bottom: 353px !important;
-    background-color: blanchedalmond;
   }
 
   /* 余白ここまでーーーーーーーーーーーー*/
@@ -3228,15 +3285,70 @@ td {
     margin-right: 0 !important;
   }
 
+  /* 写真と文字混合*/
+  /* card largeーーーーーーーーーーー*/
+  .c-card--single--large {
+    /* 外枠 */
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row !important;
+    max-width: 100%;
+    height: auto;
+    overflow-y: visible;
+  }
+
   .c-caption-group--card--single {
     /* 文章の外枠ーーー*/
+    position: relative;
     max-width: 57.13% !important;
     min-height: 53.35%;
     padding-right: 0;
     padding-left: 5.18%;
+    padding-bottom: 6%;
     box-sizing: border-box;
   }
 
+  .c-caption-group--card--single.--for-pc {
+    /* 文章の外枠ーーー*/
+    padding-right: 5.18%;
+    padding-left: 0;
+  }
+
+  .c-detail--card--single {
+    /* 文章の詳細ーーー*/
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: auto;
+    font-size: 0.83vw;
+    line-height: 1.43;
+    word-wrap: break-word;
+  }
+
+  .c-photo-frame--card--single--1-4 {
+    /* 写真の外枠ーーー*/
+    display: block !important;
+    max-width: 42.85%;
+    height: auto;
+    padding-bottom: 0;
+  }
+
+  .p-hero__single__png--pc {
+    display: none !important;
+  }
+
+  .c-photo--card--single--1-4 {
+    /*画像*/
+    display: block !important;
+    height: 0;
+    /*高さは設定しない*/
+    padding-bottom: 61.8%;
+    /*アスペクト比を維持*/
+  }
+
+  /* card 大きな枠ここまでーーーーーーー*/
   .c-wrapper--card--single {
     margin-bottom: 60px;
   }
