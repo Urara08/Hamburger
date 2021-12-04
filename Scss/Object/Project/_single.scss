@@ -65,7 +65,7 @@
 .p-contents__single__text-block{
 &__title{
   display: inline-block;
-  color:#3C2A10;
+  color:$color--char-BR;
   font-family:$font-family--M-plus;
   font-weight: bold;
   line-height: 1.5;
@@ -113,7 +113,7 @@
   box-sizing: border-box;
 }
 &__text{
-  color:#3C2A10;
+  color:$color--char-BR;
   font-family:$font-family--M-plus;
   font-weight: normal;
   word-wrap:break-word;
@@ -148,7 +148,7 @@
   position: relative;
   display: inline-block;
   font-size: 16px;
-  color: #4A6C9B !important;
+  color: $color--char-DB !important;
   text-decoration: underline;
 }
 .p-contents__single__quote__source__link::after{/*下線（リンク）*/
@@ -305,7 +305,7 @@
   margin-bottom: 30px;
   font-size: 16px;
   font-weight: normal;
-  color:#3C2A10;
+  color:$color--char-BR;
   line-height: 1.43;
 }
 .p-contents__single__list--1{
@@ -328,7 +328,7 @@
 }
 /* 以下、コードーーーーーーーーーーーーー*/
 .p-contents__single__code-block__inner{
-  background-color: #F5F5F5;
+  background-color: $color--base-li-GY;
 }
 .p-contents__single__code{
   display: inline-block;
@@ -340,7 +340,7 @@
 }
 .p-contents__single__code__detail{
   font-size: 16px;
-  color: #3C2A10;
+  color: $color--item-BK-tea;
   line-height: 1.43;
   font-family:$font-family--M-plus;
   font-weight:normal
@@ -350,7 +350,7 @@
 .p-contents__single__table-block{
   width: 100%;
   margin-top: 30px;
-  background-color: #FFFFFF;
+  background-color: $color--char-WH;
 }
 .p-contents__single__table{
   border-collapse: collapse !important;
@@ -363,7 +363,7 @@ th{
   height: 77px;
   text-align: left;
   padding: 28px 0px 27px 30px !important;
-  border: solid 1px #707070;
+  border: solid 1px $color--char-GY;
   box-sizing: border-box;
 }
   td{
@@ -371,7 +371,7 @@ th{
   width:59.11%;
   height: 77px;
   padding: 28px 12.6px 27px 30px!important;
-  border: solid 1px #707070;
+  border: solid 1px $color--char-GY;
   box-sizing: border-box;
 }
 
@@ -389,8 +389,8 @@ th{
   font-weight: bold;
   line-height: 1.43;
   padding-bottom: 24.17%;
-  background-color: #F2EDE9;
-  border: solid 1px #707070;
+  background-color: $color--base-li-dark-OR;
+  border: solid 1px $color--char-GY;
   border-radius: 22px;
   margin-bottom: 30px;
 }
@@ -458,7 +458,7 @@ th{
 .p-contents__single__text-block{
 &__title{
   display: inline-block;
-  color:#3C2A10;
+  color:$color--char-BR;
   font-family:$font-family--M-plus;
   font-weight: bold;
   line-height: 1.5;
@@ -494,7 +494,7 @@ th{
   max-width: 100%;
   padding-top: 50px;
   padding-bottom: 60px;
-  background-color: #F5F5F5;
+  background-color: $color--base-li-GY;
   font-weight: normal;
 }
 
@@ -518,7 +518,7 @@ th{
   display: inline-block !important;
   margin-left: 15px;
   font-size: 16px;
-  color: #4A6C9B;
+  color: $color--char-DB;
   text-decoration: underline;
 }
 
@@ -530,7 +530,7 @@ th{
   left:0px;
   width: 100%;
   height: 1px;
-  color: #4A6C9B;
+  color: $color--char-DB;
 }
 
 .p-contents__single__quote{/* 引用記事*/
@@ -543,7 +543,7 @@ th{
 &__text--detail{/* 文章 */
   display: inline-block;
   font-size: 1.91vw;
-  color:#3C2A10;
+  color:$color--char-BR;
   font-family:$font-family--M-plus;
   line-height: 1.43;
   word-wrap:break-word;
@@ -643,7 +643,7 @@ th{
 .p-contents__single__table-block{
   width: 100%;
   margin-top: 30px;
-  background-color: #FFFFFF;
+  background-color: $color--char-WH;
 }
 .p-contents__single__table{
   border-collapse: collapse !important;
@@ -727,7 +727,7 @@ th{
 .p-contents__single__text-block{
 &__title{
   display: inline-block;
-  color:#3C2A10;
+  color:$color--char-BR;
   font-family:$font-family--M-plus;
   font-weight: bold;
   line-height: 1.5;
@@ -802,7 +802,7 @@ th{
   display: inline-block !important;
   margin-left: 15px;
   font-size: 16px;
-  color: #4A6C9B;
+  color: $color--char-DB;
   text-decoration: underline;
 }
 
@@ -814,7 +814,7 @@ th{
   left:0px;
   width: 100%;
   height: 1px;
-  color: #4A6C9B;
+  color: $color--char-DB;
 
 }
 
