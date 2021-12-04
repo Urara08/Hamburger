@@ -61,21 +61,22 @@ table {
 /** 色の変数 ------------ **/
 /* 背景色(ベタ塗り) */
 /* header */
-/* sidebar */
+/* 検索BOXボタン･sidebar */
 /* container */
 /*検索BOXボタンの*/
+/*single・page(コードの部分)*/
 /* マスク色 または薄い画像の背景*/
 /* map */
 /* map */
 /* map */
 /* 文字色 ・　下線（border）色*/
-/* logo・Menu */
+/* logo・Menu tableの罫線*/
 /* ダミーサイト*/
 /* ブランチメニュー*/
 /* Take-out Eat-in(大タイトル)*/
 /* Take-out Eat-in(BOXの内側)*/
+/* single・page(引用元)*/
 /* アイテム色　（BOXやボタン）*/
-/* container */
 /*c-cardの背景*/
 /* フォントファミリー　*/
 /*Hamburger・MENU(ロゴ)・Take-out Eat-in(大タイトル)*/
@@ -494,7 +495,7 @@ a {
   display: block !important;
   position: relative;
   max-width: 100%;
-  min-width: 375px;
+  min-width: 375px !important;
   height: 0;
   /*高さは無し*/
   padding-bottom: 76% !important;
@@ -511,7 +512,7 @@ a {
 .p-hero__archive__png--sp {
   /*heroスマホ用写真を表示する*/
   display: block !important;
-  position: relative;
+  position: absolute !important;
   top: 0;
   left: 0;
   z-index: 100;
@@ -652,9 +653,9 @@ a {
 
   /*------------- archive */
   .p-hero__archive {
+    display: block !important;
     position: relative;
     max-width: 100%;
-    min-width: 375px;
     height: 0;
     padding-bottom: 33.93% !important;
   }
@@ -710,52 +711,13 @@ a {
   }
 
   /*------------- single */
-  .p-hero__single {
-    /*heroの外枠 */
-    display: block !important;
-    position: relative;
-    max-width: 100%;
-    height: 0;
-    padding-bottom: 59.95% !important;
-  }
-
   .p-hero__single__png--sp {
     /* スマホ用の画像は隠す */
     display: none !important;
   }
 
-  .p-hero__single__png--pc {
-    /* pc用の画像 */
-    display: block !important;
-    position: absolute !important;
-    top: 0;
-    left: 0;
-    z-index: 110;
-    width: 100% !important;
-    padding-bottom: 59.95% !important;
-    /* アスペクト比を保つ */
-    height: 0;
-    /* 高さは設定しない */
-    background-image: url(../img/hero__single--pc.png);
-    background-position: center;
-    /* centerがカンプに近い */
-    background-size: cover !important;
-    background-repeat: no-repeat;
-    vertical-align: bottom;
-  }
-
-  .p-hero__single__menu-label {
-    /*h1 チーズバーガ―:画像に重なる字*/
-    display: inline-block;
-    position: absolute;
-    z-index: 140;
-    top: 36.04%;
-    left: 10.31%;
-    font-size: 7.19vw;
-    line-height: 1.31;
-  }
+  /* singleここまで */
 }
-/* singleここまで */
 /* PC */
 @media screen and (min-width: 1250px) {
   /*------------- frontpage */
@@ -782,6 +744,7 @@ a {
   /*------------- archive */
   /* hero */
   .p-hero__archive {
+    display: block !important;
     position: relative;
     max-width: 100%;
     height: 0;
@@ -797,6 +760,7 @@ a {
   .p-hero__archive__png--pc {
     /* pc用の画像 */
     display: block !important;
+    /* 表示する */
     position: relative;
     top: 0;
     left: 0;
@@ -841,54 +805,13 @@ a {
   }
 
   /*------------- single */
-  .p-hero__single {
-    display: block !important;
-    position: relative;
-    max-width: 100%;
-    height: 0;
-    padding-bottom: 32.19% !important;
-    background-color: #000000;
-  }
-
   .p-hero__single__png--sp {
     /* pcの時は隠す */
     display: none !important;
   }
 
-  .p-hero__single__png--pc {
-    /* pc用の画像 */
-    display: block !important;
-    /* 表示する */
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 110;
-    width: 100% !important;
-    padding-bottom: 32.19% !important;
-    /* アスペクト比を保つ */
-    height: 0;
-    /* 高さは設定しない */
-    background-image: url(../img/hero__single--pc.png);
-    background-position: top right !important;
-    background-size: cover !important;
-    background-repeat: no-repeat;
-    vertical-align: bottom;
-  }
-
-  .p-hero__single__menu-label {
-    /*h1 チーズバーガ―:画像に重なる字*/
-    display: inline-block !important;
-    position: absolute;
-    z-index: 140;
-    top: 33.47%;
-    left: 5.53%;
-    font-size: 3.12vw;
-    color: #FFFFFF;
-    font-weight: bold;
-    line-height: 1.31;
-  }
+  /* singleここまで */
 }
-/* singleここまで */
 /* スマホ */
 .p-contents {
   /*外枠*/
@@ -2636,7 +2559,7 @@ a {
 
 .p-contents__single__code__detail {
   font-size: 16px;
-  color: #3C2A10;
+  color: #3C2B1C;
   line-height: 1.43;
   font-family: "M PLUS 1p", sans-serif;
   font-weight: normal;
@@ -3009,6 +2932,48 @@ td {
   }
 
   /*buttonーーーーーーーーーーーー*/
+  /*------------- hero */
+  .p-hero__single {
+    /*heroの外枠 */
+    display: block !important;
+    position: relative;
+    max-width: 100%;
+    height: 0;
+    padding-bottom: 59.95% !important;
+  }
+
+  .p-hero__single__png--pc {
+    /* pc用の画像 */
+    display: block !important;
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    z-index: 110;
+    width: 100% !important;
+    padding-bottom: 59.95% !important;
+    /* アスペクト比を保つ */
+    height: 0;
+    /* 高さは設定しない */
+    background-image: url(../img/hero__single--pc.png);
+    background-position: center;
+    /* centerがカンプに近い */
+    background-size: cover !important;
+    background-repeat: no-repeat;
+    vertical-align: bottom;
+  }
+
+  .p-hero__single__menu-label {
+    /*h1 チーズバーガ―:画像に重なる字*/
+    display: inline-block;
+    position: absolute;
+    z-index: 140;
+    top: 36.04%;
+    left: 10.31%;
+    font-size: 7.19vw;
+    line-height: 1.31;
+  }
+
+  /*------------- heroここまで */
 }
 /* PC */
 @media screen and (min-width: 1250px) {
@@ -3349,6 +3314,48 @@ td {
   }
 
   /*buttonーーーーーーーーーーーー*/
+  /*------------- hero */
+  .p-hero__single {
+    display: block !important;
+    position: relative;
+    max-width: 100%;
+    height: 0;
+    padding-bottom: 32.19% !important;
+    background-color: #000000;
+  }
+
+  .p-hero__single__png--pc {
+    /* pc用の画像 */
+    display: block !important;
+    /* 表示する */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 110;
+    width: 100% !important;
+    padding-bottom: 32.19% !important;
+    /* アスペクト比を保つ */
+    height: 0;
+    /* 高さは設定しない */
+    background-image: url(../img/hero__single--pc.png);
+    background-position: top right !important;
+    background-size: cover !important;
+    background-repeat: no-repeat;
+    vertical-align: bottom;
+  }
+
+  .p-hero__single__menu-label {
+    /*h1 チーズバーガ―:画像に重なる字*/
+    display: inline-block !important;
+    position: absolute;
+    z-index: 140;
+    top: 33.47%;
+    left: 5.53%;
+    font-size: 3.12vw;
+    color: #FFFFFF;
+    font-weight: bold;
+    line-height: 1.31;
+  }
 }
 /* pagination */
 /* スマホ */
