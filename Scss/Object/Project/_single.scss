@@ -665,11 +665,24 @@ th{
 .p-contents__single__button-block__inner{
   margin-top: 60px;
 }
+
+.p-contents__single__button-block{
+  position: relative;
+  display: block !important;
+  padding-bottom: 0;
+  width: 60.08% !important;
+  height: 104px;
+  margin-bottom: 60px;
+}
+
+/*buttonーーーーーーーーーーーー*/
 }
 
   /* PC */
 @media screen and (min-width: 1250px){
 /* contents */
+
+
 /* lead(見出し+導入記事)---- */
 .p-contents__single__lead__area{/* leadの埋め込み先 */
   max-width:100% !important;
@@ -858,14 +871,14 @@ justify-content: center;
 }
 
 .c-wrapper--card--single--pattern-area{
-  display: flex;
-  flex-direction: column;
-  min-width: 97%;
+  display: block;
+
+
 }
 
 
 .c-photo-frame--card--full--single--pattern{
-  width:100%;
+  max-width:100%;
   height: 0;
   padding-bottom: 58.67%;
 }
@@ -958,4 +971,19 @@ th{
   padding: 28px 0px 27px 30px!important;
 }
 /* テーブルーーーーーーーーーーーーー*/
+/* 以下、buttonーーーーーーーーーーーー*/
+.p-contents__single__button-block__inner{
+  margin-top: 60px;
+}
+
+.p-contents__single__button-block{
+  position: relative;
+  display: block !important;
+  padding-bottom: 0;
+  width: 429px !important;
+  height: 104px;
+  margin-bottom: 60px;
+}
+
+/*buttonーーーーーーーーーーーー*/
 }
