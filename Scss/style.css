@@ -3055,9 +3055,9 @@ td {
 /* PC */
 @media screen and (min-width: 1250px) {
   /* contents */
-  /* title+記事 */
+  /* 見出し+記事 */
   .p-contents__single__lead__area {
-    /* leadの埋め込み先 */
+    /* 埋め込み先 */
     max-width: 100% !important;
     padding-top: 60px;
     /* 内側の余白 */
@@ -3071,10 +3071,7 @@ td {
     margin-bottom: 60px;
   }
 
-  /* 見出し+記事の内側---- */
-  .p-contents__single__lead {
-    /*  */
-  }
+  /* 内側 */
   .p-contents__single__lead__inner {
     /* 枠 */
     max-width: 100%;
@@ -3099,7 +3096,7 @@ td {
     word-wrap: break-word;
   }
 
-  /* 見出しのブロック*/
+  /* 見出しのブロック（h1〜h6）*/
   /* 共通 */
   .p-contents__single__heading-block__title {
     display: inline-block;
@@ -3157,7 +3154,7 @@ td {
     word-wrap: break-word;
   }
 
-  /* 引用文＋引用元 */
+  /* 引用元 */
   .p-contents__single__quote__source {
     /* 全体 */
     display: flex;
@@ -3170,7 +3167,7 @@ td {
   }
 
   　　 .p-contents__single__quote__source__title {
-    /*引用元*/
+    /*引用元名*/
     display: inline-block !important;
     font-size: 16px !important;
     font-weight: normal;
@@ -3186,7 +3183,7 @@ td {
     font-size: 16px;
     color: #4A6C9B;
     text-decoration: underline;
-    /* 下線をひく */
+    /* 下線をひくようにする*/
   }
 
   .p-contents__single__quote__source__link::after {
@@ -3203,7 +3200,7 @@ td {
   }
 
   /* card-------------- */
-  /* pcの場合のみ表示するcard*/
+  /* 4番目のcard　pcの場合のみ表示する*/
   .c-wrapper--card--single--pc-only {
     display: block !important;
     /* 表示する */
@@ -3312,14 +3309,18 @@ td {
 
   /* 2番目・3番目のcard ここまでーーーーーーー*/
   .c-wrapper--card--single--type_frame.hp_mb60 {
+    /*pcの時は隠す*/
     display: none;
+    /*pcの時は隠す（pc用のcardを表示する）*/
   }
 
   .c-photo-frame--card--single--type_frame {
+    /*pcの時は隠す*/
     display: none;
   }
 
   .c-photo--card--single--type_frame {
+    /*pcの時は隠す*/
     display: none;
   }
 
@@ -3395,13 +3396,13 @@ td {
     min-height: 77.35%;
   }
 
-  /* コードーーーーーーーーーーーーー*/
+  /*コードの部分*/
   .p-contents__single__code {
     display: inline-block;
     width: 91.86%;
   }
 
-  /*テーブルーーーーーーーーーーーーー*/
+  /*テーブルの部分*/
   .p-contents__single__table-block {
     width: 100%;
     margin-top: 50px;
@@ -3419,12 +3420,13 @@ td {
     padding: 28px 0px 27px 30px !important;
   }
 
-  /* ボタンーーーーーーーーーーーー*/
+  /* ボタンの部分*/
   .p-contents__single__button-block__inner {
     margin-top: 60px;
   }
 
   .p-contents__single__button-block {
+    /* 埋め込み先*/
     position: relative;
     display: block !important;
     padding-bottom: 0;

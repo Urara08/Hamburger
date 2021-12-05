@@ -757,10 +757,8 @@ th{
   /* PC */
 @media screen and (min-width: 1250px){
 /* contents */
-
-
-/* title+記事 */
-.p-contents__single__lead__area{/* leadの埋め込み先 */
+/* 見出し+記事 */
+.p-contents__single__lead__area{/* 埋め込み先 */
   max-width:100% !important;
   padding-top: 60px;/* 内側の余白 */
   padding-bottom: 60px;/* 内側の余白 */
@@ -772,8 +770,8 @@ th{
   margin-bottom: 60px;
 }
 
-/* 見出し+記事の内側---- */
-.p-contents__single__lead{/*  */
+/* 内側 */
+.p-contents__single__lead{
 &__inner{/* 枠 */
   max-width: 100%;
 }
@@ -798,7 +796,7 @@ th{
 }
 }
 
-/* 見出しのブロック*/
+/* 見出しのブロック（h1〜h6）*/
 /* 共通 */
 .p-contents__single__heading-block{
 &__title{
@@ -855,7 +853,7 @@ th{
   word-wrap:break-word;
 }
 }
-/* 引用文＋引用元 */
+/* 引用元 */
 .p-contents__single__quote__source{/* 全体 */
   display: flex;/* 出典元とリンクを横に並べる*/
   flex-direction: row !important;
@@ -865,7 +863,7 @@ th{
   line-height: 1.43;
 }
       　　
-.p-contents__single__quote__source__title{/*引用元*/
+.p-contents__single__quote__source__title{/*引用元名*/
   display: inline-block !important;
   font-size: 16px !important;
   font-weight: normal;
@@ -879,7 +877,7 @@ th{
   margin-left: 15px;
   font-size: 16px;
   color: $color--char-DB;
-  text-decoration: underline;/* 下線をひく */
+  text-decoration: underline;/* 下線をひくようにする*/
 }
 
 .p-contents__single__quote__source__link::after{/*下線（リンク）*/
@@ -894,7 +892,7 @@ th{
 }
 
 /* card-------------- */
-/* pcの場合のみ表示するcard*/
+/* 4番目のcard　pcの場合のみ表示する*/
 .c-wrapper--card--single--pc-only{
   display: block!important;/* 表示する */
 }
@@ -983,13 +981,14 @@ justify-content: center;
 /* 2番目・3番目のcard ここまでーーーーーーー*/
 
 
-.c-wrapper--card--single--type_frame.hp_mb60{
+.c-wrapper--card--single--type_frame.hp_mb60{/*pcの時は隠す*/
+  display: none;/*pcの時は隠す（pc用のcardを表示する）*/
+}
+
+.c-photo-frame--card--single--type_frame{/*pcの時は隠す*/
   display: none;
 }
-.c-photo-frame--card--single--type_frame{
-  display: none;
-}
-.c-photo--card--single--type_frame{
+.c-photo--card--single--type_frame{/*pcの時は隠す*/
   display: none;
 }
 /* 連続したパターンのカードの部分 ーーーー */
@@ -1055,14 +1054,14 @@ justify-content: center;
   min-height: 77.35%;
 }
 
-/* コードーーーーーーーーーーーーー*/
+/*コードの部分*/
 
 .p-contents__single__code{
   display: inline-block;
   width: 91.86%;
 }
 
-/*テーブルーーーーーーーーーーーーー*/
+/*テーブルの部分*/
 .p-contents__single__table-block{
   width: 100%;
   margin-top: 50px;
@@ -1079,12 +1078,12 @@ th{
   padding: 28px 0px 27px 30px!important;
 }
 
-/* ボタンーーーーーーーーーーーー*/
+/* ボタンの部分*/
 .p-contents__single__button-block__inner{
   margin-top: 60px;
 }
 
-.p-contents__single__button-block{
+.p-contents__single__button-block{/* 埋め込み先*/
   position: relative;
   display: block !important;
   padding-bottom: 0;
