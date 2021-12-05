@@ -12,22 +12,19 @@
   overflow: visible;
 }
 
-/* 文字のワイヤーフレーム --------------*/
+/* (上部：文字の部分)ワイヤーフレーム */
 .p-contents__single__inner--top{
-  margin-right:5.33%;
-  margin-bottom: 30px;
-  margin-left:5.33%;
+  margin: 0 5.33% 30px 5.33%;
 }
 
-/* lead(見出し+記事)---- */
-.p-contents__single__lead__area{/* leadの埋め込み先 */
+/* (見出し+記事)テキストの部分---- */
+.p-contents__single__lead__area{/* 埋め込み先 */
   max-width:100% !important;
   padding-top: 30px;/*内側の余白 */
   padding-bottom: 34px;/*内側の余白 */
   box-sizing: border-box;
 }
 
-/* lead(見出し+リード記事の内側)------- */
 .p-contents__single__lead{
 &__inner{/* 外枠 */
   max-width:100% !important;
@@ -52,17 +49,19 @@
   word-wrap:break-word;
 }
 }
+/* (見出し+記事)テキストの部分 ここまで---- */
 
-/* ブロックの埋め込み先共通　詳細は設定しない */
+
+/* ブロックの埋め込み先共通--------------- */
 .p-contents__single__block__area{
-  float: none;/* floatは解除 */
   font-family:$font-family--M-plus;
   overflow-y: hidden !important;
 }
+/* ブロックの埋め込み先共通 ここまで---- */
 
-/* ------------テキスト系のブロック------------*/
+/* ---見出し（h2/h3/h4/h5/h6）のブロック------------*/
 /* 共通 */
-.p-contents__single__text-block{
+.p-contents__single__heading-block{
 &__title{
   display: inline-block;
   color:$color--char-BR;
@@ -174,29 +173,36 @@
   border: solid pink 3px;
 }
 
-  .c-wrapper--card--single{/*カード同士の間隔（くり返しの部分迄）*/
-    max-width: 100%;
-    margin-bottom: 30px
-  }
-  .c-wrapper--card--single--pattern{/*カード同士の間隔（くり返し）*/
-    max-width: 100%;
-    margin-bottom: 20px
-  }
-  .c-wrapper--card--single--pattern:last-child{
-    margin-bottom: 0 !important;/*カードの最後は下の余白は無し*/
-  }
+.c-wrapper--card--single{/*カード同士の間隔（くり返しの部分迄）*/
+  max-width: 100%;
+  margin-bottom: 30px
+}
+.c-wrapper--card--single--pattern{/*カード同士の間隔（くり返し）*/
+  max-width: 100%;
+  margin-bottom: 20px
+}
+.c-wrapper--card--single--pattern:last-child{
+  margin-bottom: 0 !important;/*カードの最後は下の余白は無し*/
+}
 
 /* 写真のみのcardーーーーーーー*/
-  .c-card--single{/* カード外枠*/
-    @include c-card;
+.c-card--single{/* カード外枠*/
+  @include c-card;
 }
+
 /* 写真frame*/
-  .c-photo-frame--card--single--full{
-    display: block;
-    width: 100% !important;/* 横幅100%*/
-    height: 0;
-    padding-bottom:37.01%;/*アスペクト比を維持*/
-  }
+/* mixin */
+.c-photo-frame--card--single{/* singleの写真は枠がついている */
+border: solid 1px #707070;
+}
+
+.c-photo-frame--card--single--full{
+  @include c-photo-frame--card--single;
+  width: 100% !important;/* 横幅100%*/
+  height: 0;
+  padding-bottom:37.01%;/*アスペクト比を維持*/
+}
+
 /* 画像 */
   .c-photo--single{
     @include c-photo;
@@ -216,7 +222,7 @@
   display: flex;
   flex-direction: row !important;/* 左が写真、右が文 */
   max-width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 .c-caption-group--card--single{/* 文章の外枠ーーー*/
@@ -239,8 +245,8 @@
 }
 
 .c-photo-frame--card--single--1-4{/* 写真の外枠ーーー*/
-  display: block !important;
-  width:42.72%;
+  @include c-photo-frame--card--single;
+  max-width:42.72%;
 }
 
 .p-hero__single__png--pc{
@@ -267,6 +273,7 @@
 }
 .c-photo-frame--card--single--full--frame-type{
   @include c-card;
+  @include c-photo-frame--card--single;
   height: 0;
   padding-bottom:62.17%;
 }
@@ -456,7 +463,7 @@ th{
 
 /* ------------テキスト系のブロック------------*/
 /* 共通 */
-.p-contents__single__text-block{
+.p-contents__single__heading-block{
 &__title{
   display: inline-block;
   color:$color--char-BR;
@@ -589,7 +596,7 @@ th{
 }
 
 .c-photo-frame--card--single--1-4{/* 写真の外枠ーーー*/
-  display: block !important;
+  @include c-photo-frame--card--single;
   max-width:42.85%;
   height: 0;
   padding-bottom:61.8%;/*アスペクト比を維持*/
@@ -772,7 +779,7 @@ th{
   box-sizing: border-box;
 }
 
-/* 文字のワイヤーフレーム --------------*/
+/* 文字のワイヤーフレーム */
 .p-contents__single__inner--top{
   margin-bottom: 60px;
 }
@@ -805,7 +812,7 @@ th{
 
 /* ------------テキスト系のブロック------------*/
 /* 共通 */
-.p-contents__single__text-block{
+.p-contents__single__heading-block{
 &__title{
   display: inline-block;
   color:$color--char-BR;
@@ -926,6 +933,7 @@ justify-content: center;
 }/* 余白ここまでーーーーーーーーーーーー*/
 
 .c-photo-frame--card--single--full{
+  @include c-photo-frame--card--single;
   width: 100% !important;/* 横幅100%*/
   height: 0;
   padding-bottom:37.39%;/*アスペクト比を維持*/
@@ -1028,7 +1036,7 @@ justify-content: center;
 }
 
 .c-photo-frame--card--single--1-4{/* 写真の外枠ーーー*/
-  display: block !important;
+  @include c-photo-frame--card--single;
   max-width:42.85%;
   height: auto;
   padding-bottom: 0;

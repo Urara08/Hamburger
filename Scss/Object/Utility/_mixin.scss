@@ -90,4 +90,10 @@
   word-wrap:break-word;
   box-sizing: border-box;
 }
+/*single/pageの写真の枠-----------------*/
+  @mixin c-photo-frame--card--single($border: solid 1px #707070, $display: block){
+  border: solid 1px #707070;
+  display: block;
+}
+
 /*--------------------------------カードここまで*/
