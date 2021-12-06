@@ -2486,7 +2486,6 @@ a {
 /* contents */
 .p-contents__single {
   /*contents共通部分*/
-  max-width: 100%;
   display: block;
   max-width: 100%;
   height: auto;
@@ -2497,7 +2496,17 @@ a {
   overflow: visible;
 }
 
-/* サイト上部のワイヤーフレーム --------------*/
+/*card全体のフレーム*/
+.p-contents__single__cards {
+  /*外枠*/
+  display: inline-block !important;
+  max-width: 100% !important;
+  margin-bottom: 0 !important;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* サイト上部のワイヤー*/
 .p-contents__single__inner--top {
   margin: 0 5.33% 30px 5.33%;
 }
@@ -2509,6 +2518,12 @@ a {
   padding-bottom: 0;
 }
 
+/* サイト上部のワイヤー*/
+.p-contents__single__inner--top {
+  margin: 0 5.33% 30px 5.33%;
+}
+
+/*サイト下部はpagenationが無い為、無し*/
 /* タブレット */
 @media screen and (min-width: 600px) {
   /* contents */
@@ -2518,26 +2533,25 @@ a {
     padding-bottom: 228px !important;
   }
 
-  /* サイト上部のワイヤーフレーム --------------*/
+  /* サイト上部のワイヤーフレーム*/
   .p-contents__single__inner--top {
     margin-right: 7.19%;
     margin-left: 7.19%;
     margin-bottom: 60px;
   }
 
-  /* サイト中間部のワイヤーフレーム --------------*/
+  /* サイト中間部のワイヤーフレーム*/
   .p-contents__single__inner--middle {
     max-width: 100%;
     height: 100%;
     margin: 0px 7.19% 0 7.19% !important;
-    /* 左右フレームの余白*/
     padding-bottom: 0;
   }
 }
 /* PC */
 @media screen and (min-width: 1250px) {
   /* contents */
-  /* サイト上部のワイヤーフレーム --------------*/
+  /*サイト上部のワイヤーフレーム*/
   .p-contents__single {
     display: block;
     max-width: 100% !important;
@@ -2547,19 +2561,9 @@ a {
   .p-contents__single__inner--top {
     margin-bottom: 60px;
   }
-
-  /*card全体のフレーム----------------------*/
-  .p-contents__single__cards {
-    /*外枠*/
-    display: inline-block !important;
-    max-width: 100% !important;
-    margin-bottom: 0 !important;
-    padding: 0;
-    box-sizing: border-box;
-  }
 }
 /* スマホ */
-/* 見出し+記事---- */
+/* ------------見出し+記事のブロック------------*/
 .p-contents__single__block-lead__area {
   /* leadの埋め込み先 */
   max-width: 100% !important;
@@ -2570,7 +2574,6 @@ a {
   box-sizing: border-box;
 }
 
-/* 見出し+記事の内側---- */
 .p-contents__single__block-lead__inner {
   /* 外枠 */
   max-width: 100% !important;
@@ -2600,7 +2603,7 @@ a {
   font-family: "M PLUS 1p", sans-serif;
 }
 
-/* 見出し系のブロック（h2〜h6）*/
+/* ------------見出し（h2〜h6）系のブロック------------*/
 /* 共通 */
 .p-contents__single__block-heading__title {
   display: inline-block;
@@ -2636,7 +2639,7 @@ a {
   font-size: 20px;
 }
 
-/* 引用文章＋引用元 */
+/* ------------引用文章＋引用元のブロック------------*/
 .p-contents__single__block-quote {
   /* 全体 */
   display: inline-block;
@@ -2706,7 +2709,7 @@ a {
   height: 1px;
 }
 
-/*リストの部分*/
+/* ------------リストのブロック------------*/
 .p-contents__single__block-list {
   /*本体*/
   float: none;
@@ -2743,7 +2746,7 @@ a {
   margin-bottom: 60px;
 }
 
-/*コードのブロック*/
+/* ------------コードのブロック------------*/
 .p-contents__single__block-code {
   /*本体*/
   display: inline-block;
@@ -2763,7 +2766,7 @@ a {
   line-height: 1.43;
 }
 
-/*テーブル*/
+/* ------------テーブルのブロック------------*/
 .p-contents__single__block-table {
   /*本体*/
   width: 100% !important;
@@ -2792,7 +2795,7 @@ a {
   box-sizing: border-box;
 }
 
-/*ボタンの部分*/
+/* ------------ボタンのブロック------------*/
 .p-contents__single__block-button {
   /*埋め込み先*/
   position: relative;
@@ -2822,7 +2825,7 @@ a {
 
 /* タブレット */
 @media screen and (min-width: 600px) {
-  /* 見出し+記事---- */
+  /* ------------見出し+記事のブロック------------*/
   .p-contents__single__block-lead__area {
     /* leadの埋め込み先 */
     max-width: 100% !important;
@@ -2896,7 +2899,7 @@ a {
     font-size: 20px;
   }
 
-  /* 引用文章＋引用元 */
+  /* ------------引用文章＋引用元のブロック------------*/
   .p-contents__single__block-quote {
     /* 全体 */
     max-width: 100%;
@@ -2959,7 +2962,7 @@ a {
     color: #4A6C9B;
   }
 
-  /*リストの部分*/
+  /* ------------リストのブロック------------*/
   .p-contents__single__block-list {
     /*本体*/
     float: none;
@@ -2974,13 +2977,13 @@ a {
     margin-top: 62px 0 60px 50px;
   }
 
-  /*コードの部分*/
+  /* ------------コードのブロック------------*/
   .p-contents__single__block-code {
     display: inline-block;
     width: 83.3%;
   }
 
-  /*テーブルの部分*/
+  /* ------------テーブルのブロック------------*/
   .p-contents__single__block-table {
     /*本体*/
     border-collapse: collapse !important;
@@ -3005,7 +3008,7 @@ a {
     /*インデントの部分*/
   }
 
-  /*buttonの部分*/
+  /* ------------ボタンのブロック------------*/
   .p-contents__single__block-button {
     /*本体*/
     position: relative;
@@ -3021,7 +3024,7 @@ a {
 }
 /* PC */
 @media screen and (min-width: 1250px) {
-  /* 見出し+記事 */
+  /* ------------見出し+記事のブロック------------*/
   .p-contents__single__block-lead__area {
     /* 埋め込み先 */
     max-width: 100% !important;
@@ -3056,7 +3059,7 @@ a {
     word-wrap: break-word;
   }
 
-  /* 見出しのブロック（h1〜h6）*/
+  /* ------------見出し（h2〜h6）系のブロック------------*/
   /* 共通 */
   .p-contents__single__block-heading__title {
     display: inline-block;
@@ -3091,7 +3094,7 @@ a {
     font-size: 20px;
   }
 
-  /* 引用文章＋引用元 */
+  /* ------------引用文章＋引用元のブロック------------*/
   .p-contents__single__block-quote {
     /* 全体 */
     padding-top: 50px !important;
@@ -3156,7 +3159,7 @@ a {
     /* 青色 */
   }
 
-  /* リスト*/
+  /* ------------リストのブロック------------*/
   .p-contents__single__block-list {
     /* 本体 */
     display: block;
@@ -3166,13 +3169,13 @@ a {
     min-height: 77.35%;
   }
 
-  /*コードの部分*/
+  /* ------------コードのブロック------------*/
   .p-contents__single__block-code {
     display: inline-block;
     width: 91.86%;
   }
 
-  /*テーブルの部分*/
+  /* ------------テーブルのブロック------------*/
   .p-contents__single__block-table {
     /*本体*/
     width: 100%;
@@ -3189,7 +3192,7 @@ a {
     padding: 28px 0px 27px 30px !important;
   }
 
-  /* ボタンの部分*/
+  /* ------------ボタンのブロック------------*/
   .p-contents__single__block-button {
     /* 埋め込み先*/
     position: relative;

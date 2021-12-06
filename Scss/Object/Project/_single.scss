@@ -2,7 +2,6 @@
 /*------------- single */
 /* contents */
 .p-contents__single{/*contents共通部分*/
-  max-width: 100%;
   display: block;
   max-width: 100%;
   height: auto;
@@ -13,7 +12,17 @@
   overflow: visible;
 }
 
-/* サイト上部のワイヤーフレーム --------------*/
+
+/*card全体のフレーム*/
+.p-contents__single__cards{/*外枠*/
+  display: inline-block !important;
+  max-width:100% !important;
+  margin-bottom: 0!important;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* サイト上部のワイヤー*/
 .p-contents__single__inner--top{
   margin:0 5.33% 30px 5.33%;
 }
@@ -25,6 +34,14 @@
   padding-bottom: 0;
 }
 
+/* サイト上部のワイヤー*/
+.p-contents__single__inner--top{
+  margin:0 5.33% 30px 5.33%;
+}
+
+/*サイト下部はpagenationが無い為、無し*/
+
+
 /* タブレット */
 @media screen and (min-width: 600px){
 /* contents */
@@ -34,18 +51,18 @@
   padding-bottom: 228px !important;
 }
 
-/* サイト上部のワイヤーフレーム --------------*/
+/* サイト上部のワイヤーフレーム*/
 .p-contents__single__inner--top{
   margin-right:7.19%;
   margin-left:7.19%;
   margin-bottom: 60px;
 }
 
-/* サイト中間部のワイヤーフレーム --------------*/
+/* サイト中間部のワイヤーフレーム*/
 .p-contents__single__inner--middle{
   max-width: 100%;
   height: 100%;
-  margin: 0px 7.19%  0 7.19% !important;/* 左右フレームの余白*/
+  margin: 0px 7.19%  0 7.19% !important;
   padding-bottom: 0;
 }
 }
@@ -53,7 +70,7 @@
 /* PC */
 @media screen and (min-width: 1250px){
 /* contents */
-/* サイト上部のワイヤーフレーム --------------*/
+/*サイト上部のワイヤーフレーム*/
 .p-contents__single{
   display: block;
   max-width: 100% !important;
@@ -62,14 +79,5 @@
 
 .p-contents__single__inner--top{
   margin-bottom: 60px;
-}
-
-/*card全体のフレーム----------------------*/
-.p-contents__single__cards{/*外枠*/
-  display: inline-block !important;
-  max-width:100% !important;
-  margin-bottom: 0!important;
-  padding: 0;
-  box-sizing: border-box;
 }
 }
