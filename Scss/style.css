@@ -491,7 +491,11 @@ a {
 }
 
 /*------------- archive */
-/* archive */
+.p-hero__archive__png--pc {
+  /* pc用の写真は隠す */
+  display: none !important;
+}
+
 .p-hero__archive {
   display: block !important;
   position: relative;
@@ -504,12 +508,6 @@ a {
   background-color: #000000;
   font-family: "M PLUS 1p", sans-serif;
 }
-
-.p-hero__archive__png--pc {
-  /* pc用の写真は隠す */
-  display: none !important;
-}
-
 .p-hero__archive__png--sp {
   /*heroスマホ用写真を表示する*/
   display: block !important;
@@ -530,7 +528,6 @@ a {
   vertical-align: bottom !important;
   box-sizing: border-box;
 }
-
 .p-hero__archive__menu-label {
   /*MENU:の字*/
   display: inline-block;
@@ -543,7 +540,6 @@ a {
   color: #FFFFFF;
   line-height: 1.33;
 }
-
 .p-hero__archive__item-label {
   /*チーズバーガーの字*/
   display: inline-block !important;
@@ -559,6 +555,11 @@ a {
 }
 
 /*------------- single */
+.p-hero__single__png--pc {
+  /* pc用の写真は隠す */
+  display: none !important;
+}
+
 .p-hero__single {
   display: block !important;
   position: relative !important;
@@ -569,12 +570,6 @@ a {
   padding-bottom: 60% !important;
   /*アスペクト比を保つ*/
 }
-
-.p-hero__single__png--pc {
-  /* pc用の写真は隠す */
-  display: none !important;
-}
-
 .p-hero__single__png--sp {
   /*heroスマホ用写真を表示する*/
   display: block !important;
@@ -595,7 +590,6 @@ a {
   vertical-align: bottom !important;
   box-sizing: border-box;
 }
-
 .p-hero__single__menu-label {
   /*h1 チーズバーガ―:画像に重なる字*/
   display: inline-block !important;
@@ -609,7 +603,7 @@ a {
   line-height: 1.5;
 }
 
-/* single */
+/* single -------------*/
 /* タブレット */
 @media screen and (min-width: 600px) {
   /*------------- frontpage */
@@ -653,6 +647,11 @@ a {
   }
 
   /*------------- archive */
+  .p-hero__archive__png--sp {
+    /* スマホ用の画像は隠す */
+    display: none !important;
+  }
+
   .p-hero__archive {
     display: block !important;
     position: relative;
@@ -660,12 +659,6 @@ a {
     height: 0;
     padding-bottom: 33.93% !important;
   }
-
-  .p-hero__archive__png--sp {
-    /* スマホ用の画像は隠す */
-    display: none !important;
-  }
-
   .p-hero__archive__png--pc {
     /* pc用の画像 */
     display: block !important;
@@ -685,7 +678,6 @@ a {
     background-repeat: no-repeat;
     vertical-align: bottom;
   }
-
   .p-hero__archive__menu-label {
     /*MENU:*/
     display: inline-block;
@@ -696,7 +688,6 @@ a {
     font-size: 7.19vw;
     line-height: 1.31;
   }
-
   .p-hero__archive__item-label {
     /*チーズバーガーの字*/
     display: inline-block !important;
@@ -712,11 +703,11 @@ a {
   }
 
   /*------------- single */
-  .p-hero__single__png--pc {
+  .p-hero__single__png--sp {
+    /* スマホ用の画像は隠す */
     display: none !important;
   }
 
-  /* hero ファイルを分けると表示されない為本ファイルへ記載*/
   .p-hero__single {
     /*heroの外枠 */
     display: block !important;
@@ -725,7 +716,6 @@ a {
     height: 0;
     padding-bottom: 59.95% !important;
   }
-
   .p-hero__single__png--pc {
     /* pc用の画像 */
     display: block !important;
@@ -745,7 +735,6 @@ a {
     background-repeat: no-repeat;
     vertical-align: bottom;
   }
-
   .p-hero__single__menu-label {
     /*h1 チーズバーガ―:画像に重なる字*/
     display: inline-block;
@@ -783,6 +772,11 @@ a {
   }
 
   /*------------- archive */
+  .p-hero__archive__png--sp {
+    /* pcの時は隠す */
+    display: none !important;
+  }
+
   .p-hero__archive {
     display: block !important;
     position: relative;
@@ -791,12 +785,6 @@ a {
     padding-bottom: 15.38% !important;
     background-color: #000000;
   }
-
-  .p-hero__archive__png--sp {
-    /* pcの時は隠す */
-    display: none !important;
-  }
-
   .p-hero__archive__png--pc {
     /* pc用の画像 */
     display: block !important;
@@ -816,7 +804,6 @@ a {
     background-repeat: no-repeat;
     vertical-align: bottom;
   }
-
   .p-hero__archive__menu-label {
     /*MENU:*/
     display: inline-block;
@@ -829,7 +816,6 @@ a {
     color: #FFFFFF;
     line-height: 1.31;
   }
-
   .p-hero__archive__item-label {
     /*チーズバーガーの字*/
     display: inline-block !important;
@@ -858,7 +844,6 @@ a {
     padding-bottom: 32.19% !important;
     background-color: #000000;
   }
-
   .p-hero__single__png--pc {
     /* pc用の画像 */
     display: block !important;
@@ -878,7 +863,6 @@ a {
     background-repeat: no-repeat;
     vertical-align: bottom;
   }
-
   .p-hero__single__menu-label {
     /*h1 チーズバーガ―:画像に重なる字*/
     display: inline-block !important;
