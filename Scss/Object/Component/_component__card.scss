@@ -1,5 +1,5 @@
 /* c-card用のcomponent----------- */
-/* スマホ ------*/
+/* スマホ ------------------------------------ */
 
 .c-card {/* mixin */
   width: 100%;
@@ -135,7 +135,7 @@
   line-height: 1.43;
 }
 
-/* タブレット------ */
+/* タブレット ------------------------------------ */
 @media screen and (min-width: 600px){
 .c-card--archive{/*一番外側の枠*/
   @include c-card;
@@ -233,7 +233,7 @@
 }
 }
 
-/* PC------ */
+/* PC ------------------------------------ */
 @media screen and (min-width: 1250px){
 .c-card--archive{/*一番外側の枠*/
   @include c-card;

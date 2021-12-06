@@ -2510,190 +2510,9 @@ a {
   border: solid pink 3px;
 }
 
-/* cardーーーーーーーーーーーーーーーーーーーーーーー*/
-.c-wrapper--card--single--pc-only {
-  /* pcのみ表示するcard*/
-  display: none;
-}
-
-.c-wrapper--card--single {
-  /*くり返しの部分の手前までのcard*/
-  max-width: 100%;
-  /* card外枠 */
-  margin-bottom: 30px;
-}
-
-.c-wrapper--card--single--continuous {
-  /*(くり返しの部分）*/
-  max-width: 100%;
-  /* card外枠 */
-  margin-bottom: 20px;
-}
-
-.c-wrapper--card--single--continuous:last-child {
-  margin-bottom: 0 !important;
-  /*カードの最後は下の余白無し*/
-}
-
-/* 1つ目のcardーーーーーーー*/
-.c-card--single {
-  /* 外枠 */
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.c-photo-frame--card--single--no-padding {
-  /* 写真の枠*/
-  display: block;
-  width: 100% !important;
-  /* 横幅100%*/
-  height: 0;
-  /* 高さは指定しない */
-  padding-bottom: 37.01%;
-  /*アスペクト比を維持*/
-}
-
-.c-photo--single {
-  /* 画像 */
-  max-width: 100%;
-  height: 100%;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  vertical-align: bottom;
-  display: block;
-  width: 100%;
-  /* 横幅100%*/
-  height: 0;
-  /* 高さは指定しない */
-  padding-bottom: 37.01%;
-  /*アスペクト比を維持*/
-  background-image: url(../img/cheese-burger--per_37.png);
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-/* ２つ目と3つ目のカードーーーーーーー*/
-.c-card--single--special {
-  /* 外枠 */
-  width: 100%;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: row !important;
-  /* 写真と文章を横に並べる*/
-  max-width: 100%;
-  height: 100%;
-}
-
-.c-caption-group--card--single {
-  /* 文章の外枠ーーー*/
-  position: relative;
-  width: 57.28% !important;
-  max-height: 176px;
-  min-height: 88.43%;
-  padding-right: 5.18%;
-  padding-left: 5.18%;
-  box-sizing: border-box;
-}
-
-.c-detail--card--single {
-  /* 文章の詳細部分ーーー*/
-  position: relative;
-  width: 100% !important;
-  height: 100%;
-  font-size: 16px;
-  line-height: 1.43;
-  word-wrap: break-word;
-  overflow-y: hidden;
-  /* スマホの場合のみ*/
-}
-
-.c-photo-frame--card--single--various {
-  /* 写真の外枠ーーー*/
-  display: block !important;
-  width: 42.72%;
-}
-
-.c-photo--card--single--various {
-  /*画像*/
-  display: block !important;
-  height: 0;
-  /*高さは設定しない*/
-  padding-bottom: 61.8%;
-  /*アスペクト比を維持*/
-  background-image: url(../img/cheese-burger--per_62.png);
-  background-position: left top;
-  /*カンプに近い*/
-  background-size: cover;
-  background-repeat: no-repeat;
-  vertical-align: bottom;
-  box-sizing: border-box;
-}
-
-/* card 大きな枠ここまでーーーーーーー*/
-/* 4つめのカード　写真が幅100%・周りに余白付き*/
-.c-wrapper--card--single--type_frame {
-  /* 余白付き*/
-  padding: 30px 34px;
-  box-sizing: border-box;
-}
-
-.c-photo-frame--card--single--type_frame {
-  width: 100%;
-  box-sizing: border-box;
-  height: 0;
-  /*高さは指定しない*/
-  padding-bottom: 62.17%;
-  /*アスペクト比を保つ*/
-}
-
-.c-photo--card--single--type_frame {
-  max-width: 100%;
-  height: 100%;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  vertical-align: bottom;
-  height: 0;
-  /*高さは指定しない*/
-  padding-bottom: 62.17%;
-  /*アスペクト比を保つ*/
-  background-image: url(../img/cheese-burger--per_62.png);
-}
-
-/* 4つめのカード　ここまでーーーーーーー*/
-/* 写真のみの連続するパターン*/
-.c-photo-frame--card--single--type_continuous {
-  width: 100%;
-  height: 0;
-  /*高さは指定しない*/
-  padding-bottom: 60.89%;
-  /*アスペクト比を保つ*/
-}
-
-.c-photo--single--continuous {
-  max-width: 100%;
-  height: 100%;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  vertical-align: bottom;
-  height: 0;
-  /*高さは指定しない*/
-  padding-bottom: 60.89%;
-  /*アスペクト比を保つ*/
-  background-image: url(../img/cheese-burger--per_62.png);
-}
-
-.c-wrapper--card--single--continuous-area {
-  display: flex;
-  flex-direction: column;
-  /*cardを縦並びにする*/
-}
-
+/*pagenation無しの為、サイト下部のワイヤ―は無し*/
 /* タブレット */
 @media screen and (min-width: 600px) {
-  /*------------- single */
   /* contents */
   .p-contents__single {
     display: block;
@@ -2707,8 +2526,9 @@ a {
     margin-bottom: 60px;
   }
 
+  /* サイト中間部のワイヤーフレーム --------------*/
   .p-contents__single__inner--middle {
-    /* 中間部分のワイヤー*/
+    max-width: 100%;
     height: 100%;
     margin: 0px 7.19% 0 7.19% !important;
     /* 左右フレームの余白*/
@@ -2716,150 +2536,16 @@ a {
     margin-bottom: 228px !important;
     border: solid pink 3px;
   }
-
-  /* ２つ目と3つ目のカードーーーーーーー*/
-  .c-card--single--special {
-    /* 外枠 */
-    width: 100%;
-    box-sizing: border-box;
-    display: flex;
-    /* 写真と文章を横並びに */
-    flex-direction: row !important;
-    max-width: 100%;
-    height: auto;
-    overflow-y: hidden;
-  }
-
-  .c-caption-group--card--single {
-    /* 文章の外枠ーーー*/
-    position: relative;
-    width: 57.28% !important;
-    min-height: 88.43%;
-    padding-right: 5.18%;
-    padding-left: 5.18%;
-    padding-bottom: 6%;
-    box-sizing: border-box;
-  }
-
-  .c-detail--card--single {
-    /* 文章の詳細ーーー*/
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100% !important;
-    height: auto;
-    font-size: 1.91vw;
-    line-height: 1.43;
-    word-wrap: break-word;
-  }
-
-  .c-photo-frame--card--single--various {
-    /*写真の外枠*/
-    display: block !important;
-    max-width: 42.85%;
-    height: 0;
-    padding-bottom: 61.8%;
-    /*アスペクト比を維持*/
-  }
-
-  .c-photo--card--single--various {
-    /*画像*/
-    display: block !important;
-    height: 0;
-    /*高さは設定しない*/
-    padding-bottom: 61.8%;
-    /*アスペクト比を維持*/
-  }
-
-  /*pcのみで表示するcard*/
-  .c-wrapper--card--single--pc-only {
-    display: none;
-    /*隠す*/
-  }
-
-  /*cardの上下の余白*/
-  .c-wrapper--card--single {
-    max-width: 100%;
-    margin-bottom: 0px;
-  }
-
-  .c-wrapper--card--single--continuous {
-    max-width: 100%;
-    margin-bottom: 20px;
-  }
-
-  .c-wrapper--card--single--continuous:last-child {
-    margin-bottom: 0 !important;
-    /*縦並びの最後のカードは下の余白は無し*/
-  }
-
-  .c-wrapper--card--single.hp_mb60 {
-    margin-bottom: 60px;
-  }
-
-  .c-wrapper--card--single.hp_mb117 {
-    margin-bottom: 117px;
-  }
-
-  /*同じcardをくり返す部分*/
-  .c-wrapper--card--single--continuous-area {
-    display: block !important;
-    max-width: 100%;
-    height: 100%;
-    padding: 0;
-  }
-
-  .c-wrapper--card--single--continuous {
-    width: 48.87%;
-    float: left;
-    margin-bottom: 20px;
-  }
-
-  .c-wrapper--card--single--continuous.no_one,
-.c-wrapper--card--single--continuous.no_three,
-.c-wrapper--card--single--continuous.no_five,
-.c-wrapper--card--single--continuous.no_seven,
-.c-wrapper--card--single--continuous.no_nine {
-    margin-right: 2.24% !important;
-  }
-
-  .c-wrapper--card--single--type_frame.hp_mb180 {
-    margin-bottom: 180px;
-    padding: 61px 67px;
-    /* 余白の幅*/
-    box-sizing: border-box;
-  }
-
-  /*最後に疑似要素でfloatを解除*/
-  .c-wrapper--card--single--continuous-area::after {
-    content: "";
-    display: block;
-    clear: both;
-  }
 }
 /* PC */
 @media screen and (min-width: 1250px) {
   /* contents */
-  /* サイト上部のワイヤー*/
+  /* サイト上部のワイヤーフレーム --------------*/
   .p-contents__single__inner--top {
     margin-bottom: 60px;
   }
 
-  /* card-------------- */
-  /* 4番目のcard　pcの場合のみ表示する*/
-  .c-wrapper--card--single--pc-only {
-    display: block !important;
-    /* 表示する */
-  }
-
-  .c-card--single--special.pc-only {
-    display: flex;
-    /* 真ん中に配置 */
-    justify-content: center;
-  }
-
-  /* pcの場合のみ表示するcardここまで-------*/
-  /*card全体------------------------------*/
+  /*card全体のフレーム----------------------*/
   .p-contents__single__cards {
     /*外枠*/
     display: inline-block !important;
@@ -2867,165 +2553,6 @@ a {
     margin-bottom: 0 !important;
     padding: 0;
     box-sizing: border-box;
-  }
-
-  /*1番目のcard*/
-  .c-photo-frame--card--single--no-padding {
-    width: 100% !important;
-    /* 横幅100%*/
-    height: 0;
-    padding-bottom: 37.39%;
-    /*アスペクト比を維持*/
-  }
-
-  .c-photo--single {
-    /* 画像 */
-    width: 100%;
-    /* 横幅100%*/
-    padding-bottom: 37.39%;
-    /*アスペクト比を維持*/
-  }
-
-  /*2番目のcard*/
-  .c-wrapper--card--single.hp_mb117 {
-    margin-bottom: 60px;
-  }
-
-  /* 2番目・3番目のcardーーーーーーーーーー*/
-  .c-card--single--special {
-    /* 外枠 */
-    width: 100%;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: row !important;
-    max-width: 100%;
-    height: auto;
-    overflow-y: visible;
-  }
-
-  .c-caption-group--card--single {
-    /* 文章の外枠ーーー*/
-    position: relative;
-    max-width: 57.13% !important;
-    min-height: 53.35%;
-    padding-right: 0;
-    padding-left: 5.18%;
-    padding-bottom: 6%;
-    box-sizing: border-box;
-  }
-
-  .c-caption-group--card--single.pc-only {
-    /* 文章の外枠ーーー*/
-    padding-right: 5.18%;
-    padding-left: 0;
-  }
-
-  .c-detail--card--single {
-    /* 文章の詳細ーーー*/
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100% !important;
-    height: auto;
-    font-size: 0.83vw;
-    line-height: 1.43;
-    word-wrap: break-word;
-  }
-
-  .c-photo-frame--card--single--various {
-    /* 写真の外枠ーーー*/
-    display: block !important;
-    max-width: 42.85%;
-    height: auto;
-    padding-bottom: 0;
-  }
-
-  .c-photo--card--single--various {
-    /*画像*/
-    display: block !important;
-    height: 0;
-    /*高さは設定しない*/
-    padding-bottom: 61.8%;
-    /*アスペクト比を維持*/
-  }
-
-  /* 2番目・3番目のcard ここまでーーーーーーー*/
-  .c-wrapper--card--single--type_frame.hp_mb60 {
-    /*pcの時は隠す*/
-    display: none;
-    /*pcの時は隠す（pc用のcardを表示する）*/
-  }
-
-  .c-photo-frame--card--single--type_frame {
-    /*pcの時は隠す*/
-    display: none;
-  }
-
-  .c-photo--card--single--type_frame {
-    /*pcの時は隠す*/
-    display: none;
-  }
-
-  /* 連続したパターンのカードの部分 ーーーー */
-  .c-wrapper--card--single--continuous-area {
-    display: block;
-  }
-
-  .c-photo-frame--card--single--type_continuous {
-    max-width: 100%;
-    height: 0;
-    padding-bottom: 58.67%;
-  }
-
-  .c-photo--single--continuous {
-    max-width: 100%;
-    height: 100%;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    vertical-align: bottom;
-    height: 0;
-    padding-bottom: 58.67%;
-    background-image: url(../img/cheese-burger--per_62.png);
-  }
-
-  .c-wrapper--card--single--continuous {
-    max-width: 32.3%;
-    float: left;
-    margin-bottom: 1.47%;
-  }
-
-  .c-wrapper--card--single--continuous.no_one,
-.c-wrapper--card--single--continuous.no_two,
-.c-wrapper--card--single--continuous.no_four,
-.c-wrapper--card--single--continuous.no_five,
-.c-wrapper--card--single--continuous.no_seven,
-.c-wrapper--card--single--continuous.no_eight {
-    margin-right: 1.47% !important;
-  }
-
-  .c-wrapper--card--single--continuous.no_three,
-.c-wrapper--card--single--continuous.no_nine,
-.c-wrapper--card--single--continuous.no_six {
-    margin-right: 0 !important;
-  }
-
-  .c-wrapper--card--single--continuous.no_seven,
-.c-wrapper--card--single--continuous.no_eight,
-.c-wrapper--card--single--continuous.no_nine {
-    margin-bottom: 0 !important;
-    /*7/8/9番目のcardは下の余白無し*/
-  }
-
-  /* 連続したパターンのカードの部分ここまで ーーーー */
-  /* 余白の調整ーーーーーーー*/
-  .c-wrapper--card--single {
-    margin-bottom: 60px;
-  }
-
-  .c-wrapper--card--single--pc-only {
-    margin-bottom: 60px;
-    position: relative;
   }
 }
 /* スマホ */
@@ -3842,7 +3369,7 @@ a {
   }
 }
 /* c-card用のcomponent----------- */
-/* スマホ ------*/
+/* スマホ ------------------------------------ */
 .c-card {
   /* mixin */
   width: 100%;
@@ -4029,7 +3556,7 @@ a {
   line-height: 1.43;
 }
 
-/* タブレット------ */
+/* タブレット ------------------------------------ */
 @media screen and (min-width: 600px) {
   .c-card--archive {
     /*一番外側の枠*/
@@ -4158,7 +3685,7 @@ a {
     margin-top: 45px;
   }
 }
-/* PC------ */
+/* PC ------------------------------------ */
 @media screen and (min-width: 1250px) {
   .c-card--archive {
     /*一番外側の枠*/
@@ -4275,5 +3802,485 @@ a {
     font-weight: bold;
     font-size: 16px;
     line-height: 2.06;
+  }
+}
+/* single c-card用のcomponent----------- */
+/* スマホ ------------------------------------ */
+/* cardーーーーーーーーーーーーーーーーーーーーーーー*/
+.c-wrapper--card--single--pc-only {
+  /* pcのみ表示するcard*/
+  display: none;
+}
+
+.c-wrapper--card--single {
+  /*くり返しの部分の手前までのcard*/
+  max-width: 100%;
+  /* card外枠 */
+  margin-bottom: 30px;
+}
+
+.c-wrapper--card--single--continuous {
+  /*(くり返しの部分）*/
+  max-width: 100%;
+  /* card外枠 */
+  margin-bottom: 20px;
+}
+
+.c-wrapper--card--single--continuous:last-child {
+  margin-bottom: 0 !important;
+  /*カードの最後は下の余白無し*/
+}
+
+/* 1つ目のcardーーーーーーー*/
+.c-card--single {
+  /* 外枠 */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.c-photo-frame--card--single--no-padding {
+  /* 写真の枠*/
+  display: block;
+  width: 100% !important;
+  /* 横幅100%*/
+  height: 0;
+  /* 高さは指定しない */
+  padding-bottom: 37.01%;
+  /*アスペクト比を維持*/
+}
+
+.c-photo--single {
+  /* 画像 */
+  max-width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  vertical-align: bottom;
+  display: block;
+  width: 100%;
+  /* 横幅100%*/
+  height: 0;
+  /* 高さは指定しない */
+  padding-bottom: 37.01%;
+  /*アスペクト比を維持*/
+  background-image: url(../img/cheese-burger--per_37.png);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* ２つ目と3つ目のカードーーーーーーー*/
+.c-card--single--special {
+  /* 外枠 */
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row !important;
+  /* 写真と文章を横に並べる*/
+  max-width: 100%;
+  height: 100%;
+}
+
+.c-caption-group--card--single {
+  /* 文章の外枠ーーー*/
+  position: relative;
+  width: 57.28% !important;
+  max-height: 176px;
+  min-height: 88.43%;
+  padding-right: 5.18%;
+  padding-left: 5.18%;
+  box-sizing: border-box;
+}
+
+.c-detail--card--single {
+  /* 文章の詳細部分ーーー*/
+  position: relative;
+  width: 100% !important;
+  height: 100%;
+  font-size: 16px;
+  line-height: 1.43;
+  word-wrap: break-word;
+  overflow-y: hidden;
+  /* スマホの場合のみ*/
+}
+
+.c-photo-frame--card--single--various {
+  /* 写真の外枠ーーー*/
+  display: block !important;
+  width: 42.72%;
+}
+
+.c-photo--card--single--various {
+  /*画像*/
+  display: block !important;
+  height: 0;
+  /*高さは設定しない*/
+  padding-bottom: 61.8%;
+  /*アスペクト比を維持*/
+  background-image: url(../img/cheese-burger--per_62.png);
+  background-position: left top;
+  /*カンプに近い*/
+  background-size: cover;
+  background-repeat: no-repeat;
+  vertical-align: bottom;
+  box-sizing: border-box;
+}
+
+/* card 大きな枠ここまでーーーーーーー*/
+/* 4つめのカード　写真が幅100%・周りに余白付き*/
+.c-wrapper--card--single--type_frame {
+  /* 余白付き*/
+  padding: 30px 34px;
+  box-sizing: border-box;
+}
+
+.c-photo-frame--card--single--type_frame {
+  width: 100%;
+  box-sizing: border-box;
+  height: 0;
+  /*高さは指定しない*/
+  padding-bottom: 62.17%;
+  /*アスペクト比を保つ*/
+}
+
+.c-photo--card--single--type_frame {
+  max-width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  vertical-align: bottom;
+  height: 0;
+  /*高さは指定しない*/
+  padding-bottom: 62.17%;
+  /*アスペクト比を保つ*/
+  background-image: url(../img/cheese-burger--per_62.png);
+}
+
+/* 4つめのカード　ここまでーーーーーーー*/
+/* 写真のみの連続するパターン*/
+.c-photo-frame--card--single--type_continuous {
+  width: 100%;
+  height: 0;
+  /*高さは指定しない*/
+  padding-bottom: 60.89%;
+  /*アスペクト比を保つ*/
+}
+
+.c-photo--single--continuous {
+  max-width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  vertical-align: bottom;
+  height: 0;
+  /*高さは指定しない*/
+  padding-bottom: 60.89%;
+  /*アスペクト比を保つ*/
+  background-image: url(../img/cheese-burger--per_62.png);
+}
+
+.c-wrapper--card--single--continuous-area {
+  display: flex;
+  flex-direction: column;
+  /*cardを縦並びにする*/
+}
+
+/* タブレット ------------------------------------ */
+@media screen and (min-width: 600px) {
+  /* ２つ目と3つ目のカードーーーーーーー*/
+  .c-card--single--special {
+    /* 外枠 */
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    /* 写真と文章を横並びに */
+    flex-direction: row !important;
+    max-width: 100%;
+    height: auto;
+    overflow-y: hidden;
+  }
+
+  .c-caption-group--card--single {
+    /* 文章の外枠ーーー*/
+    position: relative;
+    width: 57.28% !important;
+    min-height: 88.43%;
+    padding-right: 5.18%;
+    padding-left: 5.18%;
+    padding-bottom: 6%;
+    box-sizing: border-box;
+  }
+
+  .c-detail--card--single {
+    /* 文章の詳細ーーー*/
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: auto;
+    font-size: 1.91vw;
+    line-height: 1.43;
+    word-wrap: break-word;
+  }
+
+  .c-photo-frame--card--single--various {
+    /*写真の外枠*/
+    display: block !important;
+    max-width: 42.85%;
+    height: 0;
+    padding-bottom: 61.8%;
+    /*アスペクト比を維持*/
+  }
+
+  .c-photo--card--single--various {
+    /*画像*/
+    display: block !important;
+    height: 0;
+    /*高さは設定しない*/
+    padding-bottom: 61.8%;
+    /*アスペクト比を維持*/
+  }
+
+  /*pcのみで表示するcard*/
+  .c-wrapper--card--single--pc-only {
+    display: none;
+    /*隠す*/
+  }
+
+  /*cardの上下の余白*/
+  .c-wrapper--card--single {
+    max-width: 100%;
+    margin-bottom: 0px;
+  }
+
+  .c-wrapper--card--single--continuous {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .c-wrapper--card--single--continuous:last-child {
+    margin-bottom: 0 !important;
+    /*縦並びの最後のカードは下の余白は無し*/
+  }
+
+  .c-wrapper--card--single.hp_mb60 {
+    margin-bottom: 60px;
+  }
+
+  .c-wrapper--card--single.hp_mb117 {
+    margin-bottom: 117px;
+  }
+
+  /*同じcardをくり返す部分*/
+  .c-wrapper--card--single--continuous-area {
+    display: block !important;
+    max-width: 100%;
+    height: 100%;
+    padding: 0;
+  }
+
+  .c-wrapper--card--single--continuous {
+    width: 48.87%;
+    float: left;
+    margin-bottom: 20px;
+  }
+
+  .c-wrapper--card--single--continuous.no_one,
+.c-wrapper--card--single--continuous.no_three,
+.c-wrapper--card--single--continuous.no_five,
+.c-wrapper--card--single--continuous.no_seven,
+.c-wrapper--card--single--continuous.no_nine {
+    margin-right: 2.24% !important;
+  }
+
+  .c-wrapper--card--single--type_frame.hp_mb180 {
+    margin-bottom: 180px;
+    padding: 61px 67px;
+    /* 余白の幅*/
+    box-sizing: border-box;
+  }
+
+  /*最後に疑似要素でfloatを解除*/
+  .c-wrapper--card--single--continuous-area::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+/* PC ------------------------------------ */
+@media screen and (min-width: 1250px) {
+  /*1番目のcard*/
+  .c-photo-frame--card--single--no-padding {
+    width: 100% !important;
+    /* 横幅100%*/
+    height: 0;
+    padding-bottom: 37.39%;
+    /*アスペクト比を維持*/
+  }
+
+  .c-photo--single {
+    /* 画像 */
+    width: 100%;
+    /* 横幅100%*/
+    padding-bottom: 37.39%;
+    /*アスペクト比を維持*/
+  }
+
+  /*2番目のcard*/
+  .c-wrapper--card--single.hp_mb117 {
+    margin-bottom: 60px;
+  }
+
+  /* 2番目・3番目のcardーーーーーーーーーー*/
+  .c-card--single--special {
+    /* 外枠 */
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row !important;
+    max-width: 100%;
+    height: auto;
+    overflow-y: visible;
+  }
+
+  .c-caption-group--card--single {
+    /* 文章の外枠ーーー*/
+    position: relative;
+    max-width: 57.13% !important;
+    min-height: 53.35%;
+    padding-right: 0;
+    padding-left: 5.18%;
+    padding-bottom: 6%;
+    box-sizing: border-box;
+  }
+
+  .c-caption-group--card--single.pc-only {
+    /* 文章の外枠ーーー*/
+    padding-right: 5.18%;
+    padding-left: 0;
+  }
+
+  .c-detail--card--single {
+    /* 文章の詳細ーーー*/
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: auto;
+    font-size: 0.83vw;
+    line-height: 1.43;
+    word-wrap: break-word;
+  }
+
+  .c-photo-frame--card--single--various {
+    /* 写真の外枠ーーー*/
+    display: block !important;
+    max-width: 42.85%;
+    height: auto;
+    padding-bottom: 0;
+  }
+
+  .c-photo--card--single--various {
+    /*画像*/
+    display: block !important;
+    height: 0;
+    /*高さは設定しない*/
+    padding-bottom: 61.8%;
+    /*アスペクト比を維持*/
+  }
+
+  /* 2番目・3番目のcard ここまでーーーーーーー*/
+  /* card-------------- */
+  /* 4番目のcard　pcの場合のみ表示する*/
+  .c-wrapper--card--single--pc-only {
+    display: block !important;
+    /* 表示する */
+  }
+
+  .c-card--single--special.pc-only {
+    display: flex;
+    /* 真ん中に配置 */
+    justify-content: center;
+  }
+
+  /* pcの場合のみ表示するcardここまで-------*/
+  .c-wrapper--card--single--type_frame.hp_mb60 {
+    /*pcの時は隠す*/
+    display: none;
+    /*pcの時は隠す（pc用のcardを表示する）*/
+  }
+
+  .c-photo-frame--card--single--type_frame {
+    /*pcの時は隠す*/
+    display: none;
+  }
+
+  .c-photo--card--single--type_frame {
+    /*pcの時は隠す*/
+    display: none;
+  }
+
+  /* 連続したパターンのカードの部分 ーーーー */
+  .c-wrapper--card--single--continuous-area {
+    display: block;
+  }
+
+  .c-photo-frame--card--single--type_continuous {
+    max-width: 100%;
+    height: 0;
+    padding-bottom: 58.67%;
+  }
+
+  .c-photo--single--continuous {
+    max-width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    vertical-align: bottom;
+    height: 0;
+    padding-bottom: 58.67%;
+    background-image: url(../img/cheese-burger--per_62.png);
+  }
+
+  .c-wrapper--card--single--continuous {
+    max-width: 32.3%;
+    float: left;
+    margin-bottom: 1.47%;
+  }
+
+  .c-wrapper--card--single--continuous.no_one,
+.c-wrapper--card--single--continuous.no_two,
+.c-wrapper--card--single--continuous.no_four,
+.c-wrapper--card--single--continuous.no_five,
+.c-wrapper--card--single--continuous.no_seven,
+.c-wrapper--card--single--continuous.no_eight {
+    margin-right: 1.47% !important;
+  }
+
+  .c-wrapper--card--single--continuous.no_three,
+.c-wrapper--card--single--continuous.no_nine,
+.c-wrapper--card--single--continuous.no_six {
+    margin-right: 0 !important;
+  }
+
+  .c-wrapper--card--single--continuous.no_seven,
+.c-wrapper--card--single--continuous.no_eight,
+.c-wrapper--card--single--continuous.no_nine {
+    margin-bottom: 0 !important;
+    /*7/8/9番目のcardは下の余白無し*/
+  }
+
+  /* 連続したパターンのカードの部分ここまで ーーーー */
+  /* 余白の調整ーーーーーーー*/
+  .c-wrapper--card--single {
+    margin-bottom: 60px;
+  }
+
+  .c-wrapper--card--single--pc-only {
+    margin-bottom: 60px;
+    position: relative;
   }
 }/*# sourceMappingURL=style.css.map */
