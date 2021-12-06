@@ -35,8 +35,11 @@
 @import "./Object/project/_sidebar" ;
 
 @import "./Object/project/_archive" ;
-@import "./Object/project/_single" ;
 @import "./Object/project/_pagination" ;
+
+@import "./Object/project/_single" ;
+@import "./Object/project/_block" ;
+
 /* Component ------------ */
 @import "./Object/Component/_component" ;
 @import "./Object/Component/_component__card" ;

@@ -324,7 +324,7 @@
   margin-bottom: 60px;
 }
 /*コードのブロック*/
-.p-contents__single__block-code__inner{/*インナー*/
+.p-contents__single__block-code__wrapper{/*インナー*/
   background-color: $color--base-li-GY;
 }
 
@@ -372,7 +372,7 @@
 }
 
 /*ボタンの部分*/
-.p-contents__single__block-button__inner{
+.p-contents__single__block-button__wrapper{
   margin-top: 29px;
 }
 
@@ -450,7 +450,7 @@
   }
 
 /* ------------見出し（h2〜h6）系のブロック------------*/
-/* 共通 */
+/* 本体共通 */
 .p-contents__single__block-heading{
 &__title{
   display: inline-block;
@@ -461,7 +461,7 @@
 }
 }
 
-/* 各詳細 */
+/* 各tag詳細 */
 .tag-h2{
   margin-bottom: 60px;
 }
@@ -495,7 +495,7 @@
   font-weight: normal;
 }
 
-.p-contents__single__block-quote__source{/* 引用元全体 */
+.p-contents__single__block-quote__source{/* 引用元 */
   display: flex;/* 出典元とリンクを横に並べる*/
   flex-direction: row !important;
   margin-top: 60px;/* 引用文との距離 */
@@ -697,7 +697,7 @@
 }
 
 /*buttonの部分*/
-.p-contents__single__block-button__inner{/*埋め込み先*/
+.p-contents__single__block-button__wrapper{/*埋め込み先*/
   margin-top: 60px;
 }
 
@@ -1072,7 +1072,7 @@ justify-content: center;
 }
 
 /* ボタンの部分*/
-.p-contents__single__block-button__inner{
+.p-contents__single__block-button__wrapper{
   margin-top: 60px;
 }
 
