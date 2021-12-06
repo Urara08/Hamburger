@@ -3810,8 +3810,8 @@ a {
     line-height: 2.06;
   }
 }
-/* single c-card関連 全component*/
-/* スマホ ------------------------------------ */
+/* single c-card関連 component*/
+/* スマホ */
 /* wrapper --*/
 /* pcのみ表示するcard*/
 .c-wrapper--card--single--pc-only {
@@ -3819,27 +3819,28 @@ a {
   /* 表示しない */
 }
 
-/* くり返しの部分の手前までのcard */
+/* 1,2,3番目のcard------------------*/
 .c-wrapper--card--single {
   max-width: 100%;
-  /* card外枠 */
+  /* 外枠 */
   margin-bottom: 30px;
 }
 
-/* くり返し連損する部分のcard */
+/* 4番目card------------------------*/
+.c-wrapper--card--single--type_frame {
+  padding: 30px 34px;
+  /*周りに余白あり*/
+  box-sizing: border-box;
+}
+
+/* くり返し連続する部分のcard */
 .c-wrapper--card--single--continuous {
   max-width: 100%;
   /* card外枠 */
   margin-bottom: 20px;
 }
 
-/* 外側に余白付き*/
-.c-wrapper--card--single--type_frame {
-  padding: 30px 34px;
-  box-sizing: border-box;
-}
-
-/* 連続するカードの全体のグループ */
+/* 連続するカードの全体の並べ方*/
 .c-wrapper--card--single--continuous-area {
   display: flex;
   flex-direction: column;
@@ -3851,7 +3852,8 @@ a {
   margin-bottom: 0 !important;
 }
 
-/* 1つ目:ーーーーーーー*/
+/* 以下からwrapper以外---------- */
+/* 1番目のcard-------------------------*/
 /* c-card --*/
 .c-card--single {
   /* 外枠 */
@@ -3892,7 +3894,7 @@ a {
   background-repeat: no-repeat;
 }
 
-/* ２つ目, 3つ目*/
+/* ２つ目, 3つ目のcard-----------------*/
 /* c-card--*/
 .c-card--single--special {
   /* 外枠 */
@@ -3907,7 +3909,7 @@ a {
 
 /* c-caption-group--*/
 .c-caption-group--card--single {
-  /* 文章の外枠ーーー*/
+  /*文章の外枠*/
   position: relative;
   width: 57.28% !important;
   max-height: 176px;
@@ -3919,7 +3921,7 @@ a {
 
 /* c-detail--*/
 .c-detail--card--single {
-  /* 文章の詳細部分ーーー*/
+  /*文章の詳細部分*/
   position: relative;
   width: 100% !important;
   height: 100%;
@@ -3927,7 +3929,6 @@ a {
   line-height: 1.43;
   word-wrap: break-word;
   overflow-y: hidden;
-  /* スマホの場合のみ*/
 }
 
 /* c-photo-frame--*/
@@ -3954,8 +3955,8 @@ a {
   box-sizing: border-box;
 }
 
-/* card 2,3番目ここまでーーーーーーー*/
-/* 4番目　写真のみ・周りに余白あり*/
+/* card 2,3番目ここまで--------------------*/
+/* 4番目のcard----------------------------*/
 /* c-photo-frame */
 .c-photo-frame--card--single--type_frame {
   width: 100%;
@@ -3981,10 +3982,11 @@ a {
   background-image: url(../img/cheese-burger--per_62.png);
 }
 
-/* 4つめのカード　ここまで----------------------*/
-/* 連続するパターン(写真のみ) ------------------*/
+/* 4番目のカード　ここまで----------------*/
+/* 連続するパターンのcard-----------------*/
 /* c-photo-frame */
 .c-photo-frame--card--single--type_continuous {
+  /* 画像の枠 */
   width: 100%;
   height: 0;
   /*高さは指定しない*/
@@ -3994,6 +3996,7 @@ a {
 
 /* c-photo */
 .c-photo--single--continuous {
+  /* 画像 */
   max-width: 100%;
   height: 100%;
   background-position: center;
@@ -4007,7 +4010,7 @@ a {
   background-image: url(../img/cheese-burger--per_62.png);
 }
 
-/* タブレット ------------------------------------ */
+/* タブレット */
 @media screen and (min-width: 600px) {
   /* wrapper */
   /*pcのみで表示するcard*/
@@ -4016,24 +4019,24 @@ a {
     /*隠す*/
   }
 
-  /*1番目のcard*/
+  /*1番目のcard--------------------------*/
   .c-wrapper--card--single.hp_mb60 {
     margin-bottom: 60px;
   }
 
-  /*2番目の最後*/
+  /*2番目のcard--------------------------*/
   .c-wrapper--card--single.hp_mb117 {
     margin-bottom: 117px;
   }
 
-  /*3番目のcard*/
+  /*3番目のcard---------------------------*/
   .c-wrapper--card--single {
     max-width: 100%;
     margin-bottom: 0px;
   }
 
-  /*4番目のcard*/
-  .c-wrapper--card--single--type_frame.hp_mb180 {
+  /*4番目のcard---------------------------*/
+  .c-wrapper--card--single--type_frame {
     margin-bottom: 180px;
     padding: 61px 67px;
     /* 余白の幅*/
@@ -4048,7 +4051,7 @@ a {
     padding: 0;
   }
 
-  /*連続するcard*/
+  /*連続するcard---------------------------*/
   .c-wrapper--card--single--continuous {
     float: left;
     max-width: 100%;
@@ -4078,7 +4081,8 @@ a {
     clear: both !important;
   }
 
-  /* ２番目,3番目のカード---------------*/
+  /* 以下からwrapper以外----------------------*/
+  /* ２番目,3番目のカード----------------------*/
   /* c-card */
   .c-card--single--special {
     /* 外枠 */
@@ -4094,7 +4098,7 @@ a {
 
   /* c-caption-group */
   .c-caption-group--card--single {
-    /* 文章の外枠ーーー*/
+    /*文章の外枠*/
     position: relative;
     width: 57.28% !important;
     min-height: 88.43%;
@@ -4106,7 +4110,7 @@ a {
 
   /* c-detail */
   .c-detail--card--single {
-    /* 文章の詳細ーーー*/
+    /*文章の詳細*/
     position: relative;
     top: 0;
     left: 0;
@@ -4137,22 +4141,17 @@ a {
     /*アスペクト比を維持*/
   }
 
-  /* ２番目,3番目のカード---------------*/
+  /* ２番目,3番目のカードここまで--------*/
 }
-/* PC ------------------------------------ */
+/* PC */
 @media screen and (min-width: 1250px) {
   /* wrapper*/
-  /* 1番目、3番目のcard*/
+  /* 1番目、2番目、3番目のcard----------------------------*/
   .c-wrapper--card--single {
-    margin-bottom: 60px;
+    margin-bottom: 60px !important;
   }
 
-  /*2番目のcard*/
-  .c-wrapper--card--single.hp_mb117 {
-    margin-bottom: 60px;
-  }
-
-  /* 4番目のcard*/
+  /* 4番目のcard------------------------*/
   /* PCで表示する */
   .c-wrapper--card--single--pc-only {
     display: block !important;
@@ -4160,13 +4159,13 @@ a {
     position: relative;
   }
 
-  /* 4番目のcard*/
+  /* 4番目のcard-------------------------*/
   /*PCでは表示しない*/
   .c-wrapper--card--single--type_frame {
     display: none;
   }
 
-  /* 連続したパターンのcard */
+  /* 連続したパターンのcard---------------*/
   .c-wrapper--card--single--continuous-area {
     display: block;
   }
@@ -4177,7 +4176,7 @@ a {
     margin-bottom: 1.47%;
   }
 
-  /* 以下wrapper以外---------- */
+  /* 以下からwrapper以外------------------*/
   /*1番目のcard----------*/
   /*photo-frame*/
   .c-photo-frame--card--single--no-padding {
@@ -4197,10 +4196,10 @@ a {
     /*アスペクト比を維持*/
   }
 
-  /*2番目のcard---------*/
+  /*2番目のcard-------------------------*/
   /*caption-group*/
   .c-caption-group--card--single {
-    /* 文章の外枠ーーー*/
+    /*文章の外枠*/
     position: relative;
     max-width: 57.13% !important;
     min-height: 53.35%;
@@ -4211,7 +4210,7 @@ a {
     box-sizing: border-box;
   }
 
-  /*3番目のcard---------*/
+  /*3番目のcard-------------------------*/
   /*c-caption-group*/
   .c-caption-group--card--single.pc-only {
     /* 文章の外枠ーーー*/
@@ -4220,7 +4219,7 @@ a {
     padding-left: 0;
   }
 
-  /* 2番目・3番目のcard共通------*/
+  /* 2番目・3番目のcard共通---------------*/
   /*c-card*/
   .c-card--single--special {
     /* 外枠 */
@@ -4265,8 +4264,8 @@ a {
     /*アスペクト比を維持*/
   }
 
-  /* 2番目・3番目のcard共通ここまで------*/
-  /* 4番目のcard------*/
+  /* 2番目・3番目のcard共通ここまで----------------*/
+  /* 4番目のcard---------------------------------*/
   /*c-card*/
   .c-card--single--special.pc-only {
     display: flex;
@@ -4274,8 +4273,8 @@ a {
     justify-content: center;
   }
 
-  /*4番目のcardここまで-------*/
-  /* 連続したパターンのカード------- */
+  /*4番目のcardここまで---------------------------*/
+  /* 連続したパターンのカード----------------------*/
   /* c-photo-frame */
   .c-photo-frame--card--single--type_continuous {
     max-width: 100%;
@@ -4321,5 +4320,5 @@ a {
     /*7/8/9番目のcardは下の余白無し*/
   }
 
-  /* 連続したパターンのカードの部分ここまで ーーーー */
+  /* 連続したパターンのカードの部分ここまで --*/
 }/*# sourceMappingURL=style.css.map */
