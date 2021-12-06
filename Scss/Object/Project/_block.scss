@@ -35,9 +35,7 @@
 
 /* 各ブロックの埋め込み先共通 */
 .p-contents__single__block__area{
-  float: none;/* floatは解除 */
   font-family:$font-family--M-plus;
-  overflow-y: hidden !important;
 }
 
 /* 見出し系のブロック（h2〜h6）*/
@@ -142,7 +140,9 @@
 
 /*リストの部分*/
 .p-contents__single{
-&__block-list{/*埋め込み先*/
+&__block-list{/*本体*/
+  float: none;/* floatは解除 */
+  clear:both;/* floatは解除 */
   display: block;
   float: none !important;
   max-width: 100%;
@@ -159,16 +159,12 @@
 &__block-list-group--1{/*左詰めの行*/
   display: block;
   max-width: 100%;
-  clear: both;/*floatは解除する*/
-  float: none;/*floatは解除する*/
   margin-left: 0;
   margin-bottom: 20px;
 }
 
 &__block-list-group--2{/*インデントがある行*/
   display: block;
-  float: none;/*floatは解除する*/
-  clear:both;/*floatは解除する*/
   margin-left: 18px;
   margin-bottom: 20px;
 }
@@ -383,7 +379,9 @@
 }
 
 /*リストの部分*/
-.p-contents__single__block-list{/**/
+.p-contents__single__block-list{/*本体*/
+  float: none;/*floatは解除する*/
+  clear:both;/*floatは解除する*/
   display: block;
   float: none !important;
   max-width: 100%;
@@ -404,7 +402,8 @@
   width: 100% !important;
   margin-top: 30px;
   background-color: $color--char-WH;
-
+  border: solid red 1px;
+  overflow-x: hidden;
 
 &__title{
   border-collapse: collapse;/*題*/
@@ -563,7 +562,7 @@
 }
 
 /* リスト*/
-.p-contents__single__block-list{
+.p-contents__single__block-list{/* 本体 */
   display: block;
   float: none !important;
   max-width: 100%;

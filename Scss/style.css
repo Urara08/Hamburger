@@ -2490,6 +2490,7 @@ a {
   display: block;
   max-width: 100%;
   height: auto;
+  padding-bottom: 117px;
   background-color: #FFFDFA;
   font-family: "M PLUS 1p", sans-serif;
   font-weight: normal;
@@ -2506,17 +2507,15 @@ a {
   height: 100%;
   margin: 0px 5.33% 0 5.33% !important;
   padding-bottom: 0;
-  margin-bottom: 117px !important;
-  border: solid pink 3px;
 }
 
-/*pagenation無しの為、サイト下部のワイヤ―は無し*/
 /* タブレット */
 @media screen and (min-width: 600px) {
   /* contents */
   .p-contents__single {
     display: block;
     max-width: 100% !important;
+    padding-bottom: 228px !important;
   }
 
   /* サイト上部のワイヤーフレーム --------------*/
@@ -2533,14 +2532,18 @@ a {
     margin: 0px 7.19% 0 7.19% !important;
     /* 左右フレームの余白*/
     padding-bottom: 0;
-    margin-bottom: 228px !important;
-    border: solid pink 3px;
   }
 }
 /* PC */
 @media screen and (min-width: 1250px) {
   /* contents */
   /* サイト上部のワイヤーフレーム --------------*/
+  .p-contents__single {
+    display: block;
+    max-width: 100% !important;
+    padding-bottom: 353px !important;
+  }
+
   .p-contents__single__inner--top {
     margin-bottom: 60px;
   }
@@ -2594,10 +2597,7 @@ a {
 
 /* 各ブロックの埋め込み先共通 */
 .p-contents__single__block__area {
-  float: none;
-  /* floatは解除 */
   font-family: "M PLUS 1p", sans-serif;
-  overflow-y: hidden !important;
 }
 
 /* 見出し系のブロック（h2〜h6）*/
@@ -2708,7 +2708,11 @@ a {
 
 /*リストの部分*/
 .p-contents__single__block-list {
-  /*埋め込み先*/
+  /*本体*/
+  float: none;
+  /* floatは解除 */
+  clear: both;
+  /* floatは解除 */
   display: block;
   float: none !important;
   max-width: 100%;
@@ -2725,20 +2729,12 @@ a {
   /*左詰めの行*/
   display: block;
   max-width: 100%;
-  clear: both;
-  /*floatは解除する*/
-  float: none;
-  /*floatは解除する*/
   margin-left: 0;
   margin-bottom: 20px;
 }
 .p-contents__single__block-list-group--2 {
   /*インデントがある行*/
   display: block;
-  float: none;
-  /*floatは解除する*/
-  clear: both;
-  /*floatは解除する*/
   margin-left: 18px;
   margin-bottom: 20px;
 }
@@ -2965,7 +2961,11 @@ a {
 
   /*リストの部分*/
   .p-contents__single__block-list {
-    /**/
+    /*本体*/
+    float: none;
+    /*floatは解除する*/
+    clear: both;
+    /*floatは解除する*/
     display: block;
     float: none !important;
     max-width: 100%;
@@ -2987,6 +2987,8 @@ a {
     width: 100% !important;
     margin-top: 30px;
     background-color: #FFFFFF;
+    border: solid red 1px;
+    overflow-x: hidden;
   }
   .p-contents__single__block-table__title {
     border-collapse: collapse;
@@ -3156,6 +3158,7 @@ a {
 
   /* リスト*/
   .p-contents__single__block-list {
+    /* 本体 */
     display: block;
     float: none !important;
     max-width: 100%;
@@ -4106,7 +4109,7 @@ a {
   .c-wrapper--card--single--continuous-area::after {
     content: "";
     display: block;
-    clear: both;
+    clear: both !important;
   }
 }
 /* PC ------------------------------------ */

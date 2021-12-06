@@ -6,6 +6,7 @@
   display: block;
   max-width: 100%;
   height: auto;
+  padding-bottom: 117px;
   background-color:$color--base-WH;
   font-family: $font-family--M-plus;
   font-weight: normal;
@@ -22,11 +23,7 @@
   height: 100%;
   margin: 0px 5.33%  0 5.33% !important;
   padding-bottom: 0;
-  margin-bottom: 117px !important;
-  border: solid pink 3px;
 }
-
-/*pagenation無しの為、サイト下部のワイヤ―は無し*/
 
 /* タブレット */
 @media screen and (min-width: 600px){
@@ -34,7 +31,7 @@
 .p-contents__single{
   display: block;
   max-width: 100% !important;
-
+  padding-bottom: 228px !important;
 }
 
 /* サイト上部のワイヤーフレーム --------------*/
@@ -50,16 +47,19 @@
   height: 100%;
   margin: 0px 7.19%  0 7.19% !important;/* 左右フレームの余白*/
   padding-bottom: 0;
-  margin-bottom: 228px !important;
-
-  border: solid pink 3px;
 }
 }
 
-  /* PC */
+/* PC */
 @media screen and (min-width: 1250px){
 /* contents */
 /* サイト上部のワイヤーフレーム --------------*/
+.p-contents__single{
+  display: block;
+  max-width: 100% !important;
+  padding-bottom: 353px !important;
+}
+
 .p-contents__single__inner--top{
   margin-bottom: 60px;
 }
